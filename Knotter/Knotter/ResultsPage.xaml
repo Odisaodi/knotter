@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Knotter.ResultsPage"
+             BackgroundImageSource="tiledstripe.xml">
+    <ContentPage.Content>
+        <StackLayout x:Name="RootContent">
+            <!-- overlay for Activity indicator (aka ontop of griditems)-->
+            <Grid x:Name="Overlay" VerticalOptions="FillAndExpand">
+                
+                <!-- debug text -->
+                <Label x:Name="debug" HorizontalTextAlignment="Center" BackgroundColor="#1A000000"></Label>
+                
+                <ScrollView x:Name="ScrollContent">
+                    <Grid x:Name="Results" >
+                        <!-- Results -->
+                        <!-- [_] [_] [_] -->
+                        <!-- [_] [_] [_] -->
+                    </Grid>
+                </ScrollView>
+
+                <ActivityIndicator 
+                        x:Name="Activity" 
+                        IsRunning="True" 
+                        VerticalOptions="Center">
+                </ActivityIndicator>
+            </Grid>
+
+            <StackLayout VerticalOptions="End">
+                <Entry x:Name="Search" TextColor="Fuchsia" BackgroundColor="#7F7F7F7F"></Entry>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

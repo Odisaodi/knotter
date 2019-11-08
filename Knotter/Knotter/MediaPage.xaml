@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Knotter.MediaPage"
+             BackgroundImageSource="tiledstripe.xml">
+
+    <ContentPage.Content>
+        <Grid x:Name="UIContentLayers"><!-- Grid allows us to lay elements on top of each other (z-stack)-->
+            
+            
+            <Label x:Name="debug" 
+                   Text="debug" 
+                   HorizontalTextAlignment="Center" 
+                   BackgroundColor="Accent" 
+                   VerticalOptions="Start"/>
+
+            <!-- the element which holds the Media -->
+            <StackLayout x:Name="UIMediaContent" VerticalOptions="Center">
+                <!-- example  content, removed at runtime -->
+                <Image Source="loading.png" />
+            </StackLayout>
+            
+            <!-- SlidingPane fills the entire screen -->
+            <StackLayout x:Name="SlidingPane" Padding="5" IsClippedToBounds="True" >
+
+                <!-- UISliding pane moves along the y of "SlidingPane" -->
+                <StackLayout x:Name="UISlidingPane" BackgroundColor="#7F000000">
+
+                    <Label 
+                        Text = "Caption for sliding pane" 
+                        HorizontalTextAlignment = "Center"
+                        HeightRequest="50"
+                        BackgroundColor = "Accent">
+                    </Label>
+
+                    <!-- example  content, removed at runtime -->
+                    <!-- Frame surrounding tag list-->
+                    <StackLayout x:Name="xTagStack" Padding="10">
+                        <Button Text="Example"/>
+                        <Button Text="Example"/>
+                        <Button Text="Example"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </StackLayout>
+
+            <Button 
+                x:Name="UIButtonCollapse" 
+                IsVisible="False"
+                Text="Collapse" 
+                VerticalOptions="End" 
+                HorizontalOptions="End">
+            </Button>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
