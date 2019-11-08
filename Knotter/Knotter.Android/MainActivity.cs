@@ -24,8 +24,6 @@ namespace Knotter.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new Application());
 
-            //
-            Xamarians.MediaPlayer.Droid.VideoPlayerRenderer.Init(this);
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

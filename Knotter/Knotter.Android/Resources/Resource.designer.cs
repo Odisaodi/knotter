@@ -26,1540 +26,6 @@ namespace Knotter.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_fade_in = global::Knotter.Droid.Resource.Animation.abc_fade_in;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_fade_out = global::Knotter.Droid.Resource.Animation.abc_fade_out;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::Knotter.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_popup_enter = global::Knotter.Droid.Resource.Animation.abc_popup_enter;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_popup_exit = global::Knotter.Droid.Resource.Animation.abc_popup_exit;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::Knotter.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_slide_in_bottom = global::Knotter.Droid.Resource.Animation.abc_slide_in_bottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_slide_in_top = global::Knotter.Droid.Resource.Animation.abc_slide_in_top;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_slide_out_bottom = global::Knotter.Droid.Resource.Animation.abc_slide_out_bottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.abc_slide_out_top = global::Knotter.Droid.Resource.Animation.abc_slide_out_top;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::Knotter.Droid.Resource.Animation.design_bottom_sheet_slide_in;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::Knotter.Droid.Resource.Animation.design_bottom_sheet_slide_out;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.design_snackbar_in = global::Knotter.Droid.Resource.Animation.design_snackbar_in;
-			global::Xamarians.MediaPlayer.Droid.Resource.Animation.design_snackbar_out = global::Knotter.Droid.Resource.Animation.design_snackbar_out;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarDivider = global::Knotter.Droid.Resource.Attribute.actionBarDivider;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarItemBackground = global::Knotter.Droid.Resource.Attribute.actionBarItemBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarPopupTheme = global::Knotter.Droid.Resource.Attribute.actionBarPopupTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarSize = global::Knotter.Droid.Resource.Attribute.actionBarSize;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarSplitStyle = global::Knotter.Droid.Resource.Attribute.actionBarSplitStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarStyle = global::Knotter.Droid.Resource.Attribute.actionBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarTabBarStyle = global::Knotter.Droid.Resource.Attribute.actionBarTabBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarTabStyle = global::Knotter.Droid.Resource.Attribute.actionBarTabStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarTabTextStyle = global::Knotter.Droid.Resource.Attribute.actionBarTabTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarTheme = global::Knotter.Droid.Resource.Attribute.actionBarTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionBarWidgetTheme = global::Knotter.Droid.Resource.Attribute.actionBarWidgetTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionButtonStyle = global::Knotter.Droid.Resource.Attribute.actionButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionDropDownStyle = global::Knotter.Droid.Resource.Attribute.actionDropDownStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionLayout = global::Knotter.Droid.Resource.Attribute.actionLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionMenuTextAppearance = global::Knotter.Droid.Resource.Attribute.actionMenuTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionMenuTextColor = global::Knotter.Droid.Resource.Attribute.actionMenuTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeBackground = global::Knotter.Droid.Resource.Attribute.actionModeBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::Knotter.Droid.Resource.Attribute.actionModeCloseButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeCloseDrawable = global::Knotter.Droid.Resource.Attribute.actionModeCloseDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeCopyDrawable = global::Knotter.Droid.Resource.Attribute.actionModeCopyDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeCutDrawable = global::Knotter.Droid.Resource.Attribute.actionModeCutDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeFindDrawable = global::Knotter.Droid.Resource.Attribute.actionModeFindDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModePasteDrawable = global::Knotter.Droid.Resource.Attribute.actionModePasteDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModePopupWindowStyle = global::Knotter.Droid.Resource.Attribute.actionModePopupWindowStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::Knotter.Droid.Resource.Attribute.actionModeSelectAllDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeShareDrawable = global::Knotter.Droid.Resource.Attribute.actionModeShareDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeSplitBackground = global::Knotter.Droid.Resource.Attribute.actionModeSplitBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeStyle = global::Knotter.Droid.Resource.Attribute.actionModeStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::Knotter.Droid.Resource.Attribute.actionModeWebSearchDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionOverflowButtonStyle = global::Knotter.Droid.Resource.Attribute.actionOverflowButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionOverflowMenuStyle = global::Knotter.Droid.Resource.Attribute.actionOverflowMenuStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionProviderClass = global::Knotter.Droid.Resource.Attribute.actionProviderClass;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.actionViewClass = global::Knotter.Droid.Resource.Attribute.actionViewClass;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.activityChooserViewStyle = global::Knotter.Droid.Resource.Attribute.activityChooserViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::Knotter.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.alertDialogCenterButtons = global::Knotter.Droid.Resource.Attribute.alertDialogCenterButtons;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.alertDialogStyle = global::Knotter.Droid.Resource.Attribute.alertDialogStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.alertDialogTheme = global::Knotter.Droid.Resource.Attribute.alertDialogTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.allowStacking = global::Knotter.Droid.Resource.Attribute.allowStacking;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.arrowHeadLength = global::Knotter.Droid.Resource.Attribute.arrowHeadLength;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.arrowShaftLength = global::Knotter.Droid.Resource.Attribute.arrowShaftLength;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::Knotter.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.background = global::Knotter.Droid.Resource.Attribute.background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.backgroundSplit = global::Knotter.Droid.Resource.Attribute.backgroundSplit;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.backgroundStacked = global::Knotter.Droid.Resource.Attribute.backgroundStacked;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.backgroundTint = global::Knotter.Droid.Resource.Attribute.backgroundTint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.backgroundTintMode = global::Knotter.Droid.Resource.Attribute.backgroundTintMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.barLength = global::Knotter.Droid.Resource.Attribute.barLength;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.behavior_hideable = global::Knotter.Droid.Resource.Attribute.behavior_hideable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.behavior_overlapTop = global::Knotter.Droid.Resource.Attribute.behavior_overlapTop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.behavior_peekHeight = global::Knotter.Droid.Resource.Attribute.behavior_peekHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.borderWidth = global::Knotter.Droid.Resource.Attribute.borderWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.borderlessButtonStyle = global::Knotter.Droid.Resource.Attribute.borderlessButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.bottomSheetDialogTheme = global::Knotter.Droid.Resource.Attribute.bottomSheetDialogTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.bottomSheetStyle = global::Knotter.Droid.Resource.Attribute.bottomSheetStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonBarButtonStyle = global::Knotter.Droid.Resource.Attribute.buttonBarButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::Knotter.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::Knotter.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::Knotter.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonBarStyle = global::Knotter.Droid.Resource.Attribute.buttonBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonPanelSideLayout = global::Knotter.Droid.Resource.Attribute.buttonPanelSideLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonStyle = global::Knotter.Droid.Resource.Attribute.buttonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonStyleSmall = global::Knotter.Droid.Resource.Attribute.buttonStyleSmall;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonTint = global::Knotter.Droid.Resource.Attribute.buttonTint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.buttonTintMode = global::Knotter.Droid.Resource.Attribute.buttonTintMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.cardBackgroundColor = global::Knotter.Droid.Resource.Attribute.cardBackgroundColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.cardCornerRadius = global::Knotter.Droid.Resource.Attribute.cardCornerRadius;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.cardElevation = global::Knotter.Droid.Resource.Attribute.cardElevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.cardMaxElevation = global::Knotter.Droid.Resource.Attribute.cardMaxElevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.cardPreventCornerOverlap = global::Knotter.Droid.Resource.Attribute.cardPreventCornerOverlap;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.cardUseCompatPadding = global::Knotter.Droid.Resource.Attribute.cardUseCompatPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.checkboxStyle = global::Knotter.Droid.Resource.Attribute.checkboxStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.checkedTextViewStyle = global::Knotter.Droid.Resource.Attribute.checkedTextViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.closeIcon = global::Knotter.Droid.Resource.Attribute.closeIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.closeItemLayout = global::Knotter.Droid.Resource.Attribute.closeItemLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.collapseContentDescription = global::Knotter.Droid.Resource.Attribute.collapseContentDescription;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.collapseIcon = global::Knotter.Droid.Resource.Attribute.collapseIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.collapsedTitleGravity = global::Knotter.Droid.Resource.Attribute.collapsedTitleGravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::Knotter.Droid.Resource.Attribute.collapsedTitleTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.color = global::Knotter.Droid.Resource.Attribute.color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.colorAccent = global::Knotter.Droid.Resource.Attribute.colorAccent;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.colorButtonNormal = global::Knotter.Droid.Resource.Attribute.colorButtonNormal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.colorControlActivated = global::Knotter.Droid.Resource.Attribute.colorControlActivated;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.colorControlHighlight = global::Knotter.Droid.Resource.Attribute.colorControlHighlight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.colorControlNormal = global::Knotter.Droid.Resource.Attribute.colorControlNormal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.colorPrimary = global::Knotter.Droid.Resource.Attribute.colorPrimary;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.colorPrimaryDark = global::Knotter.Droid.Resource.Attribute.colorPrimaryDark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.colorSwitchThumbNormal = global::Knotter.Droid.Resource.Attribute.colorSwitchThumbNormal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.commitIcon = global::Knotter.Droid.Resource.Attribute.commitIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentInsetEnd = global::Knotter.Droid.Resource.Attribute.contentInsetEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentInsetLeft = global::Knotter.Droid.Resource.Attribute.contentInsetLeft;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentInsetRight = global::Knotter.Droid.Resource.Attribute.contentInsetRight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentInsetStart = global::Knotter.Droid.Resource.Attribute.contentInsetStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentPadding = global::Knotter.Droid.Resource.Attribute.contentPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentPaddingBottom = global::Knotter.Droid.Resource.Attribute.contentPaddingBottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentPaddingLeft = global::Knotter.Droid.Resource.Attribute.contentPaddingLeft;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentPaddingRight = global::Knotter.Droid.Resource.Attribute.contentPaddingRight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentPaddingTop = global::Knotter.Droid.Resource.Attribute.contentPaddingTop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.contentScrim = global::Knotter.Droid.Resource.Attribute.contentScrim;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.controlBackground = global::Knotter.Droid.Resource.Attribute.controlBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.counterEnabled = global::Knotter.Droid.Resource.Attribute.counterEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.counterMaxLength = global::Knotter.Droid.Resource.Attribute.counterMaxLength;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.counterOverflowTextAppearance = global::Knotter.Droid.Resource.Attribute.counterOverflowTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.counterTextAppearance = global::Knotter.Droid.Resource.Attribute.counterTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.customNavigationLayout = global::Knotter.Droid.Resource.Attribute.customNavigationLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.defaultQueryHint = global::Knotter.Droid.Resource.Attribute.defaultQueryHint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.dialogPreferredPadding = global::Knotter.Droid.Resource.Attribute.dialogPreferredPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.dialogTheme = global::Knotter.Droid.Resource.Attribute.dialogTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.displayOptions = global::Knotter.Droid.Resource.Attribute.displayOptions;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.divider = global::Knotter.Droid.Resource.Attribute.divider;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.dividerHorizontal = global::Knotter.Droid.Resource.Attribute.dividerHorizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.dividerPadding = global::Knotter.Droid.Resource.Attribute.dividerPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.dividerVertical = global::Knotter.Droid.Resource.Attribute.dividerVertical;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.drawableSize = global::Knotter.Droid.Resource.Attribute.drawableSize;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.drawerArrowStyle = global::Knotter.Droid.Resource.Attribute.drawerArrowStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.dropDownListViewStyle = global::Knotter.Droid.Resource.Attribute.dropDownListViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::Knotter.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.editTextBackground = global::Knotter.Droid.Resource.Attribute.editTextBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.editTextColor = global::Knotter.Droid.Resource.Attribute.editTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.editTextStyle = global::Knotter.Droid.Resource.Attribute.editTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.elevation = global::Knotter.Droid.Resource.Attribute.elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.errorEnabled = global::Knotter.Droid.Resource.Attribute.errorEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.errorTextAppearance = global::Knotter.Droid.Resource.Attribute.errorTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::Knotter.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.expanded = global::Knotter.Droid.Resource.Attribute.expanded;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.expandedTitleGravity = global::Knotter.Droid.Resource.Attribute.expandedTitleGravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.expandedTitleMargin = global::Knotter.Droid.Resource.Attribute.expandedTitleMargin;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.expandedTitleMarginBottom = global::Knotter.Droid.Resource.Attribute.expandedTitleMarginBottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.expandedTitleMarginEnd = global::Knotter.Droid.Resource.Attribute.expandedTitleMarginEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.expandedTitleMarginStart = global::Knotter.Droid.Resource.Attribute.expandedTitleMarginStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.expandedTitleMarginTop = global::Knotter.Droid.Resource.Attribute.expandedTitleMarginTop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.expandedTitleTextAppearance = global::Knotter.Droid.Resource.Attribute.expandedTitleTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.fabSize = global::Knotter.Droid.Resource.Attribute.fabSize;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.foregroundInsidePadding = global::Knotter.Droid.Resource.Attribute.foregroundInsidePadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.gapBetweenBars = global::Knotter.Droid.Resource.Attribute.gapBetweenBars;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.goIcon = global::Knotter.Droid.Resource.Attribute.goIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.headerLayout = global::Knotter.Droid.Resource.Attribute.headerLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.height = global::Knotter.Droid.Resource.Attribute.height;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.hideOnContentScroll = global::Knotter.Droid.Resource.Attribute.hideOnContentScroll;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.hintAnimationEnabled = global::Knotter.Droid.Resource.Attribute.hintAnimationEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.hintEnabled = global::Knotter.Droid.Resource.Attribute.hintEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.hintTextAppearance = global::Knotter.Droid.Resource.Attribute.hintTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.homeAsUpIndicator = global::Knotter.Droid.Resource.Attribute.homeAsUpIndicator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.homeLayout = global::Knotter.Droid.Resource.Attribute.homeLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.icon = global::Knotter.Droid.Resource.Attribute.icon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.iconifiedByDefault = global::Knotter.Droid.Resource.Attribute.iconifiedByDefault;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.imageButtonStyle = global::Knotter.Droid.Resource.Attribute.imageButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.indeterminateProgressStyle = global::Knotter.Droid.Resource.Attribute.indeterminateProgressStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.initialActivityCount = global::Knotter.Droid.Resource.Attribute.initialActivityCount;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.insetForeground = global::Knotter.Droid.Resource.Attribute.insetForeground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.isLightTheme = global::Knotter.Droid.Resource.Attribute.isLightTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.itemBackground = global::Knotter.Droid.Resource.Attribute.itemBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.itemIconTint = global::Knotter.Droid.Resource.Attribute.itemIconTint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.itemPadding = global::Knotter.Droid.Resource.Attribute.itemPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.itemTextAppearance = global::Knotter.Droid.Resource.Attribute.itemTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.itemTextColor = global::Knotter.Droid.Resource.Attribute.itemTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.keylines = global::Knotter.Droid.Resource.Attribute.keylines;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layout = global::Knotter.Droid.Resource.Attribute.layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layoutManager = global::Knotter.Droid.Resource.Attribute.layoutManager;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layout_anchor = global::Knotter.Droid.Resource.Attribute.layout_anchor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layout_anchorGravity = global::Knotter.Droid.Resource.Attribute.layout_anchorGravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layout_behavior = global::Knotter.Droid.Resource.Attribute.layout_behavior;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layout_collapseMode = global::Knotter.Droid.Resource.Attribute.layout_collapseMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::Knotter.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layout_keyline = global::Knotter.Droid.Resource.Attribute.layout_keyline;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layout_scrollFlags = global::Knotter.Droid.Resource.Attribute.layout_scrollFlags;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.layout_scrollInterpolator = global::Knotter.Droid.Resource.Attribute.layout_scrollInterpolator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::Knotter.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listDividerAlertDialog = global::Knotter.Droid.Resource.Attribute.listDividerAlertDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listItemLayout = global::Knotter.Droid.Resource.Attribute.listItemLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listLayout = global::Knotter.Droid.Resource.Attribute.listLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listPopupWindowStyle = global::Knotter.Droid.Resource.Attribute.listPopupWindowStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listPreferredItemHeight = global::Knotter.Droid.Resource.Attribute.listPreferredItemHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::Knotter.Droid.Resource.Attribute.listPreferredItemHeightLarge;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::Knotter.Droid.Resource.Attribute.listPreferredItemHeightSmall;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::Knotter.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::Knotter.Droid.Resource.Attribute.listPreferredItemPaddingRight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.logo = global::Knotter.Droid.Resource.Attribute.logo;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.logoDescription = global::Knotter.Droid.Resource.Attribute.logoDescription;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.maxActionInlineWidth = global::Knotter.Droid.Resource.Attribute.maxActionInlineWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.maxButtonHeight = global::Knotter.Droid.Resource.Attribute.maxButtonHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.measureWithLargestChild = global::Knotter.Droid.Resource.Attribute.measureWithLargestChild;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.menu = global::Knotter.Droid.Resource.Attribute.menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.multiChoiceItemLayout = global::Knotter.Droid.Resource.Attribute.multiChoiceItemLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.navigationContentDescription = global::Knotter.Droid.Resource.Attribute.navigationContentDescription;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.navigationIcon = global::Knotter.Droid.Resource.Attribute.navigationIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.navigationMode = global::Knotter.Droid.Resource.Attribute.navigationMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.overlapAnchor = global::Knotter.Droid.Resource.Attribute.overlapAnchor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.paddingEnd = global::Knotter.Droid.Resource.Attribute.paddingEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.paddingStart = global::Knotter.Droid.Resource.Attribute.paddingStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.panelBackground = global::Knotter.Droid.Resource.Attribute.panelBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.panelMenuListTheme = global::Knotter.Droid.Resource.Attribute.panelMenuListTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.panelMenuListWidth = global::Knotter.Droid.Resource.Attribute.panelMenuListWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.popupMenuStyle = global::Knotter.Droid.Resource.Attribute.popupMenuStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.popupTheme = global::Knotter.Droid.Resource.Attribute.popupTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.popupWindowStyle = global::Knotter.Droid.Resource.Attribute.popupWindowStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.preserveIconSpacing = global::Knotter.Droid.Resource.Attribute.preserveIconSpacing;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.pressedTranslationZ = global::Knotter.Droid.Resource.Attribute.pressedTranslationZ;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.progressBarPadding = global::Knotter.Droid.Resource.Attribute.progressBarPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.progressBarStyle = global::Knotter.Droid.Resource.Attribute.progressBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.queryBackground = global::Knotter.Droid.Resource.Attribute.queryBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.queryHint = global::Knotter.Droid.Resource.Attribute.queryHint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.radioButtonStyle = global::Knotter.Droid.Resource.Attribute.radioButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.ratingBarStyle = global::Knotter.Droid.Resource.Attribute.ratingBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.ratingBarStyleIndicator = global::Knotter.Droid.Resource.Attribute.ratingBarStyleIndicator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.ratingBarStyleSmall = global::Knotter.Droid.Resource.Attribute.ratingBarStyleSmall;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.reverseLayout = global::Knotter.Droid.Resource.Attribute.reverseLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.rippleColor = global::Knotter.Droid.Resource.Attribute.rippleColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.searchHintIcon = global::Knotter.Droid.Resource.Attribute.searchHintIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.searchIcon = global::Knotter.Droid.Resource.Attribute.searchIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.searchViewStyle = global::Knotter.Droid.Resource.Attribute.searchViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.seekBarStyle = global::Knotter.Droid.Resource.Attribute.seekBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.selectableItemBackground = global::Knotter.Droid.Resource.Attribute.selectableItemBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::Knotter.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.showAsAction = global::Knotter.Droid.Resource.Attribute.showAsAction;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.showDividers = global::Knotter.Droid.Resource.Attribute.showDividers;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.showText = global::Knotter.Droid.Resource.Attribute.showText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.singleChoiceItemLayout = global::Knotter.Droid.Resource.Attribute.singleChoiceItemLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.spanCount = global::Knotter.Droid.Resource.Attribute.spanCount;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.spinBars = global::Knotter.Droid.Resource.Attribute.spinBars;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::Knotter.Droid.Resource.Attribute.spinnerDropDownItemStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.spinnerStyle = global::Knotter.Droid.Resource.Attribute.spinnerStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.splitTrack = global::Knotter.Droid.Resource.Attribute.splitTrack;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.srcCompat = global::Knotter.Droid.Resource.Attribute.srcCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.stackFromEnd = global::Knotter.Droid.Resource.Attribute.stackFromEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.state_above_anchor = global::Knotter.Droid.Resource.Attribute.state_above_anchor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.statusBarBackground = global::Knotter.Droid.Resource.Attribute.statusBarBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.statusBarScrim = global::Knotter.Droid.Resource.Attribute.statusBarScrim;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.submitBackground = global::Knotter.Droid.Resource.Attribute.submitBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.subtitle = global::Knotter.Droid.Resource.Attribute.subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.subtitleTextAppearance = global::Knotter.Droid.Resource.Attribute.subtitleTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.subtitleTextColor = global::Knotter.Droid.Resource.Attribute.subtitleTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.subtitleTextStyle = global::Knotter.Droid.Resource.Attribute.subtitleTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.suggestionRowLayout = global::Knotter.Droid.Resource.Attribute.suggestionRowLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.switchMinWidth = global::Knotter.Droid.Resource.Attribute.switchMinWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.switchPadding = global::Knotter.Droid.Resource.Attribute.switchPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.switchStyle = global::Knotter.Droid.Resource.Attribute.switchStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.switchTextAppearance = global::Knotter.Droid.Resource.Attribute.switchTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabBackground = global::Knotter.Droid.Resource.Attribute.tabBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabContentStart = global::Knotter.Droid.Resource.Attribute.tabContentStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabGravity = global::Knotter.Droid.Resource.Attribute.tabGravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabIndicatorColor = global::Knotter.Droid.Resource.Attribute.tabIndicatorColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabIndicatorHeight = global::Knotter.Droid.Resource.Attribute.tabIndicatorHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabMaxWidth = global::Knotter.Droid.Resource.Attribute.tabMaxWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabMinWidth = global::Knotter.Droid.Resource.Attribute.tabMinWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabMode = global::Knotter.Droid.Resource.Attribute.tabMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabPadding = global::Knotter.Droid.Resource.Attribute.tabPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabPaddingBottom = global::Knotter.Droid.Resource.Attribute.tabPaddingBottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabPaddingEnd = global::Knotter.Droid.Resource.Attribute.tabPaddingEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabPaddingStart = global::Knotter.Droid.Resource.Attribute.tabPaddingStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabPaddingTop = global::Knotter.Droid.Resource.Attribute.tabPaddingTop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabSelectedTextColor = global::Knotter.Droid.Resource.Attribute.tabSelectedTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabTextAppearance = global::Knotter.Droid.Resource.Attribute.tabTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.tabTextColor = global::Knotter.Droid.Resource.Attribute.tabTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.textAllCaps = global::Knotter.Droid.Resource.Attribute.textAllCaps;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::Knotter.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.textAppearanceListItem = global::Knotter.Droid.Resource.Attribute.textAppearanceListItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.textAppearanceListItemSmall = global::Knotter.Droid.Resource.Attribute.textAppearanceListItemSmall;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::Knotter.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::Knotter.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::Knotter.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.textColorAlertDialogListItem = global::Knotter.Droid.Resource.Attribute.textColorAlertDialogListItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.textColorSearchUrl = global::Knotter.Droid.Resource.Attribute.textColorSearchUrl;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.theme = global::Knotter.Droid.Resource.Attribute.theme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.thickness = global::Knotter.Droid.Resource.Attribute.thickness;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.thumbTextPadding = global::Knotter.Droid.Resource.Attribute.thumbTextPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.title = global::Knotter.Droid.Resource.Attribute.title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.titleEnabled = global::Knotter.Droid.Resource.Attribute.titleEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.titleMarginBottom = global::Knotter.Droid.Resource.Attribute.titleMarginBottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.titleMarginEnd = global::Knotter.Droid.Resource.Attribute.titleMarginEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.titleMarginStart = global::Knotter.Droid.Resource.Attribute.titleMarginStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.titleMarginTop = global::Knotter.Droid.Resource.Attribute.titleMarginTop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.titleMargins = global::Knotter.Droid.Resource.Attribute.titleMargins;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.titleTextAppearance = global::Knotter.Droid.Resource.Attribute.titleTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.titleTextColor = global::Knotter.Droid.Resource.Attribute.titleTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.titleTextStyle = global::Knotter.Droid.Resource.Attribute.titleTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.toolbarId = global::Knotter.Droid.Resource.Attribute.toolbarId;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::Knotter.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.toolbarStyle = global::Knotter.Droid.Resource.Attribute.toolbarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.track = global::Knotter.Droid.Resource.Attribute.track;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.useCompatPadding = global::Knotter.Droid.Resource.Attribute.useCompatPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.voiceIcon = global::Knotter.Droid.Resource.Attribute.voiceIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowActionBar = global::Knotter.Droid.Resource.Attribute.windowActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowActionBarOverlay = global::Knotter.Droid.Resource.Attribute.windowActionBarOverlay;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowActionModeOverlay = global::Knotter.Droid.Resource.Attribute.windowActionModeOverlay;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowFixedHeightMajor = global::Knotter.Droid.Resource.Attribute.windowFixedHeightMajor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowFixedHeightMinor = global::Knotter.Droid.Resource.Attribute.windowFixedHeightMinor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowFixedWidthMajor = global::Knotter.Droid.Resource.Attribute.windowFixedWidthMajor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowFixedWidthMinor = global::Knotter.Droid.Resource.Attribute.windowFixedWidthMinor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowMinWidthMajor = global::Knotter.Droid.Resource.Attribute.windowMinWidthMajor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowMinWidthMinor = global::Knotter.Droid.Resource.Attribute.windowMinWidthMinor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Attribute.windowNoTitle = global::Knotter.Droid.Resource.Attribute.windowNoTitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::Knotter.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::Xamarians.MediaPlayer.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::Knotter.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::Knotter.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::Knotter.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::Knotter.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_color_highlight_material = global::Knotter.Droid.Resource.Color.abc_color_highlight_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_input_method_navigation_guard = global::Knotter.Droid.Resource.Color.abc_input_method_navigation_guard;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::Knotter.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::Knotter.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_primary_text_material_dark = global::Knotter.Droid.Resource.Color.abc_primary_text_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_primary_text_material_light = global::Knotter.Droid.Resource.Color.abc_primary_text_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_search_url_text = global::Knotter.Droid.Resource.Color.abc_search_url_text;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_search_url_text_normal = global::Knotter.Droid.Resource.Color.abc_search_url_text_normal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_search_url_text_pressed = global::Knotter.Droid.Resource.Color.abc_search_url_text_pressed;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_search_url_text_selected = global::Knotter.Droid.Resource.Color.abc_search_url_text_selected;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_secondary_text_material_dark = global::Knotter.Droid.Resource.Color.abc_secondary_text_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.abc_secondary_text_material_light = global::Knotter.Droid.Resource.Color.abc_secondary_text_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.accent_material_dark = global::Knotter.Droid.Resource.Color.accent_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.accent_material_light = global::Knotter.Droid.Resource.Color.accent_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.background_floating_material_dark = global::Knotter.Droid.Resource.Color.background_floating_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.background_floating_material_light = global::Knotter.Droid.Resource.Color.background_floating_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.background_material_dark = global::Knotter.Droid.Resource.Color.background_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.background_material_light = global::Knotter.Droid.Resource.Color.background_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::Knotter.Droid.Resource.Color.bright_foreground_disabled_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.bright_foreground_disabled_material_light = global::Knotter.Droid.Resource.Color.bright_foreground_disabled_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::Knotter.Droid.Resource.Color.bright_foreground_inverse_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.bright_foreground_inverse_material_light = global::Knotter.Droid.Resource.Color.bright_foreground_inverse_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.bright_foreground_material_dark = global::Knotter.Droid.Resource.Color.bright_foreground_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.bright_foreground_material_light = global::Knotter.Droid.Resource.Color.bright_foreground_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.button_material_dark = global::Knotter.Droid.Resource.Color.button_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.button_material_light = global::Knotter.Droid.Resource.Color.button_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.cardview_dark_background = global::Knotter.Droid.Resource.Color.cardview_dark_background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.cardview_light_background = global::Knotter.Droid.Resource.Color.cardview_light_background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.cardview_shadow_end_color = global::Knotter.Droid.Resource.Color.cardview_shadow_end_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.cardview_shadow_start_color = global::Knotter.Droid.Resource.Color.cardview_shadow_start_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.design_fab_shadow_end_color = global::Knotter.Droid.Resource.Color.design_fab_shadow_end_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.design_fab_shadow_mid_color = global::Knotter.Droid.Resource.Color.design_fab_shadow_mid_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.design_fab_shadow_start_color = global::Knotter.Droid.Resource.Color.design_fab_shadow_start_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::Knotter.Droid.Resource.Color.design_fab_stroke_end_inner_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::Knotter.Droid.Resource.Color.design_fab_stroke_end_outer_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::Knotter.Droid.Resource.Color.design_fab_stroke_top_inner_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::Knotter.Droid.Resource.Color.design_fab_stroke_top_outer_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.design_snackbar_background_color = global::Knotter.Droid.Resource.Color.design_snackbar_background_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::Knotter.Droid.Resource.Color.dim_foreground_disabled_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.dim_foreground_disabled_material_light = global::Knotter.Droid.Resource.Color.dim_foreground_disabled_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.dim_foreground_material_dark = global::Knotter.Droid.Resource.Color.dim_foreground_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.dim_foreground_material_light = global::Knotter.Droid.Resource.Color.dim_foreground_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.foreground_material_dark = global::Knotter.Droid.Resource.Color.foreground_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.foreground_material_light = global::Knotter.Droid.Resource.Color.foreground_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.highlighted_text_material_dark = global::Knotter.Droid.Resource.Color.highlighted_text_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.highlighted_text_material_light = global::Knotter.Droid.Resource.Color.highlighted_text_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_blue_grey_800 = global::Knotter.Droid.Resource.Color.material_blue_grey_800;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_blue_grey_900 = global::Knotter.Droid.Resource.Color.material_blue_grey_900;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_blue_grey_950 = global::Knotter.Droid.Resource.Color.material_blue_grey_950;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_deep_teal_200 = global::Knotter.Droid.Resource.Color.material_deep_teal_200;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_deep_teal_500 = global::Knotter.Droid.Resource.Color.material_deep_teal_500;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_grey_100 = global::Knotter.Droid.Resource.Color.material_grey_100;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_grey_300 = global::Knotter.Droid.Resource.Color.material_grey_300;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_grey_50 = global::Knotter.Droid.Resource.Color.material_grey_50;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_grey_600 = global::Knotter.Droid.Resource.Color.material_grey_600;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_grey_800 = global::Knotter.Droid.Resource.Color.material_grey_800;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_grey_850 = global::Knotter.Droid.Resource.Color.material_grey_850;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.material_grey_900 = global::Knotter.Droid.Resource.Color.material_grey_900;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.primary_dark_material_dark = global::Knotter.Droid.Resource.Color.primary_dark_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.primary_dark_material_light = global::Knotter.Droid.Resource.Color.primary_dark_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.primary_material_dark = global::Knotter.Droid.Resource.Color.primary_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.primary_material_light = global::Knotter.Droid.Resource.Color.primary_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.primary_text_default_material_dark = global::Knotter.Droid.Resource.Color.primary_text_default_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.primary_text_default_material_light = global::Knotter.Droid.Resource.Color.primary_text_default_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.primary_text_disabled_material_dark = global::Knotter.Droid.Resource.Color.primary_text_disabled_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.primary_text_disabled_material_light = global::Knotter.Droid.Resource.Color.primary_text_disabled_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.ripple_material_dark = global::Knotter.Droid.Resource.Color.ripple_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.ripple_material_light = global::Knotter.Droid.Resource.Color.ripple_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.secondary_text_default_material_dark = global::Knotter.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.secondary_text_default_material_light = global::Knotter.Droid.Resource.Color.secondary_text_default_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.secondary_text_disabled_material_dark = global::Knotter.Droid.Resource.Color.secondary_text_disabled_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.secondary_text_disabled_material_light = global::Knotter.Droid.Resource.Color.secondary_text_disabled_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::Knotter.Droid.Resource.Color.switch_thumb_disabled_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.switch_thumb_disabled_material_light = global::Knotter.Droid.Resource.Color.switch_thumb_disabled_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.switch_thumb_material_dark = global::Knotter.Droid.Resource.Color.switch_thumb_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.switch_thumb_material_light = global::Knotter.Droid.Resource.Color.switch_thumb_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.switch_thumb_normal_material_dark = global::Knotter.Droid.Resource.Color.switch_thumb_normal_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Color.switch_thumb_normal_material_light = global::Knotter.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::Knotter.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::Knotter.Droid.Resource.Dimension.abc_action_bar_default_height_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::Knotter.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::Knotter.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::Knotter.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::Knotter.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::Knotter.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::Knotter.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::Knotter.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::Knotter.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::Knotter.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_button_min_height_material = global::Knotter.Droid.Resource.Dimension.abc_action_button_min_height_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_button_min_width_material = global::Knotter.Droid.Resource.Dimension.abc_action_button_min_width_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::Knotter.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::Knotter.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::Knotter.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::Knotter.Droid.Resource.Dimension.abc_button_inset_vertical_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::Knotter.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::Knotter.Droid.Resource.Dimension.abc_button_padding_vertical_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::Knotter.Droid.Resource.Dimension.abc_config_prefDialogWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_control_corner_material = global::Knotter.Droid.Resource.Dimension.abc_control_corner_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_control_inset_material = global::Knotter.Droid.Resource.Dimension.abc_control_inset_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_control_padding_material = global::Knotter.Droid.Resource.Dimension.abc_control_padding_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::Knotter.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::Knotter.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::Knotter.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::Knotter.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dialog_min_width_major = global::Knotter.Droid.Resource.Dimension.abc_dialog_min_width_major;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::Knotter.Droid.Resource.Dimension.abc_dialog_min_width_minor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dialog_padding_material = global::Knotter.Droid.Resource.Dimension.abc_dialog_padding_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::Knotter.Droid.Resource.Dimension.abc_dialog_padding_top_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::Knotter.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::Knotter.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::Knotter.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::Knotter.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::Knotter.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::Knotter.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::Knotter.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::Knotter.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_floating_window_z = global::Knotter.Droid.Resource.Dimension.abc_floating_window_z;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::Knotter.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_panel_menu_list_width = global::Knotter.Droid.Resource.Dimension.abc_panel_menu_list_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_search_view_preferred_width = global::Knotter.Droid.Resource.Dimension.abc_search_view_preferred_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::Knotter.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::Knotter.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::Knotter.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_switch_padding = global::Knotter.Droid.Resource.Dimension.abc_switch_padding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_body_1_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_body_1_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_body_2_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_body_2_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_button_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_button_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_caption_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_caption_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_display_1_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_display_1_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_display_2_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_display_2_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_display_3_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_display_3_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_display_4_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_display_4_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_headline_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_headline_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_large_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_large_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_medium_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_medium_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_menu_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_menu_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_small_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_small_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_subhead_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_subhead_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::Knotter.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_title_material = global::Knotter.Droid.Resource.Dimension.abc_text_size_title_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::Knotter.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::Knotter.Droid.Resource.Dimension.cardview_compat_inset_shadow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.cardview_default_elevation = global::Knotter.Droid.Resource.Dimension.cardview_default_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.cardview_default_radius = global::Knotter.Droid.Resource.Dimension.cardview_default_radius;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_appbar_elevation = global::Knotter.Droid.Resource.Dimension.design_appbar_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::Knotter.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_fab_border_width = global::Knotter.Droid.Resource.Dimension.design_fab_border_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_fab_elevation = global::Knotter.Droid.Resource.Dimension.design_fab_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_fab_image_size = global::Knotter.Droid.Resource.Dimension.design_fab_image_size;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_fab_size_mini = global::Knotter.Droid.Resource.Dimension.design_fab_size_mini;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_fab_size_normal = global::Knotter.Droid.Resource.Dimension.design_fab_size_normal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::Knotter.Droid.Resource.Dimension.design_fab_translation_z_pressed;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_navigation_elevation = global::Knotter.Droid.Resource.Dimension.design_navigation_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_navigation_icon_padding = global::Knotter.Droid.Resource.Dimension.design_navigation_icon_padding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_navigation_icon_size = global::Knotter.Droid.Resource.Dimension.design_navigation_icon_size;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_navigation_max_width = global::Knotter.Droid.Resource.Dimension.design_navigation_max_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_navigation_padding_bottom = global::Knotter.Droid.Resource.Dimension.design_navigation_padding_bottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::Knotter.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::Knotter.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::Knotter.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_elevation = global::Knotter.Droid.Resource.Dimension.design_snackbar_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::Knotter.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_max_width = global::Knotter.Droid.Resource.Dimension.design_snackbar_max_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_min_width = global::Knotter.Droid.Resource.Dimension.design_snackbar_min_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::Knotter.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::Knotter.Droid.Resource.Dimension.design_snackbar_padding_vertical;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::Knotter.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_snackbar_text_size = global::Knotter.Droid.Resource.Dimension.design_snackbar_text_size;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_tab_max_width = global::Knotter.Droid.Resource.Dimension.design_tab_max_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::Knotter.Droid.Resource.Dimension.design_tab_scrollable_min_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_tab_text_size = global::Knotter.Droid.Resource.Dimension.design_tab_text_size;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.design_tab_text_size_2line = global::Knotter.Droid.Resource.Dimension.design_tab_text_size_2line;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.disabled_alpha_material_dark = global::Knotter.Droid.Resource.Dimension.disabled_alpha_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.disabled_alpha_material_light = global::Knotter.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.highlight_alpha_material_colored = global::Knotter.Droid.Resource.Dimension.highlight_alpha_material_colored;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.highlight_alpha_material_dark = global::Knotter.Droid.Resource.Dimension.highlight_alpha_material_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.highlight_alpha_material_light = global::Knotter.Droid.Resource.Dimension.highlight_alpha_material_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::Knotter.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::Knotter.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::Knotter.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.notification_large_icon_height = global::Knotter.Droid.Resource.Dimension.notification_large_icon_height;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.notification_large_icon_width = global::Knotter.Droid.Resource.Dimension.notification_large_icon_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Dimension.notification_subtext_size = global::Knotter.Droid.Resource.Dimension.notification_subtext_size;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::Knotter.Droid.Resource.Drawable.abc_action_bar_item_background_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_borderless_material = global::Knotter.Droid.Resource.Drawable.abc_btn_borderless_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_check_material = global::Knotter.Droid.Resource.Drawable.abc_btn_check_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::Knotter.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::Knotter.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_colored_material = global::Knotter.Droid.Resource.Drawable.abc_btn_colored_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::Knotter.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_radio_material = global::Knotter.Droid.Resource.Drawable.abc_btn_radio_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::Knotter.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::Knotter.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::Knotter.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::Knotter.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::Knotter.Droid.Resource.Drawable.abc_cab_background_internal_bg;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_cab_background_top_material = global::Knotter.Droid.Resource.Drawable.abc_cab_background_top_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_control_background_material = global::Knotter.Droid.Resource.Drawable.abc_control_background_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_edit_text_material = global::Knotter.Droid.Resource.Drawable.abc_edit_text_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::Knotter.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::Knotter.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::Knotter.Droid.Resource.Drawable.abc_ic_star_black_16dp;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::Knotter.Droid.Resource.Drawable.abc_ic_star_black_36dp;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::Knotter.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::Knotter.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_item_background_holo_dark = global::Knotter.Droid.Resource.Drawable.abc_item_background_holo_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_item_background_holo_light = global::Knotter.Droid.Resource.Drawable.abc_item_background_holo_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_focused_holo = global::Knotter.Droid.Resource.Drawable.abc_list_focused_holo;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_longpressed_holo = global::Knotter.Droid.Resource.Drawable.abc_list_longpressed_holo;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::Knotter.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::Knotter.Droid.Resource.Drawable.abc_list_pressed_holo_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::Knotter.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::Knotter.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::Knotter.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::Knotter.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::Knotter.Droid.Resource.Drawable.abc_list_selector_holo_dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_list_selector_holo_light = global::Knotter.Droid.Resource.Drawable.abc_list_selector_holo_light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::Knotter.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::Knotter.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::Knotter.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_ratingbar_small_material = global::Knotter.Droid.Resource.Drawable.abc_ratingbar_small_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::Knotter.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::Knotter.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::Knotter.Droid.Resource.Drawable.abc_seekbar_thumb_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_seekbar_track_material = global::Knotter.Droid.Resource.Drawable.abc_seekbar_track_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::Knotter.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::Knotter.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_switch_thumb_material = global::Knotter.Droid.Resource.Drawable.abc_switch_thumb_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_tab_indicator_material = global::Knotter.Droid.Resource.Drawable.abc_tab_indicator_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_text_cursor_material = global::Knotter.Droid.Resource.Drawable.abc_text_cursor_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::Knotter.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.abc_textfield_search_material = global::Knotter.Droid.Resource.Drawable.abc_textfield_search_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.design_fab_background = global::Knotter.Droid.Resource.Drawable.design_fab_background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.design_snackbar_background = global::Knotter.Droid.Resource.Drawable.design_snackbar_background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.landscape_mode = global::Knotter.Droid.Resource.Drawable.landscape_mode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.notification_template_icon_bg = global::Knotter.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::Xamarians.MediaPlayer.Droid.Resource.Drawable.portrait_mode = global::Knotter.Droid.Resource.Drawable.portrait_mode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action0 = global::Knotter.Droid.Resource.Id.action0;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_bar = global::Knotter.Droid.Resource.Id.action_bar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_bar_activity_content = global::Knotter.Droid.Resource.Id.action_bar_activity_content;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_bar_container = global::Knotter.Droid.Resource.Id.action_bar_container;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_bar_root = global::Knotter.Droid.Resource.Id.action_bar_root;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_bar_spinner = global::Knotter.Droid.Resource.Id.action_bar_spinner;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_bar_subtitle = global::Knotter.Droid.Resource.Id.action_bar_subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_bar_title = global::Knotter.Droid.Resource.Id.action_bar_title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_context_bar = global::Knotter.Droid.Resource.Id.action_context_bar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_divider = global::Knotter.Droid.Resource.Id.action_divider;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_menu_divider = global::Knotter.Droid.Resource.Id.action_menu_divider;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_menu_presenter = global::Knotter.Droid.Resource.Id.action_menu_presenter;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_mode_bar = global::Knotter.Droid.Resource.Id.action_mode_bar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_mode_bar_stub = global::Knotter.Droid.Resource.Id.action_mode_bar_stub;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.action_mode_close_button = global::Knotter.Droid.Resource.Id.action_mode_close_button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.activity_chooser_view_content = global::Knotter.Droid.Resource.Id.activity_chooser_view_content;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.alertTitle = global::Knotter.Droid.Resource.Id.alertTitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.always = global::Knotter.Droid.Resource.Id.always;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.beginning = global::Knotter.Droid.Resource.Id.beginning;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.bottom = global::Knotter.Droid.Resource.Id.bottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.buttonPanel = global::Knotter.Droid.Resource.Id.buttonPanel;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.cancel_action = global::Knotter.Droid.Resource.Id.cancel_action;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.center = global::Knotter.Droid.Resource.Id.center;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.center_horizontal = global::Knotter.Droid.Resource.Id.center_horizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.center_vertical = global::Knotter.Droid.Resource.Id.center_vertical;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.checkbox = global::Knotter.Droid.Resource.Id.checkbox;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.chronometer = global::Knotter.Droid.Resource.Id.chronometer;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.clip_horizontal = global::Knotter.Droid.Resource.Id.clip_horizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.clip_vertical = global::Knotter.Droid.Resource.Id.clip_vertical;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.collapseActionView = global::Knotter.Droid.Resource.Id.collapseActionView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.contentPanel = global::Knotter.Droid.Resource.Id.contentPanel;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.custom = global::Knotter.Droid.Resource.Id.custom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.customPanel = global::Knotter.Droid.Resource.Id.customPanel;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.decor_content_parent = global::Knotter.Droid.Resource.Id.decor_content_parent;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.default_activity_button = global::Knotter.Droid.Resource.Id.default_activity_button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.design_bottom_sheet = global::Knotter.Droid.Resource.Id.design_bottom_sheet;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.design_menu_item_action_area = global::Knotter.Droid.Resource.Id.design_menu_item_action_area;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.design_menu_item_action_area_stub = global::Knotter.Droid.Resource.Id.design_menu_item_action_area_stub;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.design_menu_item_text = global::Knotter.Droid.Resource.Id.design_menu_item_text;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.design_navigation_view = global::Knotter.Droid.Resource.Id.design_navigation_view;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.disableHome = global::Knotter.Droid.Resource.Id.disableHome;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.edit_query = global::Knotter.Droid.Resource.Id.edit_query;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.end = global::Knotter.Droid.Resource.Id.end;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.end_padder = global::Knotter.Droid.Resource.Id.end_padder;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.enterAlways = global::Knotter.Droid.Resource.Id.enterAlways;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.enterAlwaysCollapsed = global::Knotter.Droid.Resource.Id.enterAlwaysCollapsed;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.exitUntilCollapsed = global::Knotter.Droid.Resource.Id.exitUntilCollapsed;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.expand_activities_button = global::Knotter.Droid.Resource.Id.expand_activities_button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.expanded_menu = global::Knotter.Droid.Resource.Id.expanded_menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.fill = global::Knotter.Droid.Resource.Id.fill;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.fill_horizontal = global::Knotter.Droid.Resource.Id.fill_horizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.fill_vertical = global::Knotter.Droid.Resource.Id.fill_vertical;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.@fixed = global::Knotter.Droid.Resource.Id.@fixed;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.home = global::Knotter.Droid.Resource.Id.home;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.homeAsUp = global::Knotter.Droid.Resource.Id.homeAsUp;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.icon = global::Knotter.Droid.Resource.Id.icon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.ifRoom = global::Knotter.Droid.Resource.Id.ifRoom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.image = global::Knotter.Droid.Resource.Id.image;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.info = global::Knotter.Droid.Resource.Id.info;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.item_touch_helper_previous_elevation = global::Knotter.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.left = global::Knotter.Droid.Resource.Id.left;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.line1 = global::Knotter.Droid.Resource.Id.line1;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.line3 = global::Knotter.Droid.Resource.Id.line3;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.listMode = global::Knotter.Droid.Resource.Id.listMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.list_item = global::Knotter.Droid.Resource.Id.list_item;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.media_actions = global::Knotter.Droid.Resource.Id.media_actions;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.middle = global::Knotter.Droid.Resource.Id.middle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.mini = global::Knotter.Droid.Resource.Id.mini;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.multiply = global::Knotter.Droid.Resource.Id.multiply;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.navigation_header_container = global::Knotter.Droid.Resource.Id.navigation_header_container;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.never = global::Knotter.Droid.Resource.Id.never;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.none = global::Knotter.Droid.Resource.Id.none;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.normal = global::Knotter.Droid.Resource.Id.normal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.parallax = global::Knotter.Droid.Resource.Id.parallax;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.parentPanel = global::Knotter.Droid.Resource.Id.parentPanel;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.pin = global::Knotter.Droid.Resource.Id.pin;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.progress_circular = global::Knotter.Droid.Resource.Id.progress_circular;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.progress_horizontal = global::Knotter.Droid.Resource.Id.progress_horizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.radio = global::Knotter.Droid.Resource.Id.radio;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.right = global::Knotter.Droid.Resource.Id.right;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.screen = global::Knotter.Droid.Resource.Id.screen;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.scroll = global::Knotter.Droid.Resource.Id.scroll;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.scrollIndicatorDown = global::Knotter.Droid.Resource.Id.scrollIndicatorDown;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.scrollIndicatorUp = global::Knotter.Droid.Resource.Id.scrollIndicatorUp;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.scrollView = global::Knotter.Droid.Resource.Id.scrollView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.scrollable = global::Knotter.Droid.Resource.Id.scrollable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_badge = global::Knotter.Droid.Resource.Id.search_badge;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_bar = global::Knotter.Droid.Resource.Id.search_bar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_button = global::Knotter.Droid.Resource.Id.search_button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_close_btn = global::Knotter.Droid.Resource.Id.search_close_btn;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_edit_frame = global::Knotter.Droid.Resource.Id.search_edit_frame;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_go_btn = global::Knotter.Droid.Resource.Id.search_go_btn;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_mag_icon = global::Knotter.Droid.Resource.Id.search_mag_icon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_plate = global::Knotter.Droid.Resource.Id.search_plate;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_src_text = global::Knotter.Droid.Resource.Id.search_src_text;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.search_voice_btn = global::Knotter.Droid.Resource.Id.search_voice_btn;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.select_dialog_listview = global::Knotter.Droid.Resource.Id.select_dialog_listview;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.shortcut = global::Knotter.Droid.Resource.Id.shortcut;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.showCustom = global::Knotter.Droid.Resource.Id.showCustom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.showHome = global::Knotter.Droid.Resource.Id.showHome;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.showTitle = global::Knotter.Droid.Resource.Id.showTitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.snackbar_action = global::Knotter.Droid.Resource.Id.snackbar_action;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.snackbar_text = global::Knotter.Droid.Resource.Id.snackbar_text;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.snap = global::Knotter.Droid.Resource.Id.snap;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.spacer = global::Knotter.Droid.Resource.Id.spacer;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.split_action_bar = global::Knotter.Droid.Resource.Id.split_action_bar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.src_atop = global::Knotter.Droid.Resource.Id.src_atop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.src_in = global::Knotter.Droid.Resource.Id.src_in;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.src_over = global::Knotter.Droid.Resource.Id.src_over;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.start = global::Knotter.Droid.Resource.Id.start;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.status_bar_latest_event_content = global::Knotter.Droid.Resource.Id.status_bar_latest_event_content;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.submit_area = global::Knotter.Droid.Resource.Id.submit_area;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.tabMode = global::Knotter.Droid.Resource.Id.tabMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.text = global::Knotter.Droid.Resource.Id.text;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.text2 = global::Knotter.Droid.Resource.Id.text2;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.textSpacerNoButtons = global::Knotter.Droid.Resource.Id.textSpacerNoButtons;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.time = global::Knotter.Droid.Resource.Id.time;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.title = global::Knotter.Droid.Resource.Id.title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.title_template = global::Knotter.Droid.Resource.Id.title_template;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.top = global::Knotter.Droid.Resource.Id.top;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.topPanel = global::Knotter.Droid.Resource.Id.topPanel;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.touch_outside = global::Knotter.Droid.Resource.Id.touch_outside;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.up = global::Knotter.Droid.Resource.Id.up;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.useLogo = global::Knotter.Droid.Resource.Id.useLogo;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.view_offset_helper = global::Knotter.Droid.Resource.Id.view_offset_helper;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.withText = global::Knotter.Droid.Resource.Id.withText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Id.wrap_content = global::Knotter.Droid.Resource.Id.wrap_content;
-			global::Xamarians.MediaPlayer.Droid.Resource.Integer.abc_config_activityDefaultDur = global::Knotter.Droid.Resource.Integer.abc_config_activityDefaultDur;
-			global::Xamarians.MediaPlayer.Droid.Resource.Integer.abc_config_activityShortDur = global::Knotter.Droid.Resource.Integer.abc_config_activityShortDur;
-			global::Xamarians.MediaPlayer.Droid.Resource.Integer.bottom_sheet_slide_duration = global::Knotter.Droid.Resource.Integer.bottom_sheet_slide_duration;
-			global::Xamarians.MediaPlayer.Droid.Resource.Integer.cancel_button_image_alpha = global::Knotter.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Integer.design_snackbar_text_max_lines = global::Knotter.Droid.Resource.Integer.design_snackbar_text_max_lines;
-			global::Xamarians.MediaPlayer.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::Knotter.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_action_bar_title_item = global::Knotter.Droid.Resource.Layout.abc_action_bar_title_item;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_action_bar_up_container = global::Knotter.Droid.Resource.Layout.abc_action_bar_up_container;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_action_menu_item_layout = global::Knotter.Droid.Resource.Layout.abc_action_menu_item_layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_action_menu_layout = global::Knotter.Droid.Resource.Layout.abc_action_menu_layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_action_mode_bar = global::Knotter.Droid.Resource.Layout.abc_action_mode_bar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_action_mode_close_item_material = global::Knotter.Droid.Resource.Layout.abc_action_mode_close_item_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_activity_chooser_view = global::Knotter.Droid.Resource.Layout.abc_activity_chooser_view;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::Knotter.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::Knotter.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_alert_dialog_material = global::Knotter.Droid.Resource.Layout.abc_alert_dialog_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_dialog_title_material = global::Knotter.Droid.Resource.Layout.abc_dialog_title_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_expanded_menu_layout = global::Knotter.Droid.Resource.Layout.abc_expanded_menu_layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::Knotter.Droid.Resource.Layout.abc_list_menu_item_checkbox;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_list_menu_item_icon = global::Knotter.Droid.Resource.Layout.abc_list_menu_item_icon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_list_menu_item_layout = global::Knotter.Droid.Resource.Layout.abc_list_menu_item_layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_list_menu_item_radio = global::Knotter.Droid.Resource.Layout.abc_list_menu_item_radio;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_popup_menu_item_layout = global::Knotter.Droid.Resource.Layout.abc_popup_menu_item_layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_screen_content_include = global::Knotter.Droid.Resource.Layout.abc_screen_content_include;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_screen_simple = global::Knotter.Droid.Resource.Layout.abc_screen_simple;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::Knotter.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_screen_toolbar = global::Knotter.Droid.Resource.Layout.abc_screen_toolbar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::Knotter.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_search_view = global::Knotter.Droid.Resource.Layout.abc_search_view;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.abc_select_dialog_material = global::Knotter.Droid.Resource.Layout.abc_select_dialog_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_bottom_sheet_dialog = global::Knotter.Droid.Resource.Layout.design_bottom_sheet_dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_layout_snackbar = global::Knotter.Droid.Resource.Layout.design_layout_snackbar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_layout_snackbar_include = global::Knotter.Droid.Resource.Layout.design_layout_snackbar_include;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_layout_tab_icon = global::Knotter.Droid.Resource.Layout.design_layout_tab_icon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_layout_tab_text = global::Knotter.Droid.Resource.Layout.design_layout_tab_text;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_menu_item_action_area = global::Knotter.Droid.Resource.Layout.design_menu_item_action_area;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_navigation_item = global::Knotter.Droid.Resource.Layout.design_navigation_item;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_navigation_item_header = global::Knotter.Droid.Resource.Layout.design_navigation_item_header;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_navigation_item_separator = global::Knotter.Droid.Resource.Layout.design_navigation_item_separator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_navigation_item_subheader = global::Knotter.Droid.Resource.Layout.design_navigation_item_subheader;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_navigation_menu = global::Knotter.Droid.Resource.Layout.design_navigation_menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.design_navigation_menu_item = global::Knotter.Droid.Resource.Layout.design_navigation_menu_item;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.notification_media_action = global::Knotter.Droid.Resource.Layout.notification_media_action;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.notification_media_cancel_action = global::Knotter.Droid.Resource.Layout.notification_media_cancel_action;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.notification_template_big_media = global::Knotter.Droid.Resource.Layout.notification_template_big_media;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.notification_template_big_media_narrow = global::Knotter.Droid.Resource.Layout.notification_template_big_media_narrow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.notification_template_media = global::Knotter.Droid.Resource.Layout.notification_template_media;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.notification_template_part_chronometer = global::Knotter.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.notification_template_part_time = global::Knotter.Droid.Resource.Layout.notification_template_part_time;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.select_dialog_item_material = global::Knotter.Droid.Resource.Layout.select_dialog_item_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.select_dialog_multichoice_material = global::Knotter.Droid.Resource.Layout.select_dialog_multichoice_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.select_dialog_singlechoice_material = global::Knotter.Droid.Resource.Layout.select_dialog_singlechoice_material;
-			global::Xamarians.MediaPlayer.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::Knotter.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.ApplicationName = global::Knotter.Droid.Resource.String.ApplicationName;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.Hello = global::Knotter.Droid.Resource.String.Hello;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_action_bar_home_description = global::Knotter.Droid.Resource.String.abc_action_bar_home_description;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_action_bar_up_description = global::Knotter.Droid.Resource.String.abc_action_bar_up_description;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_action_menu_overflow_description = global::Knotter.Droid.Resource.String.abc_action_menu_overflow_description;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_action_mode_done = global::Knotter.Droid.Resource.String.abc_action_mode_done;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_activity_chooser_view_see_all = global::Knotter.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_activitychooserview_choose_application = global::Knotter.Droid.Resource.String.abc_activitychooserview_choose_application;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_capital_off = global::Knotter.Droid.Resource.String.abc_capital_off;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_capital_on = global::Knotter.Droid.Resource.String.abc_capital_on;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_search_hint = global::Knotter.Droid.Resource.String.abc_search_hint;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_searchview_description_clear = global::Knotter.Droid.Resource.String.abc_searchview_description_clear;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_searchview_description_query = global::Knotter.Droid.Resource.String.abc_searchview_description_query;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_searchview_description_search = global::Knotter.Droid.Resource.String.abc_searchview_description_search;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_searchview_description_submit = global::Knotter.Droid.Resource.String.abc_searchview_description_submit;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_searchview_description_voice = global::Knotter.Droid.Resource.String.abc_searchview_description_voice;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_shareactionprovider_share_with = global::Knotter.Droid.Resource.String.abc_shareactionprovider_share_with;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::Knotter.Droid.Resource.String.abc_shareactionprovider_share_with_application;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.abc_toolbar_collapse_description = global::Knotter.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.appbar_scrolling_view_behavior = global::Knotter.Droid.Resource.String.appbar_scrolling_view_behavior;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.bottom_sheet_behavior = global::Knotter.Droid.Resource.String.bottom_sheet_behavior;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.character_counter_pattern = global::Knotter.Droid.Resource.String.character_counter_pattern;
-			global::Xamarians.MediaPlayer.Droid.Resource.String.status_bar_notification_info_overflow = global::Knotter.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.AlertDialog_AppCompat = global::Knotter.Droid.Resource.Style.AlertDialog_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::Knotter.Droid.Resource.Style.AlertDialog_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Animation_AppCompat_Dialog = global::Knotter.Droid.Resource.Style.Animation_AppCompat_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::Knotter.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::Knotter.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::Knotter.Droid.Resource.Style.Base_AlertDialog_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::Knotter.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::Knotter.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::Knotter.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_CardView = global::Knotter.Droid.Resource.Style.Base_CardView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::Knotter.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::Knotter.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Knotter.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Knotter.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Knotter.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::Knotter.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::Knotter.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::Knotter.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::Knotter.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::Knotter.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::Knotter.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::Knotter.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::Knotter.Droid.Resource.Style.Base_V21_Theme_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::Knotter.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::Knotter.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::Knotter.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::Knotter.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::Knotter.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::Knotter.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::Knotter.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::Knotter.Droid.Resource.Style.Base_V7_Theme_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::Knotter.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::Knotter.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::Knotter.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::Knotter.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::Knotter.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::Knotter.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::Knotter.Droid.Resource.Style.Base_Widget_Design_TabLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.CardView = global::Knotter.Droid.Resource.Style.CardView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.CardView_Dark = global::Knotter.Droid.Resource.Style.CardView_Dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.CardView_Light = global::Knotter.Droid.Resource.Style.CardView_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Platform_AppCompat = global::Knotter.Droid.Resource.Style.Platform_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Platform_AppCompat_Light = global::Knotter.Droid.Resource.Style.Platform_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::Knotter.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::Knotter.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::Knotter.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::Knotter.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::Knotter.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::Knotter.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::Knotter.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::Knotter.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Large;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::Knotter.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::Knotter.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Design_Counter = global::Knotter.Droid.Resource.Style.TextAppearance_Design_Counter;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::Knotter.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Design_Error = global::Knotter.Droid.Resource.Style.TextAppearance_Design_Error;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Design_Hint = global::Knotter.Droid.Resource.Style.TextAppearance_Design_Hint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::Knotter.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Design_Tab = global::Knotter.Droid.Resource.Style.TextAppearance_Design_Tab;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::Knotter.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::Knotter.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::Knotter.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat = global::Knotter.Droid.Resource.Style.Theme_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::Knotter.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_DayNight = global::Knotter.Droid.Resource.Style.Theme_AppCompat_DayNight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::Knotter.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::Knotter.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::Knotter.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::Knotter.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::Knotter.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::Knotter.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Dialog = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::Knotter.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Light = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::Knotter.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::Knotter.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_Design = global::Knotter.Droid.Resource.Style.Theme_Design;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::Knotter.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_Design_Light = global::Knotter.Droid.Resource.Style.Theme_Design_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::Knotter.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::Knotter.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Theme_Design_NoActionBar = global::Knotter.Droid.Resource.Style.Theme_Design_NoActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.ThemeOverlay_AppCompat = global::Knotter.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::Knotter.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::Knotter.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::Knotter.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::Knotter.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActionButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActionMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::Knotter.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Button = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::Knotter.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::Knotter.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::Knotter.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::Knotter.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::Knotter.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_EditText = global::Knotter.Droid.Resource.Style.Widget_AppCompat_EditText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ImageButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ListView = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ListView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::Knotter.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::Knotter.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::Knotter.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::Knotter.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_RatingBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::Knotter.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::Knotter.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_SearchView = global::Knotter.Droid.Resource.Style.Widget_AppCompat_SearchView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_SeekBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Spinner = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Spinner;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::Knotter.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Toolbar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::Knotter.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_Design_AppBarLayout = global::Knotter.Droid.Resource.Style.Widget_Design_AppBarLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::Knotter.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::Knotter.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::Knotter.Droid.Resource.Style.Widget_Design_FloatingActionButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_Design_NavigationView = global::Knotter.Droid.Resource.Style.Widget_Design_NavigationView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::Knotter.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_Design_Snackbar = global::Knotter.Droid.Resource.Style.Widget_Design_Snackbar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_Design_TabLayout = global::Knotter.Droid.Resource.Style.Widget_Design_TabLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Style.Widget_Design_TextInputLayout = global::Knotter.Droid.Resource.Style.Widget_Design_TextInputLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar = global::Knotter.Droid.Resource.Styleable.ActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_background = global::Knotter.Droid.Resource.Styleable.ActionBar_background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::Knotter.Droid.Resource.Styleable.ActionBar_backgroundSplit;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::Knotter.Droid.Resource.Styleable.ActionBar_backgroundStacked;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::Knotter.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::Knotter.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::Knotter.Droid.Resource.Styleable.ActionBar_contentInsetRight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::Knotter.Droid.Resource.Styleable.ActionBar_contentInsetStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::Knotter.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_displayOptions = global::Knotter.Droid.Resource.Styleable.ActionBar_displayOptions;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_divider = global::Knotter.Droid.Resource.Styleable.ActionBar_divider;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_elevation = global::Knotter.Droid.Resource.Styleable.ActionBar_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_height = global::Knotter.Droid.Resource.Styleable.ActionBar_height;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::Knotter.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::Knotter.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_homeLayout = global::Knotter.Droid.Resource.Styleable.ActionBar_homeLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_icon = global::Knotter.Droid.Resource.Styleable.ActionBar_icon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::Knotter.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_itemPadding = global::Knotter.Droid.Resource.Styleable.ActionBar_itemPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_logo = global::Knotter.Droid.Resource.Styleable.ActionBar_logo;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_navigationMode = global::Knotter.Droid.Resource.Styleable.ActionBar_navigationMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_popupTheme = global::Knotter.Droid.Resource.Styleable.ActionBar_popupTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::Knotter.Droid.Resource.Styleable.ActionBar_progressBarPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::Knotter.Droid.Resource.Styleable.ActionBar_progressBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_subtitle = global::Knotter.Droid.Resource.Styleable.ActionBar_subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::Knotter.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_title = global::Knotter.Droid.Resource.Styleable.ActionBar_title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::Knotter.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBarLayout = global::Knotter.Droid.Resource.Styleable.ActionBarLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::Knotter.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMenuItemView = global::Knotter.Droid.Resource.Styleable.ActionMenuItemView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::Knotter.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMenuView = global::Knotter.Droid.Resource.Styleable.ActionMenuView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMode = global::Knotter.Droid.Resource.Styleable.ActionMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMode_background = global::Knotter.Droid.Resource.Styleable.ActionMode_background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::Knotter.Droid.Resource.Styleable.ActionMode_backgroundSplit;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::Knotter.Droid.Resource.Styleable.ActionMode_closeItemLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMode_height = global::Knotter.Droid.Resource.Styleable.ActionMode_height;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::Knotter.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::Knotter.Droid.Resource.Styleable.ActionMode_titleTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActivityChooserView = global::Knotter.Droid.Resource.Styleable.ActivityChooserView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::Knotter.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::Knotter.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AlertDialog = global::Knotter.Droid.Resource.Styleable.AlertDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AlertDialog_android_layout = global::Knotter.Droid.Resource.Styleable.AlertDialog_android_layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::Knotter.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::Knotter.Droid.Resource.Styleable.AlertDialog_listItemLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AlertDialog_listLayout = global::Knotter.Droid.Resource.Styleable.AlertDialog_listLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::Knotter.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::Knotter.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppBarLayout = global::Knotter.Droid.Resource.Styleable.AppBarLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppBarLayout_android_background = global::Knotter.Droid.Resource.Styleable.AppBarLayout_android_background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppBarLayout_elevation = global::Knotter.Droid.Resource.Styleable.AppBarLayout_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppBarLayout_expanded = global::Knotter.Droid.Resource.Styleable.AppBarLayout_expanded;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatImageView = global::Knotter.Droid.Resource.Styleable.AppCompatImageView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatImageView_android_src = global::Knotter.Droid.Resource.Styleable.AppCompatImageView_android_src;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::Knotter.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTextView = global::Knotter.Droid.Resource.Styleable.AppCompatTextView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::Knotter.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::Knotter.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme = global::Knotter.Droid.Resource.Styleable.AppCompatTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::Knotter.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ButtonBarLayout = global::Knotter.Droid.Resource.Styleable.ButtonBarLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::Knotter.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView = global::Knotter.Droid.Resource.Styleable.CardView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_android_minHeight = global::Knotter.Droid.Resource.Styleable.CardView_android_minHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_android_minWidth = global::Knotter.Droid.Resource.Styleable.CardView_android_minWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::Knotter.Droid.Resource.Styleable.CardView_cardBackgroundColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_cardCornerRadius = global::Knotter.Droid.Resource.Styleable.CardView_cardCornerRadius;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_cardElevation = global::Knotter.Droid.Resource.Styleable.CardView_cardElevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_cardMaxElevation = global::Knotter.Droid.Resource.Styleable.CardView_cardMaxElevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::Knotter.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::Knotter.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_contentPadding = global::Knotter.Droid.Resource.Styleable.CardView_contentPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::Knotter.Droid.Resource.Styleable.CardView_contentPaddingBottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::Knotter.Droid.Resource.Styleable.CardView_contentPaddingLeft;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_contentPaddingRight = global::Knotter.Droid.Resource.Styleable.CardView_contentPaddingRight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CardView_contentPaddingTop = global::Knotter.Droid.Resource.Styleable.CardView_contentPaddingTop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::Knotter.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CompoundButton = global::Knotter.Droid.Resource.Styleable.CompoundButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CompoundButton_android_button = global::Knotter.Droid.Resource.Styleable.CompoundButton_android_button;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CompoundButton_buttonTint = global::Knotter.Droid.Resource.Styleable.CompoundButton_buttonTint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::Knotter.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CoordinatorLayout = global::Knotter.Droid.Resource.Styleable.CoordinatorLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::Knotter.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::Knotter.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DesignTheme = global::Knotter.Droid.Resource.Styleable.DesignTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::Knotter.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::Knotter.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DrawerArrowToggle = global::Knotter.Droid.Resource.Styleable.DrawerArrowToggle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::Knotter.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::Knotter.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::Knotter.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DrawerArrowToggle_color = global::Knotter.Droid.Resource.Styleable.DrawerArrowToggle_color;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::Knotter.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::Knotter.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::Knotter.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::Knotter.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.FloatingActionButton = global::Knotter.Droid.Resource.Styleable.FloatingActionButton;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::Knotter.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::Knotter.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::Knotter.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.FloatingActionButton_elevation = global::Knotter.Droid.Resource.Styleable.FloatingActionButton_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::Knotter.Droid.Resource.Styleable.FloatingActionButton_fabSize;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::Knotter.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::Knotter.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::Knotter.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ForegroundLinearLayout = global::Knotter.Droid.Resource.Styleable.ForegroundLinearLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::Knotter.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::Knotter.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::Knotter.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_divider;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::Knotter.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ListPopupWindow = global::Knotter.Droid.Resource.Styleable.ListPopupWindow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::Knotter.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::Knotter.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuGroup = global::Knotter.Droid.Resource.Styleable.MenuGroup;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::Knotter.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuGroup_android_enabled = global::Knotter.Droid.Resource.Styleable.MenuGroup_android_enabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuGroup_android_id = global::Knotter.Droid.Resource.Styleable.MenuGroup_android_id;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::Knotter.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::Knotter.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuGroup_android_visible = global::Knotter.Droid.Resource.Styleable.MenuGroup_android_visible;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem = global::Knotter.Droid.Resource.Styleable.MenuItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_actionLayout = global::Knotter.Droid.Resource.Styleable.MenuItem_actionLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::Knotter.Droid.Resource.Styleable.MenuItem_actionProviderClass;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_actionViewClass = global::Knotter.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::Knotter.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_checkable = global::Knotter.Droid.Resource.Styleable.MenuItem_android_checkable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_checked = global::Knotter.Droid.Resource.Styleable.MenuItem_android_checked;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_enabled = global::Knotter.Droid.Resource.Styleable.MenuItem_android_enabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_icon = global::Knotter.Droid.Resource.Styleable.MenuItem_android_icon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_id = global::Knotter.Droid.Resource.Styleable.MenuItem_android_id;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::Knotter.Droid.Resource.Styleable.MenuItem_android_menuCategory;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::Knotter.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_onClick = global::Knotter.Droid.Resource.Styleable.MenuItem_android_onClick;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::Knotter.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_title = global::Knotter.Droid.Resource.Styleable.MenuItem_android_title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::Knotter.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_android_visible = global::Knotter.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuItem_showAsAction = global::Knotter.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuView = global::Knotter.Droid.Resource.Styleable.MenuView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuView_android_headerBackground = global::Knotter.Droid.Resource.Styleable.MenuView_android_headerBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::Knotter.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuView_android_itemBackground = global::Knotter.Droid.Resource.Styleable.MenuView_android_itemBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::Knotter.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::Knotter.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::Knotter.Droid.Resource.Styleable.MenuView_android_verticalDivider;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::Knotter.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::Knotter.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView = global::Knotter.Droid.Resource.Styleable.NavigationView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_android_background = global::Knotter.Droid.Resource.Styleable.NavigationView_android_background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::Knotter.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::Knotter.Droid.Resource.Styleable.NavigationView_android_maxWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_elevation = global::Knotter.Droid.Resource.Styleable.NavigationView_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_headerLayout = global::Knotter.Droid.Resource.Styleable.NavigationView_headerLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_itemBackground = global::Knotter.Droid.Resource.Styleable.NavigationView_itemBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_itemIconTint = global::Knotter.Droid.Resource.Styleable.NavigationView_itemIconTint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::Knotter.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_itemTextColor = global::Knotter.Droid.Resource.Styleable.NavigationView_itemTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.NavigationView_menu = global::Knotter.Droid.Resource.Styleable.NavigationView_menu;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.PopupWindow = global::Knotter.Droid.Resource.Styleable.PopupWindow;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::Knotter.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::Knotter.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.PopupWindowBackgroundState = global::Knotter.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::Knotter.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.RecyclerView = global::Knotter.Droid.Resource.Styleable.RecyclerView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.RecyclerView_android_orientation = global::Knotter.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.RecyclerView_layoutManager = global::Knotter.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::Knotter.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.RecyclerView_spanCount = global::Knotter.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::Knotter.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::Knotter.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::Knotter.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView = global::Knotter.Droid.Resource.Styleable.SearchView;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_android_focusable = global::Knotter.Droid.Resource.Styleable.SearchView_android_focusable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_android_imeOptions = global::Knotter.Droid.Resource.Styleable.SearchView_android_imeOptions;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_android_inputType = global::Knotter.Droid.Resource.Styleable.SearchView_android_inputType;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_android_maxWidth = global::Knotter.Droid.Resource.Styleable.SearchView_android_maxWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_closeIcon = global::Knotter.Droid.Resource.Styleable.SearchView_closeIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_commitIcon = global::Knotter.Droid.Resource.Styleable.SearchView_commitIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::Knotter.Droid.Resource.Styleable.SearchView_defaultQueryHint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_goIcon = global::Knotter.Droid.Resource.Styleable.SearchView_goIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::Knotter.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_layout = global::Knotter.Droid.Resource.Styleable.SearchView_layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_queryBackground = global::Knotter.Droid.Resource.Styleable.SearchView_queryBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_queryHint = global::Knotter.Droid.Resource.Styleable.SearchView_queryHint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_searchHintIcon = global::Knotter.Droid.Resource.Styleable.SearchView_searchHintIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_searchIcon = global::Knotter.Droid.Resource.Styleable.SearchView_searchIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_submitBackground = global::Knotter.Droid.Resource.Styleable.SearchView_submitBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::Knotter.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SearchView_voiceIcon = global::Knotter.Droid.Resource.Styleable.SearchView_voiceIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SnackbarLayout = global::Knotter.Droid.Resource.Styleable.SnackbarLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::Knotter.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SnackbarLayout_elevation = global::Knotter.Droid.Resource.Styleable.SnackbarLayout_elevation;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::Knotter.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Spinner = global::Knotter.Droid.Resource.Styleable.Spinner;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::Knotter.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Spinner_android_entries = global::Knotter.Droid.Resource.Styleable.Spinner_android_entries;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Spinner_android_popupBackground = global::Knotter.Droid.Resource.Styleable.Spinner_android_popupBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Spinner_android_prompt = global::Knotter.Droid.Resource.Styleable.Spinner_android_prompt;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Spinner_popupTheme = global::Knotter.Droid.Resource.Styleable.Spinner_popupTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat = global::Knotter.Droid.Resource.Styleable.SwitchCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::Knotter.Droid.Resource.Styleable.SwitchCompat_android_textOff;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::Knotter.Droid.Resource.Styleable.SwitchCompat_android_textOn;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::Knotter.Droid.Resource.Styleable.SwitchCompat_android_thumb;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_showText = global::Knotter.Droid.Resource.Styleable.SwitchCompat_showText;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::Knotter.Droid.Resource.Styleable.SwitchCompat_splitTrack;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::Knotter.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::Knotter.Droid.Resource.Styleable.SwitchCompat_switchPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::Knotter.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::Knotter.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.SwitchCompat_track = global::Knotter.Droid.Resource.Styleable.SwitchCompat_track;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabItem = global::Knotter.Droid.Resource.Styleable.TabItem;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabItem_android_icon = global::Knotter.Droid.Resource.Styleable.TabItem_android_icon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabItem_android_layout = global::Knotter.Droid.Resource.Styleable.TabItem_android_layout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabItem_android_text = global::Knotter.Droid.Resource.Styleable.TabItem_android_text;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout = global::Knotter.Droid.Resource.Styleable.TabLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabBackground = global::Knotter.Droid.Resource.Styleable.TabLayout_tabBackground;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabContentStart = global::Knotter.Droid.Resource.Styleable.TabLayout_tabContentStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabGravity = global::Knotter.Droid.Resource.Styleable.TabLayout_tabGravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::Knotter.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::Knotter.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::Knotter.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::Knotter.Droid.Resource.Styleable.TabLayout_tabMinWidth;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabMode = global::Knotter.Droid.Resource.Styleable.TabLayout_tabMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabPadding = global::Knotter.Droid.Resource.Styleable.TabLayout_tabPadding;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::Knotter.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::Knotter.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::Knotter.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::Knotter.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::Knotter.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::Knotter.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TabLayout_tabTextColor = global::Knotter.Droid.Resource.Styleable.TabLayout_tabTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance = global::Knotter.Droid.Resource.Styleable.TextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::Knotter.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::Knotter.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::Knotter.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::Knotter.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance_android_textColor = global::Knotter.Droid.Resource.Styleable.TextAppearance_android_textColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance_android_textSize = global::Knotter.Droid.Resource.Styleable.TextAppearance_android_textSize;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::Knotter.Droid.Resource.Styleable.TextAppearance_android_textStyle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance_android_typeface = global::Knotter.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::Knotter.Droid.Resource.Styleable.TextAppearance_textAllCaps;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout = global::Knotter.Droid.Resource.Styleable.TextInputLayout;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_android_hint = global::Knotter.Droid.Resource.Styleable.TextInputLayout_android_hint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::Knotter.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::Knotter.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::Knotter.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::Knotter.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::Knotter.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::Knotter.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::Knotter.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::Knotter.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::Knotter.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::Knotter.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar = global::Knotter.Droid.Resource.Styleable.Toolbar;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_android_gravity = global::Knotter.Droid.Resource.Styleable.Toolbar_android_gravity;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_android_minHeight = global::Knotter.Droid.Resource.Styleable.Toolbar_android_minHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::Knotter.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_collapseIcon = global::Knotter.Droid.Resource.Styleable.Toolbar_collapseIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::Knotter.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::Knotter.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::Knotter.Droid.Resource.Styleable.Toolbar_contentInsetRight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::Knotter.Droid.Resource.Styleable.Toolbar_contentInsetStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_logo = global::Knotter.Droid.Resource.Styleable.Toolbar_logo;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_logoDescription = global::Knotter.Droid.Resource.Styleable.Toolbar_logoDescription;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::Knotter.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::Knotter.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_navigationIcon = global::Knotter.Droid.Resource.Styleable.Toolbar_navigationIcon;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_popupTheme = global::Knotter.Droid.Resource.Styleable.Toolbar_popupTheme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_subtitle = global::Knotter.Droid.Resource.Styleable.Toolbar_subtitle;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::Knotter.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::Knotter.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_title = global::Knotter.Droid.Resource.Styleable.Toolbar_title;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::Knotter.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::Knotter.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::Knotter.Droid.Resource.Styleable.Toolbar_titleMarginStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::Knotter.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_titleMargins = global::Knotter.Droid.Resource.Styleable.Toolbar_titleMargins;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::Knotter.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.Toolbar_titleTextColor = global::Knotter.Droid.Resource.Styleable.Toolbar_titleTextColor;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.View = global::Knotter.Droid.Resource.Styleable.View;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.View_android_focusable = global::Knotter.Droid.Resource.Styleable.View_android_focusable;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.View_android_theme = global::Knotter.Droid.Resource.Styleable.View_android_theme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.View_paddingEnd = global::Knotter.Droid.Resource.Styleable.View_paddingEnd;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.View_paddingStart = global::Knotter.Droid.Resource.Styleable.View_paddingStart;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.View_theme = global::Knotter.Droid.Resource.Styleable.View_theme;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ViewBackgroundHelper = global::Knotter.Droid.Resource.Styleable.ViewBackgroundHelper;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::Knotter.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::Knotter.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::Knotter.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ViewStubCompat = global::Knotter.Droid.Resource.Styleable.ViewStubCompat;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ViewStubCompat_android_id = global::Knotter.Droid.Resource.Styleable.ViewStubCompat_android_id;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::Knotter.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::Xamarians.MediaPlayer.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::Knotter.Droid.Resource.Styleable.ViewStubCompat_android_layout;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::Knotter.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::Knotter.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::Knotter.Droid.Resource.Attribute.font;
@@ -7283,76 +5749,64 @@ namespace Knotter.Droid
 			public const int ic_mtrl_chip_close_circle = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int landscape_mode = 2131165287;
+			public const int loading = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int loading = 2131165288;
+			public const int mtrl_snackbar_background = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int mtrl_snackbar_background = 2131165289;
+			public const int mtrl_tabs_default_indicator = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int mtrl_tabs_default_indicator = 2131165290;
+			public const int navigation_empty_icon = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int navigation_empty_icon = 2131165291;
+			public const int notification_action_background = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int notification_action_background = 2131165292;
+			public const int notification_bg = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int notification_bg = 2131165293;
+			public const int notification_bg_low = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int notification_bg_low = 2131165294;
+			public const int notification_bg_low_normal = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int notification_bg_low_normal = 2131165295;
+			public const int notification_bg_low_pressed = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int notification_bg_low_pressed = 2131165296;
+			public const int notification_bg_normal = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int notification_bg_normal = 2131165297;
+			public const int notification_bg_normal_pressed = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int notification_bg_normal_pressed = 2131165298;
+			public const int notification_icon_background = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int notification_icon_background = 2131165299;
+			public const int notification_template_icon_bg = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int notification_template_icon_bg = 2131165300;
+			public const int notification_template_icon_low_bg = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int notification_template_icon_low_bg = 2131165301;
+			public const int notification_tile_bg = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int notification_tile_bg = 2131165302;
+			public const int notify_panel_notification_icon_bg = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int notify_panel_notification_icon_bg = 2131165303;
+			public const int stripe = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int portrait_mode = 2131165304;
+			public const int tiledstripe = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int star = 2131165305;
+			public const int tooltip_frame_dark = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int star_void = 2131165306;
-			
-			// aapt resource value: 0x7F07007B
-			public const int stripe = 2131165307;
-			
-			// aapt resource value: 0x7F07007C
-			public const int tiledstripe = 2131165308;
-			
-			// aapt resource value: 0x7F07007D
-			public const int tooltip_frame_dark = 2131165309;
-			
-			// aapt resource value: 0x7F07007E
-			public const int tooltip_frame_light = 2131165310;
+			public const int tooltip_frame_light = 2131165306;
 			
 			static Drawable()
 			{
@@ -8363,173 +6817,167 @@ namespace Knotter.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7F0E0002
-			public const int abc_action_bar_home_description = 2131623938;
-			
-			// aapt resource value: 0x7F0E0003
-			public const int abc_action_bar_up_description = 2131623939;
-			
-			// aapt resource value: 0x7F0E0004
-			public const int abc_action_menu_overflow_description = 2131623940;
-			
-			// aapt resource value: 0x7F0E0005
-			public const int abc_action_mode_done = 2131623941;
-			
-			// aapt resource value: 0x7F0E0007
-			public const int abc_activitychooserview_choose_application = 2131623943;
-			
-			// aapt resource value: 0x7F0E0006
-			public const int abc_activity_chooser_view_see_all = 2131623942;
-			
-			// aapt resource value: 0x7F0E0008
-			public const int abc_capital_off = 2131623944;
-			
-			// aapt resource value: 0x7F0E0009
-			public const int abc_capital_on = 2131623945;
-			
-			// aapt resource value: 0x7F0E000A
-			public const int abc_font_family_body_1_material = 2131623946;
-			
-			// aapt resource value: 0x7F0E000B
-			public const int abc_font_family_body_2_material = 2131623947;
-			
-			// aapt resource value: 0x7F0E000C
-			public const int abc_font_family_button_material = 2131623948;
-			
-			// aapt resource value: 0x7F0E000D
-			public const int abc_font_family_caption_material = 2131623949;
-			
-			// aapt resource value: 0x7F0E000E
-			public const int abc_font_family_display_1_material = 2131623950;
-			
-			// aapt resource value: 0x7F0E000F
-			public const int abc_font_family_display_2_material = 2131623951;
-			
-			// aapt resource value: 0x7F0E0010
-			public const int abc_font_family_display_3_material = 2131623952;
-			
-			// aapt resource value: 0x7F0E0011
-			public const int abc_font_family_display_4_material = 2131623953;
-			
-			// aapt resource value: 0x7F0E0012
-			public const int abc_font_family_headline_material = 2131623954;
-			
-			// aapt resource value: 0x7F0E0013
-			public const int abc_font_family_menu_material = 2131623955;
-			
-			// aapt resource value: 0x7F0E0014
-			public const int abc_font_family_subhead_material = 2131623956;
-			
-			// aapt resource value: 0x7F0E0015
-			public const int abc_font_family_title_material = 2131623957;
-			
-			// aapt resource value: 0x7F0E0016
-			public const int abc_menu_alt_shortcut_label = 2131623958;
-			
-			// aapt resource value: 0x7F0E0017
-			public const int abc_menu_ctrl_shortcut_label = 2131623959;
-			
-			// aapt resource value: 0x7F0E0018
-			public const int abc_menu_delete_shortcut_label = 2131623960;
-			
-			// aapt resource value: 0x7F0E0019
-			public const int abc_menu_enter_shortcut_label = 2131623961;
-			
-			// aapt resource value: 0x7F0E001A
-			public const int abc_menu_function_shortcut_label = 2131623962;
-			
-			// aapt resource value: 0x7F0E001B
-			public const int abc_menu_meta_shortcut_label = 2131623963;
-			
-			// aapt resource value: 0x7F0E001C
-			public const int abc_menu_shift_shortcut_label = 2131623964;
-			
-			// aapt resource value: 0x7F0E001D
-			public const int abc_menu_space_shortcut_label = 2131623965;
-			
-			// aapt resource value: 0x7F0E001E
-			public const int abc_menu_sym_shortcut_label = 2131623966;
-			
-			// aapt resource value: 0x7F0E001F
-			public const int abc_prepend_shortcut_label = 2131623967;
-			
-			// aapt resource value: 0x7F0E0021
-			public const int abc_searchview_description_clear = 2131623969;
-			
-			// aapt resource value: 0x7F0E0022
-			public const int abc_searchview_description_query = 2131623970;
-			
-			// aapt resource value: 0x7F0E0023
-			public const int abc_searchview_description_search = 2131623971;
-			
-			// aapt resource value: 0x7F0E0024
-			public const int abc_searchview_description_submit = 2131623972;
-			
-			// aapt resource value: 0x7F0E0025
-			public const int abc_searchview_description_voice = 2131623973;
-			
-			// aapt resource value: 0x7F0E0020
-			public const int abc_search_hint = 2131623968;
-			
-			// aapt resource value: 0x7F0E0026
-			public const int abc_shareactionprovider_share_with = 2131623974;
-			
-			// aapt resource value: 0x7F0E0027
-			public const int abc_shareactionprovider_share_with_application = 2131623975;
-			
-			// aapt resource value: 0x7F0E0028
-			public const int abc_toolbar_collapse_description = 2131623976;
-			
-			// aapt resource value: 0x7F0E0029
-			public const int appbar_scrolling_view_behavior = 2131623977;
-			
 			// aapt resource value: 0x7F0E0000
-			public const int ApplicationName = 2131623936;
-			
-			// aapt resource value: 0x7F0E002A
-			public const int bottom_sheet_behavior = 2131623978;
-			
-			// aapt resource value: 0x7F0E002B
-			public const int character_counter_content_description = 2131623979;
-			
-			// aapt resource value: 0x7F0E002C
-			public const int character_counter_pattern = 2131623980;
-			
-			// aapt resource value: 0x7F0E002D
-			public const int fab_transformation_scrim_behavior = 2131623981;
-			
-			// aapt resource value: 0x7F0E002E
-			public const int fab_transformation_sheet_behavior = 2131623982;
+			public const int abc_action_bar_home_description = 2131623936;
 			
 			// aapt resource value: 0x7F0E0001
-			public const int Hello = 2131623937;
+			public const int abc_action_bar_up_description = 2131623937;
+			
+			// aapt resource value: 0x7F0E0002
+			public const int abc_action_menu_overflow_description = 2131623938;
+			
+			// aapt resource value: 0x7F0E0003
+			public const int abc_action_mode_done = 2131623939;
+			
+			// aapt resource value: 0x7F0E0005
+			public const int abc_activitychooserview_choose_application = 2131623941;
+			
+			// aapt resource value: 0x7F0E0004
+			public const int abc_activity_chooser_view_see_all = 2131623940;
+			
+			// aapt resource value: 0x7F0E0006
+			public const int abc_capital_off = 2131623942;
+			
+			// aapt resource value: 0x7F0E0007
+			public const int abc_capital_on = 2131623943;
+			
+			// aapt resource value: 0x7F0E0008
+			public const int abc_font_family_body_1_material = 2131623944;
+			
+			// aapt resource value: 0x7F0E0009
+			public const int abc_font_family_body_2_material = 2131623945;
+			
+			// aapt resource value: 0x7F0E000A
+			public const int abc_font_family_button_material = 2131623946;
+			
+			// aapt resource value: 0x7F0E000B
+			public const int abc_font_family_caption_material = 2131623947;
+			
+			// aapt resource value: 0x7F0E000C
+			public const int abc_font_family_display_1_material = 2131623948;
+			
+			// aapt resource value: 0x7F0E000D
+			public const int abc_font_family_display_2_material = 2131623949;
+			
+			// aapt resource value: 0x7F0E000E
+			public const int abc_font_family_display_3_material = 2131623950;
+			
+			// aapt resource value: 0x7F0E000F
+			public const int abc_font_family_display_4_material = 2131623951;
+			
+			// aapt resource value: 0x7F0E0010
+			public const int abc_font_family_headline_material = 2131623952;
+			
+			// aapt resource value: 0x7F0E0011
+			public const int abc_font_family_menu_material = 2131623953;
+			
+			// aapt resource value: 0x7F0E0012
+			public const int abc_font_family_subhead_material = 2131623954;
+			
+			// aapt resource value: 0x7F0E0013
+			public const int abc_font_family_title_material = 2131623955;
+			
+			// aapt resource value: 0x7F0E0014
+			public const int abc_menu_alt_shortcut_label = 2131623956;
+			
+			// aapt resource value: 0x7F0E0015
+			public const int abc_menu_ctrl_shortcut_label = 2131623957;
+			
+			// aapt resource value: 0x7F0E0016
+			public const int abc_menu_delete_shortcut_label = 2131623958;
+			
+			// aapt resource value: 0x7F0E0017
+			public const int abc_menu_enter_shortcut_label = 2131623959;
+			
+			// aapt resource value: 0x7F0E0018
+			public const int abc_menu_function_shortcut_label = 2131623960;
+			
+			// aapt resource value: 0x7F0E0019
+			public const int abc_menu_meta_shortcut_label = 2131623961;
+			
+			// aapt resource value: 0x7F0E001A
+			public const int abc_menu_shift_shortcut_label = 2131623962;
+			
+			// aapt resource value: 0x7F0E001B
+			public const int abc_menu_space_shortcut_label = 2131623963;
+			
+			// aapt resource value: 0x7F0E001C
+			public const int abc_menu_sym_shortcut_label = 2131623964;
+			
+			// aapt resource value: 0x7F0E001D
+			public const int abc_prepend_shortcut_label = 2131623965;
+			
+			// aapt resource value: 0x7F0E001F
+			public const int abc_searchview_description_clear = 2131623967;
+			
+			// aapt resource value: 0x7F0E0020
+			public const int abc_searchview_description_query = 2131623968;
+			
+			// aapt resource value: 0x7F0E0021
+			public const int abc_searchview_description_search = 2131623969;
+			
+			// aapt resource value: 0x7F0E0022
+			public const int abc_searchview_description_submit = 2131623970;
+			
+			// aapt resource value: 0x7F0E0023
+			public const int abc_searchview_description_voice = 2131623971;
+			
+			// aapt resource value: 0x7F0E001E
+			public const int abc_search_hint = 2131623966;
+			
+			// aapt resource value: 0x7F0E0024
+			public const int abc_shareactionprovider_share_with = 2131623972;
+			
+			// aapt resource value: 0x7F0E0025
+			public const int abc_shareactionprovider_share_with_application = 2131623973;
+			
+			// aapt resource value: 0x7F0E0026
+			public const int abc_toolbar_collapse_description = 2131623974;
+			
+			// aapt resource value: 0x7F0E0027
+			public const int appbar_scrolling_view_behavior = 2131623975;
+			
+			// aapt resource value: 0x7F0E0028
+			public const int bottom_sheet_behavior = 2131623976;
+			
+			// aapt resource value: 0x7F0E0029
+			public const int character_counter_content_description = 2131623977;
+			
+			// aapt resource value: 0x7F0E002A
+			public const int character_counter_pattern = 2131623978;
+			
+			// aapt resource value: 0x7F0E002B
+			public const int fab_transformation_scrim_behavior = 2131623979;
+			
+			// aapt resource value: 0x7F0E002C
+			public const int fab_transformation_sheet_behavior = 2131623980;
+			
+			// aapt resource value: 0x7F0E002D
+			public const int hide_bottom_view_on_scroll_behavior = 2131623981;
+			
+			// aapt resource value: 0x7F0E002E
+			public const int mtrl_chip_close_icon_content_description = 2131623982;
 			
 			// aapt resource value: 0x7F0E002F
-			public const int hide_bottom_view_on_scroll_behavior = 2131623983;
+			public const int password_toggle_content_description = 2131623983;
 			
 			// aapt resource value: 0x7F0E0030
-			public const int mtrl_chip_close_icon_content_description = 2131623984;
+			public const int path_password_eye = 2131623984;
 			
 			// aapt resource value: 0x7F0E0031
-			public const int password_toggle_content_description = 2131623985;
+			public const int path_password_eye_mask_strike_through = 2131623985;
 			
 			// aapt resource value: 0x7F0E0032
-			public const int path_password_eye = 2131623986;
+			public const int path_password_eye_mask_visible = 2131623986;
 			
 			// aapt resource value: 0x7F0E0033
-			public const int path_password_eye_mask_strike_through = 2131623987;
+			public const int path_password_strike_through = 2131623987;
 			
 			// aapt resource value: 0x7F0E0034
-			public const int path_password_eye_mask_visible = 2131623988;
+			public const int search_menu_title = 2131623988;
 			
 			// aapt resource value: 0x7F0E0035
-			public const int path_password_strike_through = 2131623989;
-			
-			// aapt resource value: 0x7F0E0036
-			public const int search_menu_title = 2131623990;
-			
-			// aapt resource value: 0x7F0E0037
-			public const int status_bar_notification_info_overflow = 2131623991;
+			public const int status_bar_notification_info_overflow = 2131623989;
 			
 			static String()
 			{

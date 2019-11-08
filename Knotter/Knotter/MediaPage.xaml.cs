@@ -25,14 +25,14 @@ namespace Knotter
             SelectedPost = Booru.Results[SelectedPostIndex];
 
             //add gesture to the MediaWindow
-            PanGestureRecognizer swipe = new PanGestureRecognizer();
-            swipe.PanUpdated += OnImagePanUpdated;
-            UIContentLayers.GestureRecognizers.Add(swipe);
+            var MediaWindowPan = new PanGestureRecognizer();
+            MediaWindowPan.PanUpdated += OnMediaPanUpdated;
+            UIContentLayers.GestureRecognizers.Add(MediaWindowPan);
 
-            //Add Gesture to the PullUp
-            PanGestureRecognizer SlideY = new PanGestureRecognizer();
-            SlideY.PanUpdated += OnPanUpdated;
-            UIContentLayers.GestureRecognizers.Add(SlideY);
+            //Add Gesture to the SlidingMenu
+            PanGestureRecognizer SlidingMenu = new PanGestureRecognizer();
+            SlidingMenu.PanUpdated += OnSlidingMenuPanUpdated;
+            UIContentLayers.GestureRecognizers.Add(SlidingMenu);
 
             //button event
             UIButtonCollapse.Clicked +=
@@ -42,15 +42,13 @@ namespace Knotter
             UpdateMediaContent();
             UpdateSlidingPane();
             Indicate(false);
-
-            //UISlidingPane.TranslationY = Booru.ScreenHeight - (Booru.ScreenHeight / 8);
         }
 
         private void Collapse_clicked()
         {
             UIButtonCollapse.IsVisible = false;
 
-            UISlidingPane.TranslateTo(0, LowerBounds);
+            UISlidingMenu.TranslateTo(0, LowerBounds);
         }
 
         private async void GetNextPost()
@@ -90,14 +88,27 @@ namespace Knotter
         {
             UIMediaContent.Children.Clear();
 
-            UIMediaContent.Children.Add(
-                GetMedia(SelectedPost)
-                );
+            var Caption = new Button
+            {
+                Text = $"↑ {SelectedPost.Score} ↓;  View on {Settings.HostValue} ?",
+                BackgroundColor = Color.Accent,
+                HeightRequest = 20,
+            };
+            //UIMediaContent.Children.Add(Caption);
+
+            var media = GetMedia(SelectedPost);
+            //UIMediaContent.Children.Add(media);
+
+            var grid = new Grid
+            {
+                Children = { Caption, media },
+            };
+            UIMediaContent.Children.Add(grid);
         }
 
         private void UpdateSlidingPane()
         {
-            UISlidingPane.Children.Clear();
+            UISlidingMenu.Children.Clear();
 
             var Caption = new Label { 
                 Text = "Caption ", 
@@ -106,7 +117,7 @@ namespace Knotter
                 BackgroundColor = Color.Accent, 
             };
 
-            UISlidingPane.Children.Add(Caption);
+            UISlidingMenu.Children.Add(Caption);
             //
             var TagStack = new StackLayout
             {
@@ -117,6 +128,7 @@ namespace Knotter
 
             foreach (var tag in SelectedPost.Tags.Split(' ').ToList())
             {
+                
                 Button button = new Button
                 {
                     Text = tag.ToString(),
@@ -133,12 +145,10 @@ namespace Knotter
                 TagStack.Children.Add(button);
             }
             //Add tagstack to pane
-            UISlidingPane.Children.Add(TagStack);
+            UISlidingMenu.Children.Add(TagStack);
 
             //the lower 1/8th of the screen
-            
-
-            UISlidingPane.TranslateTo(0, LowerBounds);
+            UISlidingMenu.TranslateTo(0, LowerBounds);
             
         }
 
@@ -158,22 +168,22 @@ namespace Knotter
         }
 
         public double StartDragY;
-        public void OnPanUpdated(object sender, PanUpdatedEventArgs e)
+        public void OnSlidingMenuPanUpdated(object sender, PanUpdatedEventArgs e)
         {
-            double delta = (Booru.ScreenHeight - UISlidingPane.Height);
+
+            double delta = (SlidingWindow.Height - UISlidingMenu.Height);
 
             switch (e.StatusType)
             {
                 case GestureStatus.Started:
-                    StartDragY = UISlidingPane.TranslationY;
+                    StartDragY = UISlidingMenu.TranslationY;
                     break;
 
                 case GestureStatus.Running:
-                    //move the content
-                    UISlidingPane.TranslationY = StartDragY + e.TotalY;
-                    
-                    //button visibility  
-                    if (UISlidingPane.TranslationY < LowerBounds)//display a "drop/close" button if we scroll the content
+                    UISlidingMenu.TranslationY = StartDragY + e.TotalY;
+
+                    //display a "drop/close" button if we scroll the content
+                    if (UISlidingMenu.TranslationY < LowerBounds)
                         UIButtonCollapse.IsVisible = true;
                     else
                         UIButtonCollapse.IsVisible = false;
@@ -181,24 +191,23 @@ namespace Knotter
 
                 case GestureStatus.Completed:
 
-                    if (UISlidingPane.TranslationY > LowerBounds)
+                    if (UISlidingMenu.TranslationY > LowerBounds)
                     {
-                        UISlidingPane.TranslateTo(0, LowerBounds);
+                        UISlidingMenu.TranslateTo(0, LowerBounds);
                         break;
                     }
 
-                    if (UISlidingPane.TranslationY < delta)
+                    if (UISlidingMenu.TranslationY < delta)
                     {
-                        UISlidingPane.TranslateTo(0, delta);
+                        UISlidingMenu.TranslateTo(0, delta);
                         break;
                     }
                     break;
             }
-            debug.Text = UISlidingPane.TranslationY.ToString();
+            //debug.Text = UISlidingPane.TranslationY.ToString();
         }
 
-
-        private void OnImagePanUpdated(object sender, PanUpdatedEventArgs e)
+        private void OnMediaPanUpdated(object sender, PanUpdatedEventArgs e)
         {
 
             switch (e.StatusType)
@@ -209,7 +218,6 @@ namespace Knotter
                 case GestureStatus.Running:
 
                     UIMediaContent.TranslationX = e.TotalX;
-                    UIMediaContent.TranslationY = e.TotalY / 4;
                     break;
 
                 case GestureStatus.Completed:
@@ -247,12 +255,11 @@ namespace Knotter
             }
         }
 
-
-
         private bool StrCmp(string s1, string s2)
         {
             return (String.Compare(s1, s2) == 0);
         }
+
         private dynamic GetMedia(CPost post)
         {
 
@@ -274,8 +281,7 @@ namespace Knotter
                 };
             }
 
-            else
-            {
+            else {
                 media = new Image
                 {
                     Source = ImageSource.FromUri(post.SampleUrl),
@@ -283,7 +289,6 @@ namespace Knotter
                     HeightRequest = Booru.ScreenHeight,
                 };
             }
-            //return
             return media;
         }
 
@@ -311,11 +316,13 @@ namespace Knotter
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand,
             };
+
             /* 
-                * note: 
-                * WebView's dont accept touch gestures (for some reason?)
-                * so a transparent top layer (frame) is required so we can still swipe
-                */
+            * note: 
+            * WebView's dont accept touch gestures (for some reason?)
+            * so a transparent top layer (frame) is required so we can still swipe
+            */
+
             var frame = new Frame
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,

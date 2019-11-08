@@ -9,29 +9,29 @@
 
     <ContentPage.Content>
         <Grid x:Name="UIContentLayers"><!-- Grid allows us to lay elements on top of each other (z-stack)-->
-            
-            
-            <Label x:Name="debug" 
-                   Text="debug" 
-                   HorizontalTextAlignment="Center" 
-                   BackgroundColor="Accent" 
-                   VerticalOptions="Start"/>
 
             <!-- the element which holds the Media -->
-            <StackLayout x:Name="UIMediaContent" VerticalOptions="Center">
+            <StackLayout x:Name="UIMediaContent" VerticalOptions="Start">
                 <!-- example  content, removed at runtime -->
+                <Label x:Name="Caption" Text="Loading..." VerticalOptions="Start" BackgroundColor="Accent"></Label>
                 <Image Source="loading.png" />
+                
             </StackLayout>
             
-            <!-- SlidingPane fills the entire screen -->
-            <StackLayout x:Name="SlidingPane" Padding="5" IsClippedToBounds="True" >
+            <!-- SlidingPane fills the entire screen BackgroundColor="LightGoldenrodYellow"-->
+            <StackLayout x:Name="SlidingWindow" Padding="5" VerticalOptions="End">
 
                 <!-- UISliding pane moves along the y of "SlidingPane" -->
-                <StackLayout x:Name="UISlidingPane" BackgroundColor="#7F000000">
+                <StackLayout 
+                    x:Name="UISlidingMenu" 
+                    BackgroundColor="#7F000000" 
+                    VerticalOptions="End" 
+                    Margin="10">
 
                     <Label 
                         Text = "Caption for sliding pane" 
                         HorizontalTextAlignment = "Center"
+                        VerticalTextAlignment="Center"
                         HeightRequest="50"
                         BackgroundColor = "Accent">
                     </Label>

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-public class Connection
+public static class Connection
 {
     private static HttpClient Client;
 
-    public static void OpenConnection(string URL = "https://Knotter.net")
+    public static void OpenConnection(string URL = "https://e926.net")
     {
         Client = new HttpClient
         {
             BaseAddress = new Uri(URL)
         };
-        Client.DefaultRequestHeaders.UserAgent.ParseAdd("uwu/1.0 (user do6kids9)");//MyProject/1.0 (by username on Knotter)
+        Client.DefaultRequestHeaders.UserAgent.ParseAdd("Knotter/1.0 (user do6kids9)");//MyProject/1.0 (by username on Knotter)
     }
     public static async Task<string> GetResponse(string page, Dictionary<String, String> arguments, bool IsPost = false)
     {
