@@ -294,8 +294,8 @@ namespace Knotter
                 WidthRequest = UIMediaContent.WidthRequest,
                 HeightRequest = UIMediaContent.HeightRequest,
 
-                //HorizontalOptions = LayoutOptions.FillAndExpand,
-                //VerticalOptions = LayoutOptions.FillAndExpand,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand,
 
                 Source = new HtmlWebViewSource
                 {
