@@ -68,7 +68,7 @@ namespace Knotter
 
             Label label = new Label
             {
-                Text = $"score:{post.Score}, ext:{post.FileExt}",
+                Text = $"[↑↓:{post.Score}] [♥:{post.FavCount}]",
                 //center the text
                 HorizontalTextAlignment = TextAlignment.Center,
                 //semi transparent black background
