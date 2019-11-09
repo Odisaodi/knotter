@@ -7,33 +7,42 @@
              x:Class="Knotter.MediaPage"
              BackgroundImageSource="tiledstripe.xml">
 
-    <ContentPage.Content>
-        <Grid x:Name="UIContentLayers"><!-- Grid allows us to lay elements on top of each other (z-stack)-->
-
-            <!-- the element which holds the Media -->
-            <StackLayout x:Name="UIMediaContent" VerticalOptions="Start">
-                <!-- example  content, removed at runtime -->
-                <Label x:Name="Caption" Text="Loading..." VerticalOptions="Start" BackgroundColor="Accent"></Label>
-                <Image Source="loading.png" />
-                
-            </StackLayout>
+    <ContentPage.Content >
+        <StackLayout BackgroundColor="#7F000000">
             
+            <!-- Caption at top of media -->
+            <Button 
+                Margin="5"
+                x:Name = "ExternalButton" 
+                Text="Loading..." 
+                BackgroundColor="Accent">
+            </Button>
+            
+            <!-- Grid allows us to lay elements on top of each other (z-stack)-->
+            <Grid x:Name="UIContentLayers" VerticalOptions="FillAndExpand" >
+                
+            <!-- the element which holds the Media -->
+            <StackLayout x:Name="UIMediaContent" VerticalOptions="Center" BackgroundColor="#648F8F8F">
+                <!-- example  content, removed at runtime -->
+                <Image Source="loading.png"/>
+            </StackLayout>
+
             <!-- SlidingPane fills the entire screen BackgroundColor="LightGoldenrodYellow"-->
             <StackLayout x:Name="SlidingWindow" Padding="5" VerticalOptions="End">
 
                 <!-- UISliding pane moves along the y of "SlidingPane" -->
                 <StackLayout 
                     x:Name="UISlidingMenu" 
-                    BackgroundColor="#7F000000" 
-                    VerticalOptions="End" 
-                    Margin="10">
+                    BackgroundColor="#E5000000" 
+                    VerticalOptions="End">
 
                     <Label 
-                        Text = "Caption for sliding pane" 
-                        HorizontalTextAlignment = "Center"
-                        VerticalTextAlignment="Center"
-                        HeightRequest="50"
-                        BackgroundColor = "Accent">
+                    x:Name="UISliderCaption"
+                    Text = "[↑↓:0] [♥:0]  Caption for sliding pane " 
+                    HorizontalTextAlignment = "Center"
+                    VerticalTextAlignment="Center"
+                    HeightRequest="50"
+                    BackgroundColor = "Accent">
                     </Label>
 
                     <!-- example  content, removed at runtime -->
@@ -45,16 +54,17 @@
                     </StackLayout>
 
                 </StackLayout>
+                    
             </StackLayout>
-
-            <Button 
-                x:Name="UIButtonCollapse" 
-                IsVisible="False"
-                Text="Collapse" 
-                VerticalOptions="End" 
-                HorizontalOptions="End">
-            </Button>
             
-        </Grid>
+                <Button 
+                    x:Name="UIButtonCollapse" 
+                    IsVisible="False"
+                    Text="Collapse" 
+                    VerticalOptions="End" 
+                    HorizontalOptions="End">
+                </Button>
+            </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

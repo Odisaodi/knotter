@@ -10,7 +10,7 @@
     <ContentPage.Content>
         <StackLayout x:Name="RootContent">
             
-            <Button x:Name="SettingsButton" Text="Settings"></Button>
+            <Button x:Name="SettingsButton" Text="(Gear)" HorizontalOptions="End"></Button>
             
             <ScrollView x:Name="ScrollContent">
                 <Grid x:Name="GridItems">

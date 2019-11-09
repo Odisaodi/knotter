@@ -3,6 +3,7 @@ using System.Linq;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 using Octane.Xamarin.Forms.VideoPlayer;
 using QuickType;
@@ -15,11 +16,13 @@ namespace Knotter
         
         public int SelectedPostIndex = 0;
         public CPost SelectedPost;
-        public static double LowerBounds = Booru.ScreenHeight - (Booru.ScreenHeight / 4);
+        public static double LowerBounds;
 
         public MediaPage(int index)//List<object> posts, int index
         {
             InitializeComponent();
+
+            LowerBounds = Booru.ScreenHeight - (Booru.ScreenHeight / 3);
 
             SelectedPostIndex = index;
             SelectedPost = Booru.Results[SelectedPostIndex];
@@ -86,43 +89,36 @@ namespace Knotter
 
         private void UpdateMediaContent()
         {
-            UIMediaContent.Children.Clear();
-
-            var Caption = new Button
-            {
-                Text = $"↑ {SelectedPost.Score} ↓;  View on {Settings.HostValue} ?",
-                BackgroundColor = Color.Accent,
-                HeightRequest = 20,
+            ExternalButton.Clicked += (s, e) => {
+                Launcher.OpenAsync(new Uri(Settings.HostValue + "/post/show/" + SelectedPost.Id));
             };
-            //UIMediaContent.Children.Add(Caption);
+            ExternalButton.Text = $"[↑↓:{SelectedPost.Score}] [♥:{SelectedPost.FavCount}]. View at {Settings.HostValue}";
+
+            //
+            UIMediaContent.Children.Clear();
 
             var media = GetMedia(SelectedPost);
             //UIMediaContent.Children.Add(media);
 
-            var grid = new Grid
-            {
-                Children = { Caption, media },
-            };
-            UIMediaContent.Children.Add(grid);
+            UIMediaContent.Children.Add(media);
         }
 
         private void UpdateSlidingPane()
         {
             UISlidingMenu.Children.Clear();
 
-            var Caption = new Label { 
-                Text = "Caption ", 
+            //UISliderCaption
+            var UISliderCaption = new Label { 
+                Text = $"↑ Tags ↑", //↑↓;
                 HeightRequest = 50,
+                VerticalTextAlignment = TextAlignment.Center,
                 HorizontalTextAlignment = TextAlignment.Center,
                 BackgroundColor = Color.Accent, 
             };
-
-            UISlidingMenu.Children.Add(Caption);
+            UISlidingMenu.Children.Add(UISliderCaption);
             //
             var TagStack = new StackLayout
             {
-                //HorizontalOptions = LayoutOptions.,
-                //VerticalOptions = LayoutOptions.StartAndExpand,
                 Padding = 10,
             };
 
@@ -147,9 +143,8 @@ namespace Knotter
             //Add tagstack to pane
             UISlidingMenu.Children.Add(TagStack);
 
-            //the lower 1/8th of the screen
+            //the lower 1/4th of the screen
             UISlidingMenu.TranslateTo(0, LowerBounds);
-            
         }
 
         ActivityIndicator activityIndicator;
@@ -276,7 +271,7 @@ namespace Knotter
                 {
                     //Videos require full URL (previews converted to jpg)
                     Source = post.FileUrl.AbsoluteUri,
-                    WidthRequest = Booru.ScreenWidth,
+                    WidthRequest = UIMediaContent.Width,
                     Volume = 0,//no volume
                 };
             }
@@ -285,17 +280,23 @@ namespace Knotter
                 media = new Image
                 {
                     Source = ImageSource.FromUri(post.SampleUrl),
-                    WidthRequest = Booru.ScreenWidth,
-                    HeightRequest = Booru.ScreenHeight,
+                    WidthRequest = UIMediaContent.Width,
+                    HeightRequest = UIMediaContent.Height,
                 };
             }
             return media;
         }
 
-        public static Grid WebVeiwTemplate(string imageurl) //post.FileUrl.AbsoluteUri
+        public Grid WebVeiwTemplate(string imageurl) //post.FileUrl.AbsoluteUri
         {
             var webveiw = new WebView
             {
+                WidthRequest = UIMediaContent.WidthRequest,
+                HeightRequest = UIMediaContent.HeightRequest,
+
+                //HorizontalOptions = LayoutOptions.FillAndExpand,
+                //VerticalOptions = LayoutOptions.FillAndExpand,
+
                 Source = new HtmlWebViewSource
                 {
                     Html =
@@ -311,10 +312,6 @@ namespace Knotter
                         $"<body><img src=\"{imageurl}\" width=\"{Booru.ScreenWidth}\" ></body>" +
                     "</html>"
                 },
-                WidthRequest = Booru.ScreenWidth,
-                HeightRequest = Booru.ScreenHeight,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.FillAndExpand,
             };
 
             /* 
