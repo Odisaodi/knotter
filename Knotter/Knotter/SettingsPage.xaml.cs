@@ -29,8 +29,6 @@ namespace Knotter
             Preferences.Set("Host", HostValue = Host);
             Preferences.Set("Name", NameValue = Name);
 
-
-
             Booru.Initialize(HostValue);
         }
     }
