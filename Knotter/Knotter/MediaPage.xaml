@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:videoplayer="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
              mc:Ignorable="d"
              x:Class="Knotter.MediaPage"
              BackgroundImageSource="tiledstripe.xml">
@@ -22,9 +23,12 @@
             <Grid x:Name="UIContentLayers" VerticalOptions="FillAndExpand" >
                 
             <!-- the element which holds the Media -->
-            <StackLayout x:Name="UIMediaContent" VerticalOptions="Center" BackgroundColor="#648F8F8F">
+            <StackLayout x:Name="UIMediaContent" VerticalOptions="CenterAndExpand" BackgroundColor="#648F8F8F">
                 <!-- example  content, removed at runtime -->
-                <Image Source="loading.png"/>
+                    <ContentView>
+                        <Image Source="loading.png"/>
+                    </ContentView>
+
             </StackLayout>
 
             <!-- SlidingPane fills the entire screen BackgroundColor="LightGoldenrodYellow"-->
@@ -37,12 +41,12 @@
                     VerticalOptions="End">
 
                     <Label 
-                    x:Name="UISliderCaption"
-                    Text = "[↑↓:0] [♥:0]  Caption for sliding pane " 
-                    HorizontalTextAlignment = "Center"
-                    VerticalTextAlignment="Center"
-                    HeightRequest="50"
-                    BackgroundColor = "Accent">
+                        x:Name="UISliderCaption"
+                        Text = "[↑↓:0] [♥:0]  Caption for sliding pane " 
+                        HorizontalTextAlignment = "Center"
+                        VerticalTextAlignment="Center"
+                        HeightRequest="50"
+                        BackgroundColor = "Accent">
                     </Label>
 
                     <!-- example  content, removed at runtime -->
@@ -59,8 +63,8 @@
             
                 <Button 
                     x:Name="UIButtonCollapse" 
-                    IsVisible="False"
-                    Text="Collapse" 
+                    IsVisible="True"
+                    Text="↓Collapse↓" 
                     VerticalOptions="End" 
                     HorizontalOptions="End">
                 </Button>

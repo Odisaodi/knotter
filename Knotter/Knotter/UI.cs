@@ -1,8 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.ComponentModel;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Knotter
 {
@@ -11,9 +7,12 @@ namespace Knotter
     {
         public void IsLoading(bool state = true)
         {
-            if (state){
+            if (state)
+            {
                 Activity.IsVisible = true;
-            }else{
+            }
+            else
+            {
                 Activity.IsVisible = false;
             }
         }
@@ -86,12 +85,12 @@ namespace Knotter
                 HorizontalTextAlignment = TextAlignment.End,
                 TextColor = Color.Chartreuse,
             };
-  
+
             if (post.FileExt == "gif")
             {
                 isAnimated.IsVisible = true;
             }
-            
+
             //Create the Element to Display
             Grid Tile = new Grid
             {
@@ -110,11 +109,11 @@ namespace Knotter
             };//Tile
 
             var tap = new TapGestureRecognizer();
-            tap.Tapped += (s, e) => Navigation.PushAsync( new MediaPage(index) );
+            tap.Tapped += (s, e) => Navigation.PushAsync(new MediaPage(index));
             //
             Tile.GestureRecognizers.Add(tap);
 
-            return Tile;  
+            return Tile;
         }
     }
 }

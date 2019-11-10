@@ -1,61 +1,20 @@
-using System;
+using QuickType;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Net.Http;
-using System.ComponentModel;
-using QuickType;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Knotter
 {
     static partial class Booru
-    { 
-        static public Dictionary<string, string> Arguments { get; set; }
-        //-----------
-        static private HttpClient Client;
-        
-        static public void Connect(string host = "https://e926.net")// / Knotter
-        {
-            Client = new HttpClient
-            {
-                BaseAddress = new Uri(host),
-            };
-            Client.DefaultRequestHeaders.UserAgent.ParseAdd("Knot/1.0 (by do6kids9 on Knotter)");//MyProject/1.0 (by username on Knotter)
-        }
-        
-        static private async Task<string> FetchResultStringAsync(string page, Dictionary<string, string> arguments, bool IsPost = false)
-        {
-            HttpMethod Method = IsPost ? HttpMethod.Post : HttpMethod.Get;
+    {
 
-            var request = new HttpRequestMessage(Method, page)
-            {
-                Content = new FormUrlEncodedContent(arguments)
-            };
-
-            HttpResponseMessage httpResponse = await Client.SendAsync(request);//.ConfigureAwait(false);
-
-            if (httpResponse.IsSuccessStatusCode)
-                return await httpResponse.Content.ReadAsStringAsync();//.ConfigureAwait(false);
-
-            return null;
-        }
-
-        static private async Task<T> FetchResults<T>(string page, Dictionary<String, String> arguments)
-        {//Get Response as String
-
-            //Booru.PageID = { {POST, "/post/create"}, {GET, "/Post/search"} }
-            string response = await FetchResultStringAsync(page, arguments);
-            //Deserialize response to Type
-            return (T)Deserialize.FromJson<T>(response);
-        }
 
         //-------------
         static public int preview_width = 110;
         static public int preview_height = 150;
         static private DisplayInfo DisplayInfo;
-        
+
         static public int ColCount;
         static public int RowCount;
         static public int ResultsPerPage;
@@ -69,7 +28,7 @@ namespace Knotter
 
         static public void Initialize(string host)
         {
-            Connect(host);//assume success
+            Connection.Connect(host);//assume success
 
             //results downloaded
             Results = new List<CPost>();
@@ -100,7 +59,7 @@ namespace Knotter
             return (int)ScreenHeight / (preview_height);// / (int)App.ScreenInfo.Density);
         }
 
-        static public async Task<int> UpdateCacheAsync(Dictionary<string, string> arguments)
+        static public async Task<int> UpdateCacheAsync()
         {
             int remainder = (Booru.Results.Count - Booru.Tiles.Count);
 
@@ -115,7 +74,7 @@ namespace Knotter
             //else update
             _isGettingNewItems = true;
 
-            var value = await FetchResults<List<CPost>>("/post/index.json", arguments);
+            var value = await Connection.FetchResults<List<CPost>>("/post/index.json", Connection.Arguments);//.ConfigureAwait(false);
 
             if (value != null)
                 Booru.Results.AddRange(value);
@@ -123,23 +82,8 @@ namespace Knotter
                 remainder = 0;
 
             _isGettingNewItems = false;
-         
+
             return remainder;
         }
-
-
-        //static public async Task FetchAndAppendResults()
-        //{
-        //    int remaining = (Results.Count - Tiles.Count);
-
-        //    //if we have less than 1 page of results in memory, add more.
-        //    if (remaining < ResultsPerPage)
-        //    {
-        //        List<CPost> Results = await FetchResults<List<CPost>>("/post/index.json", Arguments).ConfigureAwait(false);
-        //        Booru.Results.AddRange(Results);
-        //    }
-
-        //}
-        //
     }
 }

@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
 
 namespace Knotter
 {
@@ -47,6 +43,21 @@ namespace Knotter
             UINameValue.Text = Settings.NameValue;
 
             Submit.Clicked += UpdateSettings;
+            Update.Clicked += CheckForUpdates;
+        }
+
+        private async void CheckForUpdates(object sender, EventArgs e)
+        {
+            var check = await Connection.CheckVersion();
+            if (check)
+            {
+                bool reply = await DisplayAlert("wuw whats this", "An Update is availible!", "Download", "Cancel");
+                if (reply)
+                {//true
+                    await Launcher.OpenAsync(new Uri("https://github.com/keihoag/knotter"));
+                }
+            }
+            //throw new NotImplementedException();
         }
 
         private async void UpdateSettings(object sender, EventArgs e)

@@ -1,22 +1,20 @@
-﻿using System;
+﻿using Octane.Xamarin.Forms.VideoPlayer;
+using QuickType;
+using System;
 using System.Linq;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
-
-using Octane.Xamarin.Forms.VideoPlayer;
-using QuickType;
 
 namespace Knotter
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MediaPage : ContentPage
     {
-        
-        public int SelectedPostIndex = 0;
-        public CPost SelectedPost;
-        public static double LowerBounds;
+
+        private int SelectedPostIndex = 0;
+        private CPost SelectedPost;
+        private static double LowerBounds;
 
         public MediaPage(int index)//List<object> posts, int index
         {
@@ -59,7 +57,7 @@ namespace Knotter
             //if Next_post touches the threshhold we have to update the prefetch
             if ((Booru.Results.Count - SelectedPostIndex) < Booru.ResultsPerPage)
             {
-                await Booru.UpdateCacheAsync(Booru.Arguments);
+                await Booru.UpdateCacheAsync();
             }
             SelectedPostIndex++;
             SelectedPost = Booru.Results[SelectedPostIndex];
@@ -89,16 +87,16 @@ namespace Knotter
 
         private void UpdateMediaContent()
         {
-            ExternalButton.Clicked += (s, e) => {
+            ExternalButton.Clicked += (s, e) =>
+            {
                 Launcher.OpenAsync(new Uri(Settings.HostValue + "/post/show/" + SelectedPost.Id));
             };
             ExternalButton.Text = $"[↑↓:{SelectedPost.Score}] [♥:{SelectedPost.FavCount}]. View at {Settings.HostValue}";
 
-            //
+
             UIMediaContent.Children.Clear();
 
-            var media = GetMedia(SelectedPost);
-            //UIMediaContent.Children.Add(media);
+            var media = GetMediaContent();
 
             UIMediaContent.Children.Add(media);
         }
@@ -108,12 +106,13 @@ namespace Knotter
             UISlidingMenu.Children.Clear();
 
             //UISliderCaption
-            var UISliderCaption = new Label { 
-                Text = $"↑ Tags ↑", //↑↓;
+            var UISliderCaption = new Label
+            {
+                Text = "↑ Tags ↑", //↑↓;
                 HeightRequest = 50,
                 VerticalTextAlignment = TextAlignment.Center,
                 HorizontalTextAlignment = TextAlignment.Center,
-                BackgroundColor = Color.Accent, 
+                BackgroundColor = Color.Accent,
             };
             UISlidingMenu.Children.Add(UISliderCaption);
             //
@@ -124,7 +123,7 @@ namespace Knotter
 
             foreach (var tag in SelectedPost.Tags.Split(' ').ToList())
             {
-                
+
                 Button button = new Button
                 {
                     Text = tag.ToString(),
@@ -162,7 +161,7 @@ namespace Knotter
             activityIndicator.IsRunning = state;
         }
 
-        public double StartDragY;
+        private double StartDragY;
         public void OnSlidingMenuPanUpdated(object sender, PanUpdatedEventArgs e)
         {
 
@@ -220,14 +219,14 @@ namespace Knotter
                     double x = UIMediaContent.TranslationX;
 
                     double Threshhold = (Booru.ScreenWidth / 3); //aka 1/3 of the screen
-                    if ( Threshhold < Math.Abs(x) )
+                    if (Threshhold < Math.Abs(x))
                     {
                         //A new Image Will Load, Clear the Current one
                         UIMediaContent.Children.Clear();
 
                         //place on oppsite side (so the next one slides in)
                         //[last] <- [current] <- [next]
-                        //   v----------------------^
+                        //   ^----------------------^
 
                         bool Direction = (x < 0) ? true : false;
 
@@ -243,59 +242,66 @@ namespace Knotter
                                 GetLastPost();
                                 break;
                         }
-
                     }
                     UIMediaContent.TranslateTo(0, 0);
                     break;
             }
         }
 
-        private bool StrCmp(string s1, string s2)
+        public ContentView GetMediaContent()
         {
-            return (String.Compare(s1, s2) == 0);
-        }
-
-        private dynamic GetMedia(CPost post)
-        {
-
             dynamic media;
-            if (StrCmp(post.FileExt, "gif"))
+            switch (SelectedPost.FileExt)
             {
-                //GIFs require full URL (previews converted to jpg)
-                media = WebVeiwTemplate(post.FileUrl.AbsoluteUri); ;
+                case "gif":
+                    media = WebVeiwTemplate(SelectedPost.FileUrl.AbsoluteUri);
+                    break;
+
+                case "webm"://Webm's used to work but dont anymore, hmm
+                    media = new VideoPlayer
+                    {
+                        Source = VideoSource.FromUri(SelectedPost.FileUrl),
+                        Volume = 0,//Default Mute
+                    };
+                    break;
+
+                case "png":
+                case "jpg":
+                case "bmp":
+                    media = new Image
+                    {
+                        //preview, although smaller, loads much faster than absurd_res and saves data
+                        //user can still view full image on web
+                        Source = ImageSource.FromUri(SelectedPost.SampleUrl),
+                        //WidthRequest = Booru.ScreenWidth,
+                    };
+                    break;
+
+                default:
+                    media = new Label
+                    {
+                        Text = $"Media format not supported: {SelectedPost.FileExt}",
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        VerticalTextAlignment = TextAlignment.Center,
+                        TextColor = Color.Chartreuse,
+                    };
+                    break;
             }
 
-            else if (StrCmp(post.FileExt, "webm") | StrCmp(post.FileExt, "swf"))
+            return new ContentView
             {
-                media = new VideoPlayer
-                {
-                    //Videos require full URL (previews converted to jpg)
-                    Source = post.FileUrl.AbsoluteUri,
-                    WidthRequest = UIMediaContent.Width,
-                    Volume = 0,//no volume
-                };
-            }
-
-            else {
-                media = new Image
-                {
-                    Source = ImageSource.FromUri(post.SampleUrl),
-                    WidthRequest = UIMediaContent.Width,
-                    HeightRequest = UIMediaContent.Height,
-                };
-            }
-            return media;
+                Content = media,
+                HeightRequest = Booru.ScreenHeight,
+                WidthRequest = Booru.ScreenWidth,
+            };
         }
 
-        public Grid WebVeiwTemplate(string imageurl) //post.FileUrl.AbsoluteUri
+        public static View WebVeiwTemplate(string imageurl) //post.FileUrl.AbsoluteUri
         {
             var webveiw = new WebView
             {
-                WidthRequest = UIMediaContent.WidthRequest,
-                HeightRequest = UIMediaContent.HeightRequest,
-
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.FillAndExpand,
+                WidthRequest = Booru.ScreenWidth,
+                HeightRequest = Booru.ScreenHeight,
 
                 Source = new HtmlWebViewSource
                 {
@@ -320,24 +326,14 @@ namespace Knotter
             * so a transparent top layer (frame) is required so we can still swipe
             */
 
-            var frame = new Frame
+            return new Frame
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 BackgroundColor = Color.Transparent,
                 Content = webveiw,
             };
-
-            return new Grid
-            {
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                //BackgroundColor = Color.FromHex("8F000000"),
-                Children =
-                {   
-                    frame,//frame overlays webview and accepts Gestures
-                },
-            };
         }
     }
-    
+
 }

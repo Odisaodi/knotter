@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -52,14 +50,14 @@ namespace Knotter
             if (Booru.Results.Count < 0)
                 last_id = Booru.Results[Booru.Results.Count - 1].Id.ToString();
 
-            Booru.Arguments = new Dictionary<string, string>
+            Connection.Arguments = new Dictionary<string, string>
             {
                 ["limit"] = Booru.ResultsPerRequest.ToString(),
                 ["before_id"] = last_id,
                 ["tags"] = tags,//"rating:s ", 
             };
 
-            await Booru.UpdateCacheAsync(Booru.Arguments);
+            await Booru.UpdateCacheAsync();//.ConfigureAwait(false);
 
             //Add a page worth of Tiles to the UI
             AddTiles();
@@ -80,13 +78,13 @@ namespace Knotter
                 debug.Text = "Fetching";
 
                 if (Booru.Results.Count > 0)
-                    Booru.Arguments["before_id"] = Booru.Results[Booru.Results.Count - 1].Id.ToString();
+                    Connection.Arguments["before_id"] = Booru.Results[Booru.Results.Count - 1].Id.ToString();
 
                 //notify the user something is happening
                 IsLoading();
-                
+
                 //return control to the parent thread (UI) until this await has completed
-                await Booru.UpdateCacheAsync(Booru.Arguments);
+                await Booru.UpdateCacheAsync();//.ConfigureAwait(false);
 
                 AddTiles();
 
@@ -94,7 +92,7 @@ namespace Knotter
                 IsLoading(false);
 
                 //finished / resume
-                debug.Text = "Fetch complete";  
+                debug.Text = "Fetch complete";
             }
         }
     }

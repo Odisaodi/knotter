@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Essentials;
 //using Booru;
 
 namespace Knotter
@@ -21,20 +18,23 @@ namespace Knotter
 
             TitleText.Text = Settings.NameValue;
 
-            SearchBox.Completed += Search_Clicked;
-            SettingsButton.Clicked += Settings_Clicked;
+            SearchBox.Completed += SearchClicked;
+            SettingsButton.Clicked += SettingsClicked;
+
         }
 
-        public async void Settings_Clicked(object sender, EventArgs e)
+        public async void SettingsClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingsPage());
+            await Navigation.PushAsync(new SettingsPage()).ConfigureAwait(false);
+
+            
         }
 
-        private async void Search_Clicked(object sender, EventArgs e)
+        private async void SearchClicked(object sender, EventArgs e)
         {
             //search clicked
-            debug.Text = "submitted query";
-            await Navigation.PushAsync(new ResultsPage(SearchBox.Text));
+            //debug.Text = "submitted query";
+            await Navigation.PushAsync(new ResultsPage(SearchBox.Text));//.ConfigureAwait(false);
         }
 
     }

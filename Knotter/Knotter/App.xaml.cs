@@ -1,9 +1,6 @@
 ﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
-using System.Collections.Generic;
-using QuickType;
+using Xamarin.Forms;
 
 namespace Knotter
 {
@@ -15,8 +12,9 @@ namespace Knotter
             InitializeComponent();
 
             //this initializes Booru
+            VersionTracking.Track();
             Settings.LoadUserSettings();
-             
+
             //this allows us to use page navigation
             MainPage = new NavigationPage(new MainPage()); //MainPage = new MainPage();
         }

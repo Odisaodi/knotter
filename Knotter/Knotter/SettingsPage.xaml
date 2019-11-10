@@ -7,15 +7,26 @@
              BackgroundImageSource="tiledstripe.xml"
              x:Class="Knotter.SettingsPage">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" BackgroundColor="#7F808080">
-            
-            <Label Text="Host Url (ex. 'https://e926.net' )" HorizontalTextAlignment="Center"/>
-            
-            <Entry x:Name="UIHostValue" Text="default"></Entry>
-            
-            <Label Text="Title (aka: 'e926')" HorizontalTextAlignment="Center"/>
-            <Entry x:Name="UINameValue" Text="default"></Entry>
-            
+        <StackLayout VerticalOptions="Center" BackgroundColor="#7F808080" >
+
+            <Button x:Name="Update"
+                    IsVisible="False"
+                    Text="Check for Updates"
+                    HorizontalOptions="End"/>
+
+            <Label Text="Host Url (ex. 'https://e926.net' )"
+                   HorizontalTextAlignment="Center"/>
+
+            <Entry x:Name="UIHostValue"
+                   Text="default" HorizontalTextAlignment="Center"/>
+
+            <Label Text="Title (aka: 'e926')"
+                   HorizontalTextAlignment="Center"/>
+
+            <Entry x:Name="UINameValue" 
+                   Text="default"
+                   HorizontalTextAlignment="Center"/>
+
             <Button x:Name="Submit" Text="Save"></Button>
 
         </StackLayout>
