@@ -2,7 +2,7 @@
 An Android app for browsing specific Image boards aka (e926 and similar)
 
 installation
-  1) locate "/apk/com.lolsoft.Knutter.apk" and copy it onto your phone.
+  1) locate "/apk/com.lolsoft.Knotter.apk" and copy it onto your phone.
   2) (on your phone) navigate to and click the .apk to install it
 
 tested on samsung s9 
