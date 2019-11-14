@@ -91,8 +91,7 @@ namespace Knotter
             {
                 Launcher.OpenAsync(new Uri(Settings.HostValue + "/post/show/" + SelectedPost.Id));
             };
-            ExternalButton.Text = $"[↑↓:{SelectedPost.Score}] [♥:{SelectedPost.FavCount}]. View at {Settings.HostValue}";
-
+            ExternalButton.Text = $"View at {Settings.NameValue}";
 
             UIMediaContent.Children.Clear();
 
@@ -115,6 +114,8 @@ namespace Knotter
                 BackgroundColor = Color.Accent,
             };
             UISlidingMenu.Children.Add(UISliderCaption);
+
+
             //
             var TagStack = new StackLayout
             {
@@ -333,6 +334,16 @@ namespace Knotter
                 BackgroundColor = Color.Transparent,
                 Content = webveiw,
             };
+        }
+
+        public bool state;
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            state = !state;
+            if (state)
+                UIFavoriteClick.Source = "heart_small.png";
+            else
+                UIFavoriteClick.Source = "heart_large.png";
         }
     }
 

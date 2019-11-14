@@ -10,15 +10,30 @@
 
     <ContentPage.Content >
         <StackLayout BackgroundColor="#7F000000">
-            
-            <!-- Caption at top of media -->
-            <Button 
-                Margin="5"
-                x:Name = "ExternalButton" 
-                Text="Loading..." 
+                     
+            <StackLayout 
+                Margin="5"                 
+                Orientation="Horizontal" 
+                HorizontalOptions="FillAndExpand" 
                 BackgroundColor="Accent">
-            </Button>
-            
+                
+                <Button 
+                    x:Name = "ExternalButton" 
+                    Text="Loading..."
+                    HorizontalOptions="FillAndExpand">
+                </Button>
+
+                <ImageButton 
+                        x:Name="UIFavoriteClick" 
+                        Source="heart_small.png" 
+                        Clicked="ImageButton_Clicked" 
+                        BackgroundColor="Transparent" 
+                        WidthRequest="64" 
+                        HeightRequest="64" 
+                />
+
+            </StackLayout>
+
             <!-- Grid allows us to lay elements on top of each other (z-stack)-->
             <Grid x:Name="UIContentLayers" VerticalOptions="FillAndExpand" >
                 
@@ -29,9 +44,9 @@
                         <Image Source="loading.png"/>
                     </ContentView>
 
-            </StackLayout>
+            </StackLayout >
 
-            <!-- SlidingPane fills the entire screen BackgroundColor="LightGoldenrodYellow"-->
+                <!-- SlidingPane fills the entire screen BackgroundColor="LightGoldenrodYellow"-->
             <StackLayout x:Name="SlidingWindow" Padding="5" VerticalOptions="End">
 
                 <!-- UISliding pane moves along the y of "SlidingPane" -->
@@ -49,7 +64,7 @@
                         BackgroundColor = "Accent">
                     </Label>
 
-                    <!-- example  content, removed at runtime -->
+                        <!-- example  content, removed at runtime -->
                     <!-- Frame surrounding tag list-->
                     <StackLayout x:Name="xTagStack" Padding="10">
                         <Button Text="Example"/>

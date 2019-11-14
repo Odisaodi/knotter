@@ -8,8 +8,6 @@ namespace Knotter
 {
     static partial class Booru
     {
-
-
         //-------------
         static public int preview_width = 110;
         static public int preview_height = 150;

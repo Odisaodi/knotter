@@ -1,34 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             BackgroundImageSource="tiledstripe.xml"
              x:Class="Knotter.SettingsPage">
-    <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" BackgroundColor="#7F808080" >
+    <!--Pages can be added as references or inline-->
+    <!-- Login -->
+    <ContentPage Title="login" >
+        <StackLayout>
+            <Label x:Name="UILabelLoggedIn" BackgroundColor="IndianRed" HorizontalTextAlignment="Center"/>
+            <Label Text="Username"/>
+            <Entry x:Name="UIEntryUserame"/>
 
-            <Button x:Name="Update"
-                    IsVisible="False"
-                    Text="Check for Updates"
-                    HorizontalOptions="End"/>
+            <Label Text="Password"/>
+            <Entry x:Name="UIEntryPassword"/>
 
-            <Label Text="Host Url (ex. 'https://e926.net' )"
-                   HorizontalTextAlignment="Center"/>
-
-            <Entry x:Name="UIHostValue"
-                   Text="default" HorizontalTextAlignment="Center"/>
-
-            <Label Text="Title (aka: 'e926')"
-                   HorizontalTextAlignment="Center"/>
-
-            <Entry x:Name="UINameValue" 
-                   Text="default"
-                   HorizontalTextAlignment="Center"/>
-
-            <Button x:Name="Submit" Text="Save"></Button>
-
+            <Button x:Name="UIButtonLogin" Text="Log in"/>
         </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    </ContentPage>
+    <!-- Host -->
+    <ContentPage Title="host" >
+        <StackLayout>
+            <Label Text="Host"/>
+            <Entry x:Name="UIEntryURL"/>
+
+            <Label Text="Title"/>
+            <Entry x:Name="UIEntryTitle"/>
+
+            <Button x:Name="UIButtonUpdateHost" Text="Update"/>
+        </StackLayout>
+    </ContentPage>
+    <!-- about -->
+    <ContentPage Title="about" >
+        
+        <Label Text="icons by https://icons8.com"/>
+        
+    </ContentPage>
+</TabbedPage>
+
+
+
+
+
