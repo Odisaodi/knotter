@@ -44,17 +44,14 @@ namespace Knotter
                 return await response.Content.ReadAsStringAsync();//.ConfigureAwait(false);
             }
 
-            var status = new Failure_type
+            var status = new ExpectedFailure
             { 
                 Status = false, 
                 Reason = response.ReasonPhrase 
             };
-
-            return status.ToString();
+            string value = Serialize.ToJson(status);
+            return value;
         }
-
-
-
 
         static public async Task<T> FetchResults<T>(string page, Dictionary<String, String> arguments, bool posting = false)
         {

@@ -132,7 +132,7 @@ namespace QuickType
         [JsonProperty("success")]
         public string Success { get; set; }
     }
-    public class Failure_type
+    public class ExpectedFailure
     {
         [JsonProperty("status")]
         public bool Status { get; set; }
@@ -152,7 +152,7 @@ namespace QuickType
 
     public static class Serialize
     {
-        public static string ToJson(this List<dynamic> self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
+        public static string ToJson(this object self) => JsonConvert.SerializeObject(self, QuickType.Converter.Settings);
     }
     public static class Deserialize
     {

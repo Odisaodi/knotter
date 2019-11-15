@@ -16,7 +16,7 @@ namespace Knotter
         private CPost SelectedPost;
         private static double LowerBounds;
 
-        public MediaPage(int index)//List<object> posts, int index
+        public MediaPage(int index)
         {
             InitializeComponent();
 
@@ -337,13 +337,22 @@ namespace Knotter
         }
 
         public bool state;
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        private async void ImageButton_Clicked(object sender, EventArgs e)
         {
+            //note: upvoting is different than faverating
             state = !state;
             if (state)
+            {//downvote
                 UIFavoriteClick.Source = "heart_small.png";
+                await UserActions.VoteAsync(SelectedPost.Id, -1);
+            }
+
             else
+            {//upvote
                 UIFavoriteClick.Source = "heart_large.png";
+                await UserActions.VoteAsync(SelectedPost.Id, 1);
+            }
+
         }
     }
 
