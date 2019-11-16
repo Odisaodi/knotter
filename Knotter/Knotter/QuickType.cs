@@ -23,6 +23,7 @@ namespace QuickType
 
         [JsonProperty("tags")]
         public string Tags { get; set; }
+        //public Tags Tags { get; set; }
 
         [JsonProperty("locked_tags")]
         public object LockedTags { get; set; }
@@ -126,7 +127,23 @@ namespace QuickType
         [JsonProperty("n")]
         public long N { get; set; }
     }
+    public partial class Tags
+    {
+        [JsonProperty("general")]
+        public List<string> General { get; set; }
 
+        [JsonProperty("artist")]
+        public List<string> Artist { get; set; }
+
+        [JsonProperty("copyright")]
+        public List<string> Copyright { get; set; }
+
+        [JsonProperty("character")]
+        public List<string> Character { get; set; }
+
+        [JsonProperty("species")]
+        public List<string> Species { get; set; }
+    }
     public class LoginFailure
     {
         [JsonProperty("success")]

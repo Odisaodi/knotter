@@ -10,12 +10,12 @@ namespace Knotter
 
     public static class UserActions
     {
-        //public static bool _isloggedin ;
+
         public static bool Isloggedin() {
+            //use result for UI status changes
+            // "log in" -> "welcome back, {user}"
             return (Settings.ApiKey.Length > 0);
         }
-
-
 
         static public async Task<bool> Login(string username, string password)
         {
@@ -66,10 +66,30 @@ namespace Knotter
                     return Returned.Status;
                 }
             }
-            //if (not 200 OK) 
-            //  we can not parse the reply (404, 501, html?)
+            //if (not 200_OK) { "we may get a non json reply (501, 404.html?)" }
             return false;
         }
-            
+
+        static public async Task<bool> typedTags(long post_id)
+        {
+            var param = new Dictionary<string, string>
+            {
+                { "id" , post_id.ToString() },//"2051732"
+                { "typed_tags", "true" },
+            };
+
+            var response = await Connection.GetResponse("/post/index.json", param);
+            if (response.IsSuccessStatusCode)
+            {
+                var json = await response.Content.ReadAsStringAsync();
+
+                if (Deserialize.TryParse(json, out ReturnStatus Returned))
+                {
+                    return Returned.Status;
+                }
+            }
+            //if (not 200_OK) { "we may get a non json reply (501, 404.html?)" }
+            return false;
+        }
     }
 }

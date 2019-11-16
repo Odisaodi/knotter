@@ -55,7 +55,7 @@ namespace Knotter
 
         static public async Task<bool> CheckVersion()
         {
-            var VersionURL = "https://raw.githubusercontent.com/keihoag/knotter/master/apk/version.txt";
+            var VersionURL = "/keihoag/knotter/master/apk/version.txt";
 
             Client = new HttpClient
             {
@@ -71,9 +71,10 @@ namespace Knotter
                 if (latest != null)
                 {
                     var currentVersion = VersionTracking.CurrentVersion;
-
-                    // (1.1) -> (1.0)
-                    bool UpdateAvailible = string.Compare(latest, currentVersion, StringComparison.Ordinal) <= 0;
+                    string ThisVersion = currentVersion;
+                    string ThatVersion = latest;
+                    //bool UpdateAvailible = (ThisVersion < ThatVersion) ? true : false;
+                    bool UpdateAvailible = string.Compare(ThatVersion, ThatVersion, StringComparison.Ordinal) <= 0;
                     if (UpdateAvailible)
                     {
                         return true;

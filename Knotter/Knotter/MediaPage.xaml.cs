@@ -2,12 +2,15 @@
 using QuickType;
 using System;
 using System.Linq;
+using System.ComponentModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Knotter
 {
+    [DesignTimeVisible(true)]
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MediaPage : ContentPage
     {
@@ -44,6 +47,7 @@ namespace Knotter
             UpdateSlidingPane();
             Indicate(false);
         }
+        //Listview
 
         public bool state;
         private async void UIVoteClicked()//(object sender, EventArgs e)
@@ -148,6 +152,22 @@ namespace Knotter
             {
                 Padding = 10,
             };
+            //
+
+
+            var list = new ListView();
+
+            Type type = SelectedPost.Tags.GetType();
+            foreach (var property in type.GetProperties())
+            {
+                //for each property of the Tags class
+                string category = property.Name;
+                var value = (string)property.GetValue(SelectedPost.Tags, null);
+
+                //return an array of tags
+                var taglist = value.Split(' ').ToList();
+
+            }
 
             foreach (var tag in SelectedPost.Tags.Split(' ').ToList())
             {
@@ -175,6 +195,7 @@ namespace Knotter
         }
 
         ActivityIndicator activityIndicator;
+
         public void Indicate(bool state = true)
         {
             if (activityIndicator == null)

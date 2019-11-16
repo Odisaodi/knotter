@@ -10,13 +10,13 @@
 
     <ContentPage.Content >
         <StackLayout BackgroundColor="#7F000000">
-            <Label x:Name="UINotification" Text="Unable to process request" IsVisible="true" BackgroundColor="IndianRed"/>
+            <Label x:Name="UINotification" Text="Unable to process request" IsVisible="False" BackgroundColor="IndianRed" HorizontalTextAlignment="Center"/>
             <StackLayout 
                 Margin="5"                 
                 Orientation="Horizontal" 
                 HorizontalOptions="FillAndExpand" 
                 BackgroundColor="Accent">
-                
+
                 <Button 
                     x:Name = "ExternalButton" 
                     Text="Loading..."
@@ -26,7 +26,6 @@
                 <ImageButton 
                         x:Name="UIFavoriteClick" 
                         Source="heart_small.png" 
-                        
                         BackgroundColor="Transparent" 
                         WidthRequest="64" 
                         HeightRequest="64" 
