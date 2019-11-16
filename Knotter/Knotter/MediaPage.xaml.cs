@@ -57,10 +57,13 @@ namespace Knotter
             {
                 case true:
                     UIFavoriteClick.Source = "heart_large.png";
+                    UINotification.IsVisible = false;
                     break;
 
                 case false:
                     UIFavoriteClick.Source = "heart_small.png";
+                    UINotification.IsVisible = true;
+                    Device.StartTimer(TimeSpan.FromSeconds(2), () => { return UINotification.IsVisible = false; });     
                     break;
             }
         }  

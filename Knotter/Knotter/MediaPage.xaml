@@ -10,7 +10,7 @@
 
     <ContentPage.Content >
         <StackLayout BackgroundColor="#7F000000">
-            <Label Text="Unable to process request" IsVisible="true" BackgroundColor="IndianRed"/>
+            <Label x:Name="UINotification" Text="Unable to process request" IsVisible="true" BackgroundColor="IndianRed"/>
             <StackLayout 
                 Margin="5"                 
                 Orientation="Horizontal" 
