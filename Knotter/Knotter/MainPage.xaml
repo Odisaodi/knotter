@@ -15,8 +15,8 @@
             <ScrollView x:Name="ScrollContent">
                 <Grid x:Name="GridItems">
                     <!-- Results -->
-                </Grid><!-- Grid item / Results -->
-                
+                </Grid>
+
             </ScrollView>
             
             <StackLayout x:Name="splash" VerticalOptions="CenterAndExpand">

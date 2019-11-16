@@ -57,6 +57,8 @@ namespace Knotter
             return (int)ScreenHeight / (preview_height);// / (int)App.ScreenInfo.Density);
         }
 
+
+
         static public async Task<int> UpdateCacheAsync()
         {
             int remainder = (Booru.Results.Count - Booru.Tiles.Count);
@@ -72,16 +74,31 @@ namespace Knotter
             //else update
             _isGettingNewItems = true;
 
-            var value = await Connection.FetchResults<List<CPost>>("/post/index.json", Connection.Arguments);//.ConfigureAwait(false);
+            var response = await Connection.GetResponse("/post/index.json", Connection.Arguments);//.ConfigureAwait(false);
+            var json = await response.Content.ReadAsStringAsync();
 
-            if (value != null)
-                Booru.Results.AddRange(value);
-            else
-                remainder = 0;
+            if (Deserialize.TryParse(json, out List<CPost> posts))
+            {
+                //var value = await Connection.FetchResults<List<CPost>>("/post/index.json", Connection.Arguments);
 
-            _isGettingNewItems = false;
+                if (posts != null)
+                    Booru.Results.AddRange(posts);
+                else
+                    remainder = 0;
 
-            return remainder;
+                _isGettingNewItems = false;
+
+                return remainder;
+            }
+            //an error occured
+
+            if (Deserialize.TryParse(json, out ReturnStatus ret))
+            {
+                //to do: ReturnStatus.
+            }
+
+            //uh oh
+            return 0;
         }
     }
 }

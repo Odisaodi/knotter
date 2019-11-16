@@ -8,8 +8,10 @@
     <!--Pages can be added as references or inline-->
     <!-- Login -->
     <ContentPage Title="login" >
+        
         <StackLayout>
             <Label x:Name="UILabelLoggedIn" BackgroundColor="IndianRed" HorizontalTextAlignment="Center"/>
+            
             <Label Text="Username"/>
             <Entry x:Name="UIEntryUserame"/>
 
@@ -18,6 +20,7 @@
 
             <Button x:Name="UIButtonLogin" Text="Log in"/>
         </StackLayout>
+        
     </ContentPage>
     <!-- Host -->
     <ContentPage Title="host" >

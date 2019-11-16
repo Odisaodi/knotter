@@ -35,34 +35,23 @@ namespace Knotter
             return await Client.SendAsync(request);//.ConfigureAwait(false);
         }
 
-        static private async Task<string> FetchResultStringAsync(string page, Dictionary<string, string> arguments)
-        {
-            HttpResponseMessage response = await GetResponse(page, arguments);
+        //static private async Task<bool> (string page, Dictionary<string, string> arguments)
+        //{
+        //    HttpResponseMessage response = await GetResponse(page, arguments);
 
-            if (response.IsSuccessStatusCode)
-            {
-                return await response.Content.ReadAsStringAsync();//.ConfigureAwait(false);
-            }
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        return await response.Content.ReadAsStringAsync();//.ConfigureAwait(false);
+        //    }
 
-            var status = new ExpectedFailure
-            { 
-                Status = false, 
-                Reason = response.ReasonPhrase 
-            };
-            string value = Serialize.ToJson(status);
-            return value;
-        }
+        //    var error = new ReturnStatus { 
+        //        Status = false, 
+        //        Reason = response.ReasonPhrase,
+        //    };
 
-        static public async Task<T> FetchResults<T>(string page, Dictionary<String, String> arguments, bool posting = false)
-        {
-            //Get Response as String    
-            string response = await FetchResultStringAsync(page, arguments);//.ConfigureAwait(false);
-
-            if (response.Length > 0)
-                return (T)Deserialize.FromJson<T>(response);//Deserialize response to Type
-
-            throw new ArgumentNullException();
-        }
+        //    string value = Serialize.ToJson(error);
+        //    return value;
+        //}
 
         static public async Task<bool> CheckVersion()
         {

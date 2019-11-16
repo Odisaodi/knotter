@@ -11,16 +11,13 @@ namespace Knotter
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MediaPage : ContentPage
     {
-
-        private int SelectedPostIndex = 0;
         private CPost SelectedPost;
-        private static double LowerBounds;
+        private int SelectedPostIndex = 0;
+        private static readonly double LowerBounds = Booru.ScreenHeight - (Booru.ScreenHeight / 3);
 
         public MediaPage(int index)
         {
             InitializeComponent();
-
-            LowerBounds = Booru.ScreenHeight - (Booru.ScreenHeight / 3);
 
             SelectedPostIndex = index;
             SelectedPost = Booru.Results[SelectedPostIndex];
@@ -39,12 +36,39 @@ namespace Knotter
             UIButtonCollapse.Clicked +=
                 (s, e) => Collapse_clicked();
 
+            UIFavoriteClick.Clicked +=
+                (s, e) => UIVoteClicked();
+
             Indicate(true);
             UpdateMediaContent();
             UpdateSlidingPane();
             Indicate(false);
         }
 
+        public bool state;
+        private async void UIVoteClicked()//(object sender, EventArgs e)
+        {//note: upvoting is different than favorating
+            
+            state = !state;
+            var vote = (state) ? 1 : -1;
+            bool ret = await UserActions.VoteAsync(SelectedPost.Id, vote);
+
+            switch (ret)
+            {
+                case true:
+                    UIFavoriteClick.Source = "heart_large.png";
+                    break;
+
+                case false:
+                    UIFavoriteClick.Source = "heart_small.png";
+                    break;
+            }
+        }  
+
+        public void InitalizeMediaContent()
+        {
+
+        }
         private void Collapse_clicked()
         {
             UIButtonCollapse.IsVisible = false;
@@ -143,8 +167,8 @@ namespace Knotter
             //Add tagstack to pane
             UISlidingMenu.Children.Add(TagStack);
 
-            //the lower 1/4th of the screen
             UISlidingMenu.TranslateTo(0, LowerBounds);
+            UIButtonCollapse.IsVisible = false;
         }
 
         ActivityIndicator activityIndicator;
@@ -336,24 +360,7 @@ namespace Knotter
             };
         }
 
-        public bool state;
-        private async void ImageButton_Clicked(object sender, EventArgs e)
-        {
-            //note: upvoting is different than faverating
-            state = !state;
-            if (state)
-            {//downvote
-                UIFavoriteClick.Source = "heart_small.png";
-                await UserActions.VoteAsync(SelectedPost.Id, -1);
-            }
 
-            else
-            {//upvote
-                UIFavoriteClick.Source = "heart_large.png";
-                await UserActions.VoteAsync(SelectedPost.Id, 1);
-            }
-
-        }
     }
 
 }

@@ -8,7 +8,7 @@ namespace Knotter
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
 
-    [DesignTimeVisible(false)]
+    [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
 
@@ -20,20 +20,15 @@ namespace Knotter
 
             SearchBox.Completed += SearchClicked;
             SettingsButton.Clicked += SettingsClicked;
-
         }
 
         public async void SettingsClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new SettingsPage()).ConfigureAwait(false);
-
-            
+            await Navigation.PushAsync(new SettingsPage()).ConfigureAwait(false);//.ConfigureAwait(false);
         }
 
         private async void SearchClicked(object sender, EventArgs e)
         {
-            //search clicked
-            //debug.Text = "submitted query";
             await Navigation.PushAsync(new ResultsPage(SearchBox.Text));//.ConfigureAwait(false);
         }
 

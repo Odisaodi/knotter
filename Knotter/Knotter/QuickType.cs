@@ -132,10 +132,11 @@ namespace QuickType
         [JsonProperty("success")]
         public string Success { get; set; }
     }
-    public class ExpectedFailure
+    public class ReturnStatus //"{\"status\":false,\"reason\":\"Not Found\"}"
     {
         [JsonProperty("status")]
         public bool Status { get; set; }
+
         [JsonProperty("reason")]
         public string Reason { get; set; }
     }
@@ -156,8 +157,24 @@ namespace QuickType
     }
     public static class Deserialize
     {
-        public static T FromJson<T>(string json) => (T) JsonConvert.DeserializeObject<T>(json, QuickType.Converter.Settings);
-    }   
+        public static T FromJson<T>(string json) => 
+            (T) JsonConvert.DeserializeObject<T>(json, QuickType.Converter.Settings);
+
+        public static bool TryParse<T>(string json, out T result)
+        {
+            try
+            {
+                result = Deserialize.FromJson<T>(json);
+                return true;
+            }
+            catch //(Newtonsoft.Json.JsonSerializationException)
+            {
+                result = default;
+                return false;
+            }
+        }
+    }
+
 
     internal static class Converter
     {
@@ -167,9 +184,8 @@ namespace QuickType
         {
             MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
             DateParseHandling = DateParseHandling.None,
-
             MissingMemberHandling = MissingMemberHandling.Error,
-
+           
             Converters =
             {
                 new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
