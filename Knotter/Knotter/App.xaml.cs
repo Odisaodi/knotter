@@ -13,7 +13,7 @@ namespace Knotter
 
             //this initializes Booru
             VersionTracking.Track();
-            Settings.LoadUserSettings();
+            //Settings.LoadUserSettings();
 
             //this allows us to use page navigation
             MainPage = new NavigationPage(new MainPage()); //MainPage = new MainPage();
@@ -21,6 +21,7 @@ namespace Knotter
 
         void OnRotate(Object sender, DisplayInfoChangedEventArgs e)
         {
+            //Booru.ColCount = Booru.ScreenWidth / Booru.preview_height;
             //MainPage.ColCount = ScreenWidth / (preview_size);
             //change column count ??
         }

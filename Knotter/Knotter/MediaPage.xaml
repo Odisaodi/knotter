@@ -25,7 +25,7 @@
 
                 <ImageButton 
                         x:Name="UIFavoriteClick" 
-                        Source="heart_small.png" 
+                        Source="vote.png" 
                         BackgroundColor="Transparent" 
                         WidthRequest="64" 
                         HeightRequest="64" 

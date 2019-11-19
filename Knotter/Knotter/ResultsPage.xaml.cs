@@ -8,24 +8,26 @@ namespace Knotter
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ResultsPage : ContentPage
     {
+        private Booru CurrentSearch;
+
         public ResultsPage(string Tags)
         {
             InitializeComponent();
 
-            if (Booru.ColCount != Results.ColumnDefinitions.Count)
-            {
-                AddColumn(Booru.ColCount);
-            }
-
             //event handlers
-            Search.Completed += Search_Completed;
+            SearchTerms.Completed += Search_Completed;
             ScrollContent.Scrolled += OnScrolledAsync;
-
+            //
+            CurrentSearch = new Booru(Settings.HostValue);
+            if (CurrentSearch.ColCount != Results.ColumnDefinitions.Count)
+            {
+                AddColumn(CurrentSearch.ColCount);
+            }
             Results.VerticalOptions = LayoutOptions.StartAndExpand;
             Results.HorizontalOptions = LayoutOptions.CenterAndExpand;
             Results.Padding = 2;
             //initial search results
-            Search.Text = Tags;
+            SearchTerms.Text = Tags;
             SubmitSearchAsync(Tags);
         }
 
@@ -43,25 +45,27 @@ namespace Knotter
             Results.Children.Clear();
 
             //Clear the memory
-            Booru.Tiles.Clear();
-            Booru.Results.Clear();
+            CurrentSearch.tiles.Clear();
+            CurrentSearch.posts.Clear();
 
             string last_id = null;
-            if (Booru.Results.Count < 0)
-                last_id = Booru.Results[Booru.Results.Count - 1].Id.ToString();
+            if (CurrentSearch.posts.Count < 0)
+                last_id = CurrentSearch.posts[CurrentSearch.posts.Count - 1].Id.ToString();
 
             Connection.Arguments = new Dictionary<string, string>
             {
-                ["limit"] = Booru.ResultsPerRequest.ToString(),
-                ["before_id"] = last_id,
+                ["typed_tags"] = "true",
+                ["limit"] = CurrentSearch.ResultsPerRequest.ToString(),
                 ["tags"] = tags,//"rating:s ", 
             };
+            if (last_id != null)
+                Connection.Arguments["last_id"] = last_id;
 
-            await Booru.UpdateCacheAsync();//.ConfigureAwait(false);
-
-            //Add a page worth of Tiles to the UI
-            AddTiles();
-
+            int count = await CurrentSearch.UpdateCacheAsync();//.ConfigureAwait(false);
+            if(count > 0)
+                AddTiles();
+                //Add a page worth of Tiles to the UI
+                //note 0 results may be caused by an invalid struct cast (aka tryParse() fails)
             //removie the activity indicator
             IsLoading(false);
         }
@@ -77,14 +81,14 @@ namespace Knotter
             {//threshhold == bottom of scrollveiw + height of one image (aka just before it's visible)
                 debug.Text = "Fetching";
 
-                if (Booru.Results.Count > 0)
-                    Connection.Arguments["before_id"] = Booru.Results[Booru.Results.Count - 1].Id.ToString();
+                if (CurrentSearch.posts.Count > 0)
+                    Connection.Arguments["before_id"] = CurrentSearch.posts[CurrentSearch.posts.Count - 1].Id.ToString();
 
                 //notify the user something is happening
                 IsLoading();
 
                 //return control to the parent thread (UI) until this await has completed
-                await Booru.UpdateCacheAsync();//.ConfigureAwait(false);
+                await CurrentSearch.UpdateCacheAsync();//.ConfigureAwait(false);
 
                 AddTiles();
 

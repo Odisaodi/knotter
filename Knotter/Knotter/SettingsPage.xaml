@@ -8,7 +8,7 @@
     <!--Pages can be added as references or inline-->
     <!-- Login -->
     <ContentPage Title="login" >
-        
+        <!-- login -->
         <StackLayout>
             <Label x:Name="UILabelLoggedIn" BackgroundColor="IndianRed" HorizontalTextAlignment="Center"/>
             
@@ -28,7 +28,7 @@
             <Label Text="Host"/>
             <Entry x:Name="UIEntryURL"/>
 
-            <Label Text="Title"/>
+            <Label Text="Caption"/>
             <Entry x:Name="UIEntryTitle"/>
 
             <Button x:Name="UIButtonUpdateHost" Text="Update"/>
@@ -37,7 +37,11 @@
     <!-- about -->
     <ContentPage Title="about" >
         
-        <Label Text="icons by https://icons8.com"/>
+        <StackLayout>
+            <Label Text="icons by https://icons8.com" HorizontalTextAlignment="Center"/>
+            <Button x:Name="UICheckVersion" Text="Check for Updates" />
+            <Label x:Name="UIVersionLabel" IsVisible="False" HorizontalTextAlignment="Center"/>
+        </StackLayout>
         
     </ContentPage>
 </TabbedPage>

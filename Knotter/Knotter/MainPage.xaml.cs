@@ -16,7 +16,7 @@ namespace Knotter
         {
             InitializeComponent();
 
-            TitleText.Text = Settings.NameValue;
+            TitleText.Text = Settings.HostTitle;
 
             SearchBox.Completed += SearchClicked;
             SettingsButton.Clicked += SettingsClicked;

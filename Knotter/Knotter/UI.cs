@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿
+using Xamarin.Forms;
+using System;
 
 namespace Knotter
 {
@@ -26,33 +28,39 @@ namespace Knotter
         }
         public void AddTiles()
         {
-            int remainder = (Booru.Results.Count - Booru.Tiles.Count);
+            int remainder = (CurrentSearch.posts.Count - CurrentSearch.tiles.Count);
 
             //return count unless remainder is less, then return remainder.       
-            int count = (remainder < Booru.ResultsPerPage) ? remainder : Booru.ResultsPerPage;
+            int count = (remainder < CurrentSearch.ResultsPerPage) ? remainder : CurrentSearch.ResultsPerPage;
+            if(count <= 0)
+            {
+                UINotification.Text = "nobody here but us chickens";
+                UINotification.IsVisible = true;
+                Device.StartTimer(TimeSpan.FromSeconds(2), () => { return UINotification.IsVisible = false; });
+            } else UINotification.IsVisible = false;
 
             for (int i = 0; i < count; i++)
             {
                 var Tile = GetNextThumbnail();
 
-                int x = Booru.Tiles.Count % Booru.ColCount;
-                int y = Booru.Tiles.Count / Booru.ColCount;
+                int x = CurrentSearch.tiles.Count % CurrentSearch.ColCount;
+                int y = CurrentSearch.tiles.Count / CurrentSearch.ColCount;
                 //Add to UI
                 Results.Children.Add(Tile, x, y);
 
                 //add to List (Must happen last, as it incriments Tiles.Count)
-                Booru.Tiles.Add(Tile);
+                CurrentSearch.tiles.Add(Tile);
             }
         }
 
         public Grid GetNextThumbnail() //thumbnails
         {
-            if (Booru.Results.Count <= 0) //verify we have at least 1 data to use
+            if (CurrentSearch.posts.Count <= 0) //verify we have at least 1 data to use
                 return null;
 
             //aka the "next" item
-            int index = Booru.Tiles.Count;
-            var post = Booru.Results[index];
+            int index = CurrentSearch.tiles.Count;
+            var post = CurrentSearch.posts[index];
 
             //return Task.Run(() => 
             //{
@@ -109,7 +117,7 @@ namespace Knotter
             };//Tile
 
             var tap = new TapGestureRecognizer();
-            tap.Tapped += (s, e) => Navigation.PushAsync(new MediaPage(index));
+            tap.Tapped += (s, e) => Navigation.PushAsync( new MediaPage(CurrentSearch, index));
             //
             Tile.GestureRecognizers.Add(tap);
 

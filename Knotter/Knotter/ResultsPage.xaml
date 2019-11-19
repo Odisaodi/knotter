@@ -9,6 +9,13 @@
     <ContentPage.Content>
         <StackLayout x:Name="RootContent">
             <!-- overlay for Activity indicator (aka ontop of griditems)-->
+            <Label 
+                x:Name="UINotification" 
+                Text="Unable to process request" 
+                IsVisible="False" 
+                BackgroundColor="IndianRed" 
+                HorizontalTextAlignment="Center"/>
+            
             <Grid x:Name="Overlay" VerticalOptions="FillAndExpand">
                 
                 <!-- debug text -->
@@ -30,7 +37,7 @@
             </Grid>
 
             <StackLayout VerticalOptions="End">
-                <Entry x:Name="Search" TextColor="Fuchsia" BackgroundColor="#7F7F7F7F"></Entry>
+                <Entry x:Name="SearchTerms" TextColor="Fuchsia" BackgroundColor="#7F7F7F7F"></Entry>
             </StackLayout>
             
         </StackLayout>
