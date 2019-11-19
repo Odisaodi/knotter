@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Linq;
-using System.ComponentModel;
+using System.Collections.Generic;
 
-using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
 
-using Octane.Xamarin.Forms.VideoPlayer;
 using QuickType;
+using Octane.Xamarin.Forms.VideoPlayer;
 
 namespace Knotter
 {
-    //[DesignTimeVisible(true)]
-
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MediaPage : ContentPage
     {
-        private CPost SelectedPost;
-        private int SelectedPostIndex = 0;
+        private Booru Search;
+        private CPost Post;
+        private int Index = 0;
         private static readonly double upperBounds = Booru.ScreenHeight / 3;
         private static readonly double LowerBounds = Booru.ScreenHeight - upperBounds;
 
-        public MediaPage(int index)
+        public MediaPage(object sender, int index)
         {
             InitializeComponent();
 
-            SelectedPostIndex = index;
-            SelectedPost = Booru.Results[SelectedPostIndex];
+            Search = (Booru)sender;
+            Index = index;
+            Post = Search.posts[Index];
 
             //add gesture to the MediaWindow
             var MediaWindowPan = new PanGestureRecognizer();
@@ -47,7 +47,6 @@ namespace Knotter
 
             UpdateMedia();
         }
-
 
         public void UpdateMedia()
         {
@@ -76,12 +75,12 @@ namespace Knotter
         private async void GetNextPost()
         {
             //if Next_post touches the threshhold we have to update the prefetch
-            if ((Booru.Results.Count - SelectedPostIndex) < Booru.ResultsPerPage)
+            if ((Search.posts.Count - Index) < Search.ResultsPerPage)
             {
-                await Booru.UpdateCacheAsync();
+                await Search.UpdateCacheAsync();
             }
-            SelectedPostIndex++;
-            SelectedPost = Booru.Results[SelectedPostIndex];
+            Index++;
+            Post = Search.posts[Index];
 
             UpdateMedia();
         }
@@ -90,7 +89,7 @@ namespace Knotter
         {
             ExternalButton.Clicked += (s, e) =>
             {
-                Launcher.OpenAsync(new Uri(Settings.HostValue + "/post/show/" + SelectedPost.Id));
+                Launcher.OpenAsync(new Uri(Settings.HostValue + "/post/show/" + Post.Id));
             };
             ExternalButton.Text = $"View at {Settings.NameValue}";
 
@@ -101,14 +100,14 @@ namespace Knotter
         //swipe action
         private void GetLastPost()
         {
-            if (SelectedPostIndex <= 0)
+            if (Index <= 0)
             {
                 DisplayAlert("owo no", "End of List", "ok");
                 return;
             }
 
-            SelectedPostIndex--;
-            SelectedPost = Booru.Results[SelectedPostIndex];
+            Index--;
+            Post = Search.posts[Index];
 
             UpdateMedia();
         }
@@ -120,7 +119,7 @@ namespace Knotter
 
             state = !state;
             var vote = (state) ? 1 : -1;
-            int ret = await UserActions.VoteAsync(SelectedPost.Id, vote);
+            int ret = await UserActions.VoteAsync(Post.Id, vote);
 
             switch (ret)
             {
@@ -205,16 +204,16 @@ namespace Knotter
         public ContentView MediaTemplate()
         {
             dynamic media;
-            switch (SelectedPost.FileExt)
+            switch (Post.FileExt)
             {
                 case "gif":
-                    media = WebVeiwTemplate(SelectedPost.FileUrl.AbsoluteUri);
+                    media = WebVeiwTemplate(Post.FileUrl.AbsoluteUri);
                     break;
 
                 case "webm"://Webm's used to work but dont anymore, hmm
                     media = new VideoPlayer
                     {
-                        Source = VideoSource.FromUri(SelectedPost.FileUrl),
+                        Source = VideoSource.FromUri(Post.FileUrl),
                         Volume = 0,//Default Mute
                     };
                     break;
@@ -226,7 +225,7 @@ namespace Knotter
                     {
                         //preview, although smaller, loads much faster than absurd_res and saves data
                         //user can still view full image on web
-                        Source = ImageSource.FromUri(SelectedPost.SampleUrl),
+                        Source = ImageSource.FromUri(Post.SampleUrl),
                         //WidthRequest = Booru.ScreenWidth,
                     };
                     break;
@@ -234,7 +233,7 @@ namespace Knotter
                 default:
                     media = new Label
                     {
-                        Text = $"Media format not supported: {SelectedPost.FileExt}",
+                        Text = $"Media format not supported: {Post.FileExt}",
                         HorizontalTextAlignment = TextAlignment.Center,
                         VerticalTextAlignment = TextAlignment.Center,
                         TextColor = Color.Chartreuse,

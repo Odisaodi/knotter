@@ -3,37 +3,33 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin;
 
 namespace Knotter
 {
-    static partial class Booru
+    partial class Booru
     {
-        //-------------
+        static public int ScreenWidth;
+        static public int ScreenHeight;
+        static private bool _isGettingNewItems;      
+
         static public int preview_width = 110;
         static public int preview_height = 150;
         static private DisplayInfo DisplayInfo;
 
-        static public int ColCount;
-        static public int RowCount;
-        static public int ResultsPerPage;
-        static public int ResultsPerRequest;
+        public int ColCount;
+        public int RowCount;
+        public int ResultsPerPage;
+        public int ResultsPerRequest;
 
-        static public int ScreenWidth;
-        static public int ScreenHeight;
-        static public List<CPost> Results;//List<Post_Item>
-        static public List<Grid> Tiles;
-        public static bool _isGettingNewItems;
-
-        static public void Initialize(string host)
+        public List<CPost> posts = new List<CPost>();
+        public List<Grid> tiles = new List<Grid>();
+        
+        public Booru(string host)
         {
+            
             Connection.Connect(host);//assume success
-
-            //results downloaded
-            Results = new List<CPost>();
-
-            //results displayed
-            Tiles = new List<Grid>();
-
+            
             //calculate screen size;
             DisplayInfo = DeviceDisplay.MainDisplayInfo;
             ScreenWidth = (int)(DisplayInfo.Width / DisplayInfo.Density);
@@ -47,24 +43,22 @@ namespace Knotter
             ResultsPerRequest = ResultsPerPage * 2;//aka always have two pages in memory.
         }
 
-        static public int ColsPerPage()
+        public int ColsPerPage()
         {
-            return (int)ScreenWidth / (preview_width);// / (int)App.ScreenInfo.Density);
+            return (int)ScreenWidth / (preview_width);
         }
 
-        static public int RowsPerPage()
+        public int RowsPerPage()
         {
-            return (int)ScreenHeight / (preview_height);// / (int)App.ScreenInfo.Density);
+            return (int)ScreenHeight / (preview_height);
         }
 
-
-
-        static public async Task<int> UpdateCacheAsync()
+        public async Task<int> UpdateCacheAsync()
         {
-            int remainder = (Booru.Results.Count - Booru.Tiles.Count);
+            int remainder = this.posts.Count - tiles.Count;
 
             //do we even need to update? 
-            if (remainder > Booru.ResultsPerPage)
+            if (remainder > ResultsPerPage)
                 return remainder;
 
             //if its already updating?
@@ -77,24 +71,30 @@ namespace Knotter
             var response = await Connection.GetResponse("/post/index.json", Connection.Arguments);//.ConfigureAwait(false);
             var json = await response.Content.ReadAsStringAsync();
 
-            if (Deserialize.TryParse(json, out List<CPost> posts))
+            _isGettingNewItems = false;
+            try
             {
-                //var value = await Connection.FetchResults<List<CPost>>("/post/index.json", Connection.Arguments);
+                if (Deserialize.TryParse(json, out List<CPost> output))
+                {
 
-                if (posts != null)
-                    Booru.Results.AddRange(posts);
-                else
-                    remainder = 0;
+                    if (posts != null)
+                        posts.AddRange(output);
+                    else
+                        remainder = 0;
 
-                _isGettingNewItems = false;
-
-                return remainder;
+                    return remainder + output.Count;
+                }
+            }
+            catch
+            {
+                return 0;
             }
             //an error occured
 
             if (Deserialize.TryParse(json, out ReturnStatus ret))
             {
-                //to do: ReturnStatus.
+                //to do: ReturnStatus.;
+                //Device.BeginInvokeOnMainThread( ()=> DisplayAlert )
             }
 
             //uh oh

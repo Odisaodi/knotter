@@ -62,7 +62,7 @@ namespace Knotter
             };
             UISlidingMenu.Children.Add(UISliderCaption);
 
-            var tagList = CreateTagList(SelectedPost.Tags);
+            var tagList = CreateTagList(Post.Tags);
             UISlidingMenu.Children.Add(tagList);
 
             UISlidingMenu.TranslateTo(0, LowerBounds);

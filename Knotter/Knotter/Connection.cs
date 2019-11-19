@@ -21,6 +21,12 @@ namespace Knotter
                 BaseAddress = new Uri(host),
             };
             Client.DefaultRequestHeaders.UserAgent.ParseAdd("Knotter/1.0 (user do6kids9)");//MyProject/1.0 (by username on Knotter)
+
+            Arguments = new Dictionary<string, string>
+            {
+                ["typed_tags"] = "true",
+                ["limit"] = "1",
+            };
         }
 
         static public async Task<HttpResponseMessage> GetResponse(string page, Dictionary<string, string> arguments, bool IsPost = false)

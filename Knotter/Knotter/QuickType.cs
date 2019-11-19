@@ -17,12 +17,12 @@ namespace QuickType
 
     public partial class CPost
     {
-        [JsonProperty("id")]
+        [JsonProperty("id"), JsonRequired]
         public long Id { get; set; }
 
         [JsonProperty("tags")]
-        public Tags Tags { get; set; } //public string Tags { get; set; }
-        
+        public  Tags Tags { get; set; }
+
         [JsonProperty("locked_tags")]
         public object LockedTags { get; set; }
 
@@ -144,24 +144,24 @@ namespace QuickType
     }
     public class LoginFailure
     {
-        [JsonProperty("success")]
+        [JsonProperty("success"), JsonRequired]
         public string Success { get; set; }
     }
     public class ReturnStatus //"{\"status\":false,\"reason\":\"Not Found\"}"
     {
-        [JsonProperty("status")]
+        [JsonProperty("status"), JsonRequired]
         public bool Status { get; set; }
 
-        [JsonProperty("reason")]
+        [JsonProperty("reason"), JsonRequired]
         public string Reason { get; set; }
     }
 
     public class LoginSuccess
     {
-        [JsonProperty("name")]
+        [JsonProperty("name"), JsonRequired]
         public string Name { get; set; }
         
-        [JsonProperty("password_hash")]
+        [JsonProperty("password_hash"), JsonRequired]
         public string PasswordHash { get; set; }
     }
 
@@ -173,7 +173,7 @@ namespace QuickType
     public static class Deserialize
     {
         public static T FromJson<T>(string json) => 
-            (T) JsonConvert.DeserializeObject<T>(json, QuickType.Converter.Settings);
+            (T) JsonConvert.DeserializeObject<T>(json);
 
         public static bool TryParse<T>(string json, out T result)
         {
@@ -182,7 +182,7 @@ namespace QuickType
                 result = Deserialize.FromJson<T>(json);
                 return true;
             }
-            catch //(Newtonsoft.Json.JsonSerializationException)
+            catch (Newtonsoft.Json.JsonSerializationException)
             {
                 result = default;
                 return false;
@@ -199,13 +199,13 @@ namespace QuickType
         {
             MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
             DateParseHandling = DateParseHandling.None,
-            MissingMemberHandling = MissingMemberHandling.Error,
-           
+            //MissingMemberHandling = MissingMemberHandling.Error,
             Converters =
             {
                 new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
             },
         };
+
     }
 
 }

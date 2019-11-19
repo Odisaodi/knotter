@@ -37,7 +37,7 @@
             </Grid>
 
             <StackLayout VerticalOptions="End">
-                <Entry x:Name="Search" TextColor="Fuchsia" BackgroundColor="#7F7F7F7F"></Entry>
+                <Entry x:Name="SearchTerms" TextColor="Fuchsia" BackgroundColor="#7F7F7F7F"></Entry>
             </StackLayout>
             
         </StackLayout>

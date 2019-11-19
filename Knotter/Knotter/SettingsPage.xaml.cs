@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace Knotter
 {
-
     public static class Settings
     {
         //maybe use a dictionary?
@@ -28,16 +27,16 @@ namespace Knotter
             set { Preferences.Set("ApiKey", value); } 
         }
 
-        public static void LoadUserSettings()
-        {
-            //todo: username/apikey 
-            Booru.Initialize(Settings.HostValue);
-        }
+        //public static void LoadUserSettings()
+        //{
+        //    //todo: username/apikey 
+        //    //(Settings.HostValue);
+        //}
         public static void UpdateUserSettings(string Host, string Name)
         {
             Settings.HostValue = Host;
             Settings.NameValue = Name;
-            Booru.Initialize(HostValue);
+            //Booru.Initialize(HostValue);
         }
     }
 
@@ -47,8 +46,6 @@ namespace Knotter
         public SettingsPage()
         {
             InitializeComponent();
-
-            Settings.LoadUserSettings();
 
             //Display Settings
             UIEntryTitle.Text = Settings.NameValue;
@@ -102,26 +99,23 @@ namespace Knotter
             }
         }
 
-        private async void UpdateSettings(object sender, EventArgs e)
+        private void UpdateSettings(object sender, EventArgs e)
         {
             Settings.UpdateUserSettings(UIEntryURL.Text, UIEntryTitle.Text);
+            
+            UIUpdateSettings();
 
-            //find the root page
-            var root = Navigation.NavigationStack.First();
 
             // insert the new page at the beginning of the stack
-            Navigation.InsertPageBefore(new MainPage(), root);
+            Navigation.InsertPageBefore(new MainPage(), Navigation.NavigationStack.First());
 
             //pop to the new root page
-            await Navigation.PopToRootAsync();
+           //await Navigation.PopToRootAsync();
+            
         }
 
-        public void DisplaySettings()
+        public void UIUpdateSettings()
         {
-            //in case it hasnt already been called for some reason
-            Settings.LoadUserSettings();
-
-            //Display Settings
             UIEntryURL.Text = Settings.HostValue;
             UIEntryTitle.Text = Settings.NameValue;
         }
