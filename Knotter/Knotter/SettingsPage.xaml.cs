@@ -10,32 +10,44 @@ namespace Knotter
     public static class Settings
     {
         //maybe use a dictionary?
+        private static string _host = Preferences.Get("HostValue", "https://e926.net");
+        private static string _name = Preferences.Get("HostName", "e926");
+        private static string _user = Preferences.Get("Username", "");
+        private static string _pass = Preferences.Get("ApiKey", "");
         public static string HostValue { 
-            get { return Preferences.Get("HostValue", "https://e926.net"); } 
-            set { HostValue = Preferences.Get("HostValue", value); } 
-        }
-        public static string NameValue { 
-            get { return Preferences.Get("NameValue", "e926"); }
-            set { Preferences.Set("NameValue", value); }
-        }
-        public static string Username {
-            get { return Preferences.Get("Username", ""); }
-            set { Preferences.Set("Username", value); }
-        }
-        public static string ApiKey {
-            get { return Preferences.Get("ApiKey", ""); }
-            set { Preferences.Set("ApiKey", value); } 
+            get { return _host; } 
+            set {
+                _host = value;
+                Preferences.Set("HostValue", value);
+            } 
         }
 
-        //public static void LoadUserSettings()
-        //{
-        //    //todo: username/apikey 
-        //    //(Settings.HostValue);
-        //}
+        public static string HostTitle { 
+            get { return _name; }
+            set {
+                _name  = value;
+                Preferences.Set("HostName", value); 
+            }
+        }
+
+        public static string Username {
+            get { return _user; }
+            set {
+                _user = value;
+                Preferences.Set("Username", value); }
+        }
+
+        public static string ApiKey {
+            get { return Preferences.Get("ApiKey", ""); }
+            set {
+                _pass = value;
+                Preferences.Set("ApiKey", value); } 
+        }
+
         public static void UpdateUserSettings(string Host, string Name)
         {
             Settings.HostValue = Host;
-            Settings.NameValue = Name;
+            Settings.HostTitle = Name;
             //Booru.Initialize(HostValue);
         }
     }
@@ -48,12 +60,13 @@ namespace Knotter
             InitializeComponent();
 
             //Display Settings
-            UIEntryTitle.Text = Settings.NameValue;
+            UIEntryTitle.Text = Settings.HostTitle;
             UIEntryURL.Text = Settings.HostValue;
             UIEntryUserame.Text = Settings.Username;
             //
             UIButtonUpdateHost.Clicked += UpdateSettings;
             UIButtonLogin.Clicked += LoginAsync;
+            UICheckVersion.Clicked += CheckForUpdates;
 
             if (UserActions.Isloggedin())
             {
@@ -83,7 +96,9 @@ namespace Knotter
 
         private async void LoginAsync(object sender, EventArgs e)
         {
-            bool success = await UserActions.Login(UIEntryUserame.Text, UIEntryPassword.Text);
+            bool status = await UserActions.Login(UIEntryUserame.Text, UIEntryPassword.Text);
+            if (status)
+                UIGetWelcomeText();
         }
 
         private async void CheckForUpdates(object sender, EventArgs e)
@@ -97,27 +112,37 @@ namespace Knotter
                     await Launcher.OpenAsync(new Uri("https://github.com/keihoag/knotter"));
                 }
             }
+            else
+            {
+                UIVersionLabel.IsVisible = true;
+                UIVersionLabel.Text = "No Updates. :(";
+                Device.StartTimer(TimeSpan.FromSeconds(2), () => {
+                   return UIVersionLabel.IsVisible = false;//no update
+                });
+            }
         }
 
-        private void UpdateSettings(object sender, EventArgs e)
+        private async void UpdateSettings(object sender, EventArgs e)
         {
             Settings.UpdateUserSettings(UIEntryURL.Text, UIEntryTitle.Text);
             
             UIUpdateSettings();
 
+            
+            var root = Navigation.NavigationStack.First();
 
             // insert the new page at the beginning of the stack
-            Navigation.InsertPageBefore(new MainPage(), Navigation.NavigationStack.First());
+            Navigation.InsertPageBefore(new MainPage(), root);
 
             //pop to the new root page
-           //await Navigation.PopToRootAsync();
+            await Navigation.PopToRootAsync();
             
         }
 
         public void UIUpdateSettings()
         {
             UIEntryURL.Text = Settings.HostValue;
-            UIEntryTitle.Text = Settings.NameValue;
+            UIEntryTitle.Text = Settings.HostTitle;
         }
 
     }

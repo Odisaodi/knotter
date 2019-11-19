@@ -61,14 +61,14 @@ namespace Knotter
 
         static public async Task<bool> CheckVersion()
         {
-            var VersionURL = "/keihoag/knotter/master/apk/version.txt";
-
             Client = new HttpClient
             {
-                BaseAddress = new Uri("https://raw.githubusercontent.com")
+                BaseAddress = new Uri("https://raw.githubusercontent.com"),
             };
-            Client.DefaultRequestHeaders.UserAgent.ParseAdd("Knotter/1.0 (user do6kids9)");//MyProject/1.0 (by username on Knotter)
+            Client.DefaultRequestHeaders.Add("Cache-Control", "no-cache");
+            Client.DefaultRequestHeaders.Add("UserAgent", "Knotter /1.0 (on github)");
 
+            var VersionURL = "/keihoag/knotter/master/apk/version.txt";
             var response = await Client.GetAsync(VersionURL);
             if (response.IsSuccessStatusCode)
             {
@@ -80,7 +80,7 @@ namespace Knotter
                     string ThisVersion = currentVersion;
                     string ThatVersion = latest;
                     //bool UpdateAvailible = (ThisVersion < ThatVersion) ? true : false;
-                    bool UpdateAvailible = string.Compare(ThatVersion, ThatVersion, StringComparison.Ordinal) <= 0;
+                    bool UpdateAvailible = string.Compare(ThisVersion, ThatVersion, StringComparison.Ordinal) <= 0;
                     if (UpdateAvailible)
                     {
                         return true;
@@ -88,6 +88,7 @@ namespace Knotter
                 }
             }
             return false;
+            //return false;
         }
     }
 }

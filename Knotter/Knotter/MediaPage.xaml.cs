@@ -91,7 +91,7 @@ namespace Knotter
             {
                 Launcher.OpenAsync(new Uri(Settings.HostValue + "/post/show/" + Post.Id));
             };
-            ExternalButton.Text = $"View at {Settings.NameValue}";
+            ExternalButton.Text = $"View at {Settings.HostTitle}";
 
             UIMediaContent.Children.Clear();
             UIMediaContent.Children.Add( MediaTemplate() );
