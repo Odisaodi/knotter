@@ -21,6 +21,7 @@ namespace Knotter
 
         void OnRotate(Object sender, DisplayInfoChangedEventArgs e)
         {
+            Booru.ColCount = Booru.ScreenWidth / Booru.preview_height;
             //MainPage.ColCount = ScreenWidth / (preview_size);
             //change column count ??
         }

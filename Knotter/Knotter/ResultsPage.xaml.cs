@@ -52,6 +52,7 @@ namespace Knotter
 
             Connection.Arguments = new Dictionary<string, string>
             {
+                ["typed_tags"] = "true",
                 ["limit"] = Booru.ResultsPerRequest.ToString(),
                 ["before_id"] = last_id,
                 ["tags"] = tags,//"rating:s ", 
@@ -60,6 +61,7 @@ namespace Knotter
             await Booru.UpdateCacheAsync();//.ConfigureAwait(false);
 
             //Add a page worth of Tiles to the UI
+            //note 0 results may be caused by an invalid struct cast (aka tryParse() fails)
             AddTiles();
 
             //removie the activity indicator

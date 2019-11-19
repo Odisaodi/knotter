@@ -54,14 +54,13 @@ namespace Knotter
             UIEntryTitle.Text = Settings.NameValue;
             UIEntryURL.Text = Settings.HostValue;
             UIEntryUserame.Text = Settings.Username;
-
-            
+            //
             UIButtonUpdateHost.Clicked += UpdateSettings;
             UIButtonLogin.Clicked += LoginAsync;
 
             if (UserActions.Isloggedin())
             {
-                UILabelLoggedIn.Text = $"Hello {Settings.Username}";
+                UILabelLoggedIn.Text = $"Welcome back, {Settings.Username}";
                 UILabelLoggedIn.BackgroundColor = Color.LightGreen;
             }
             else
@@ -71,19 +70,23 @@ namespace Knotter
             } 
         }
 
-        private async void LoginAsync(object sender, EventArgs e)
+        public void UIGetWelcomeText()
         {
-            bool success = await UserActions.Login(UIEntryUserame.Text, UIEntryPassword.Text);
             if (UserActions.Isloggedin())
             {
-                UILabelLoggedIn.BackgroundColor = Color.LightGreen;
                 UILabelLoggedIn.Text = $"Welcome back, {Settings.Username}";
+                UILabelLoggedIn.BackgroundColor = Color.LightGreen;
             }
             else
             {
                 UILabelLoggedIn.Text = $"Not logged in";
                 UILabelLoggedIn.BackgroundColor = Color.IndianRed;
             }
+        }
+
+        private async void LoginAsync(object sender, EventArgs e)
+        {
+            bool success = await UserActions.Login(UIEntryUserame.Text, UIEntryPassword.Text);
         }
 
         private async void CheckForUpdates(object sender, EventArgs e)

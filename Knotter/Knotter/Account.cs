@@ -44,7 +44,7 @@ namespace Knotter
             return false;
         }
 
-        static public async Task<bool> VoteAsync(long post_id, int score = 0)
+        static public async Task<int> VoteAsync(long post_id, int score = 0)
         {
             var vote = new Dictionary<string, string>
             {
@@ -63,11 +63,11 @@ namespace Knotter
 
                 if (Deserialize.TryParse(json, out ReturnStatus Returned))
                 {
-                    return Returned.Status;
+                    return (Returned.Status) ? 1 : -1; 
                 }
             }
             //if (not 200_OK) { "we may get a non json reply (501, 404.html?)" }
-            return false;
+            return 0;//neutral
         }
 
         static public async Task<bool> typedTags(long post_id)

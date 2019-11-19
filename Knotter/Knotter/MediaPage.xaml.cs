@@ -1,22 +1,25 @@
-﻿using Octane.Xamarin.Forms.VideoPlayer;
-using QuickType;
-using System;
+﻿using System;
 using System.Linq;
 using System.ComponentModel;
+
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using Octane.Xamarin.Forms.VideoPlayer;
+using QuickType;
+
 namespace Knotter
 {
-    [DesignTimeVisible(true)]
+    //[DesignTimeVisible(true)]
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MediaPage : ContentPage
     {
         private CPost SelectedPost;
         private int SelectedPostIndex = 0;
-        private static readonly double LowerBounds = Booru.ScreenHeight - (Booru.ScreenHeight / 3);
+        private static readonly double upperBounds = Booru.ScreenHeight / 3;
+        private static readonly double LowerBounds = Booru.ScreenHeight - upperBounds;
 
         public MediaPage(int index)
         {
@@ -42,160 +45,19 @@ namespace Knotter
             UIFavoriteClick.Clicked +=
                 (s, e) => UIVoteClicked();
 
+            UpdateMedia();
+        }
+
+
+        public void UpdateMedia()
+        {
             Indicate(true);
-            UpdateMediaContent();
+            FetchMediaContent();
             UpdateSlidingPane();
             Indicate(false);
-        }
-        //Listview
-
-        public bool state;
-        private async void UIVoteClicked()//(object sender, EventArgs e)
-        {//note: upvoting is different than favorating
-            
-            state = !state;
-            var vote = (state) ? 1 : -1;
-            bool ret = await UserActions.VoteAsync(SelectedPost.Id, vote);
-
-            switch (ret)
-            {
-                case true:
-                    UIFavoriteClick.Source = "heart_large.png";
-                    UINotification.IsVisible = false;
-                    break;
-
-                case false:
-                    UIFavoriteClick.Source = "heart_small.png";
-                    UINotification.IsVisible = true;
-                    Device.StartTimer(TimeSpan.FromSeconds(2), () => { return UINotification.IsVisible = false; });     
-                    break;
-            }
-        }  
-
-        public void InitalizeMediaContent()
-        {
-
-        }
-        private void Collapse_clicked()
-        {
-            UIButtonCollapse.IsVisible = false;
-
-            UISlidingMenu.TranslateTo(0, LowerBounds);
-        }
-
-        private async void GetNextPost()
-        {
-            //if Next_post touches the threshhold we have to update the prefetch
-            if ((Booru.Results.Count - SelectedPostIndex) < Booru.ResultsPerPage)
-            {
-                await Booru.UpdateCacheAsync();
-            }
-            SelectedPostIndex++;
-            SelectedPost = Booru.Results[SelectedPostIndex];
-
-            Indicate(true);
-            UpdateMediaContent();
-            UpdateSlidingPane();
-            Indicate(false);
-        }
-
-        private void GetLastPost()
-        {
-            if (SelectedPostIndex <= 0)
-            {
-                DisplayAlert("owo nowo", "End of List", "ok");
-                return;
-            }
-
-            SelectedPostIndex--;
-            SelectedPost = Booru.Results[SelectedPostIndex];
-
-            Indicate(true);
-            UpdateMediaContent();
-            UpdateSlidingPane();
-            Indicate(false);
-        }
-
-        private void UpdateMediaContent()
-        {
-            ExternalButton.Clicked += (s, e) =>
-            {
-                Launcher.OpenAsync(new Uri(Settings.HostValue + "/post/show/" + SelectedPost.Id));
-            };
-            ExternalButton.Text = $"View at {Settings.NameValue}";
-
-            UIMediaContent.Children.Clear();
-
-            var media = GetMediaContent();
-
-            UIMediaContent.Children.Add(media);
-        }
-
-        private void UpdateSlidingPane()
-        {
-            UISlidingMenu.Children.Clear();
-
-            //UISliderCaption
-            var UISliderCaption = new Label
-            {
-                Text = "↑ Tags ↑", //↑↓;
-                HeightRequest = 50,
-                VerticalTextAlignment = TextAlignment.Center,
-                HorizontalTextAlignment = TextAlignment.Center,
-                BackgroundColor = Color.Accent,
-            };
-            UISlidingMenu.Children.Add(UISliderCaption);
-
-
-            //
-            var TagStack = new StackLayout
-            {
-                Padding = 10,
-            };
-            //
-
-
-            var list = new ListView();
-
-            Type type = SelectedPost.Tags.GetType();
-            foreach (var property in type.GetProperties())
-            {
-                //for each property of the Tags class
-                string category = property.Name;
-                var value = (string)property.GetValue(SelectedPost.Tags, null);
-
-                //return an array of tags
-                var taglist = value.Split(' ').ToList();
-
-            }
-
-            foreach (var tag in SelectedPost.Tags.Split(' ').ToList())
-            {
-
-                Button button = new Button
-                {
-                    Text = tag.ToString(),
-                    HorizontalOptions = LayoutOptions.Start,
-                };
-
-                button.Clicked += (s, e) =>
-                {
-                    Navigation.PushAsync(
-                        new ResultsPage(tag.ToString())
-                    );
-                };
-
-                TagStack.Children.Add(button);
-            }
-            //Add tagstack to pane
-            UISlidingMenu.Children.Add(TagStack);
-
-            UISlidingMenu.TranslateTo(0, LowerBounds);
-            UIButtonCollapse.IsVisible = false;
         }
 
         ActivityIndicator activityIndicator;
-
         public void Indicate(bool state = true)
         {
             if (activityIndicator == null)
@@ -210,49 +72,91 @@ namespace Knotter
             activityIndicator.IsRunning = state;
         }
 
-        private double StartDragY;
-        public void OnSlidingMenuPanUpdated(object sender, PanUpdatedEventArgs e)
+        //swipe action
+        private async void GetNextPost()
         {
-
-            double delta = (SlidingWindow.Height - UISlidingMenu.Height);
-
-            switch (e.StatusType)
+            //if Next_post touches the threshhold we have to update the prefetch
+            if ((Booru.Results.Count - SelectedPostIndex) < Booru.ResultsPerPage)
             {
-                case GestureStatus.Started:
-                    StartDragY = UISlidingMenu.TranslationY;
-                    break;
-
-                case GestureStatus.Running:
-                    UISlidingMenu.TranslationY = StartDragY + e.TotalY;
-
-                    //display a "drop/close" button if we scroll the content
-                    if (UISlidingMenu.TranslationY < LowerBounds)
-                        UIButtonCollapse.IsVisible = true;
-                    else
-                        UIButtonCollapse.IsVisible = false;
-                    break;
-
-                case GestureStatus.Completed:
-
-                    if (UISlidingMenu.TranslationY > LowerBounds)
-                    {
-                        UISlidingMenu.TranslateTo(0, LowerBounds);
-                        break;
-                    }
-
-                    if (UISlidingMenu.TranslationY < delta)
-                    {
-                        UISlidingMenu.TranslateTo(0, delta);
-                        break;
-                    }
-                    break;
+                await Booru.UpdateCacheAsync();
             }
-            //debug.Text = UISlidingPane.TranslationY.ToString();
+            SelectedPostIndex++;
+            SelectedPost = Booru.Results[SelectedPostIndex];
+
+            UpdateMedia();
         }
 
+        private void FetchMediaContent()
+        {
+            ExternalButton.Clicked += (s, e) =>
+            {
+                Launcher.OpenAsync(new Uri(Settings.HostValue + "/post/show/" + SelectedPost.Id));
+            };
+            ExternalButton.Text = $"View at {Settings.NameValue}";
+
+            UIMediaContent.Children.Clear();
+            UIMediaContent.Children.Add( MediaTemplate() );
+        }
+
+        //swipe action
+        private void GetLastPost()
+        {
+            if (SelectedPostIndex <= 0)
+            {
+                DisplayAlert("owo no", "End of List", "ok");
+                return;
+            }
+
+            SelectedPostIndex--;
+            SelectedPost = Booru.Results[SelectedPostIndex];
+
+            UpdateMedia();
+        }
+
+        //voting
+        public bool state;
+        private async void UIVoteClicked()//(object sender, EventArgs e)
+        {//note: upvoting is different than favorating
+
+            state = !state;
+            var vote = (state) ? 1 : -1;
+            int ret = await UserActions.VoteAsync(SelectedPost.Id, vote);
+
+            switch (ret)
+            {
+                case -1:
+                    //notify user of success
+                    UIFavoriteClick.Source = "downvote.png";
+                    break;
+
+                case 0:
+                    //failure types
+                    //"already voted You have already voted for this post."
+                    //"invalid score You have supplied an invalid score."
+
+                    //neutral icon
+                    UIFavoriteClick.Source = "vote.png";
+
+                    //turn notification on
+                    UINotification.IsVisible = true;
+
+                    //turn notification off after 2 seconds
+                    Device.StartTimer(TimeSpan.FromSeconds(2),
+                        () => { return UINotification.IsVisible = false; }
+                    );
+
+                    break;
+
+                case 1:
+                    //notify user of success
+                    UIFavoriteClick.Source = "upvote.png";
+                    break;
+            }
+        }
+
+        //swipe action
         private void OnMediaPanUpdated(object sender, PanUpdatedEventArgs e)
         {
-
             switch (e.StatusType)
             {
                 case GestureStatus.Started:
@@ -297,7 +201,8 @@ namespace Knotter
             }
         }
 
-        public ContentView GetMediaContent()
+        //templates
+        public ContentView MediaTemplate()
         {
             dynamic media;
             switch (SelectedPost.FileExt)

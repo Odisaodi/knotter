@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using System;
 
 namespace Knotter
 {
@@ -30,6 +31,12 @@ namespace Knotter
 
             //return count unless remainder is less, then return remainder.       
             int count = (remainder < Booru.ResultsPerPage) ? remainder : Booru.ResultsPerPage;
+            if(count <= 0)
+            {
+                UINotification.Text = "nobody here but us chickens";
+                UINotification.IsVisible = true;
+                Device.StartTimer(TimeSpan.FromSeconds(2), () => { return UINotification.IsVisible = false; });
+            } else UINotification.IsVisible = false;
 
             for (int i = 0; i < count; i++)
             {
