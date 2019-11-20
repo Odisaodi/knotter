@@ -69,6 +69,54 @@ namespace Knotter
             UIButtonCollapse.IsVisible = false;
         }
 
+        private void CreateActionBar()
+        {
+            var UIExternalLink = new Button
+            {
+                Text = "View on web",
+                BackgroundColor = Color.Transparent,
+            };
+            UIExternalLink.Clicked += (s, e) => { };
+            //
+            var UIFavoriteClicked = new ImageButton
+            {
+                Source = "stargrey.png",
+                BackgroundColor = Color.Transparent,
+            };
+            UIFavoriteClicked.Clicked += (s, e) => { HeartClicked(); };
+
+            //
+            var UIVoteDown = new ImageButton
+            {
+                Source = "votedowngrey.png",
+                BackgroundColor = Color.Transparent,
+                
+            };
+            UIVoteDown.Clicked += (s, e) => { VoteClicked(false); };
+
+            //
+            var UIVoteUp = new ImageButton
+            {
+                Source = "voteupgrey.png",
+                BackgroundColor = Color.Transparent,
+            };
+            UIVoteUp.Clicked += (s, e) => { VoteClicked(true); };
+
+            //
+            var stack = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                Children =
+                {
+                    UIVoteUp, UIVoteDown, UIFavoriteClicked,
+                }
+            };
+            UIMediaContent.Children.Add(stack);
+            //return stack;
+            //throw new NotImplementedException();
+        }
+
         public TableView CreateTagList(QuickType.Tags tags)
         {
             var root = new TableRoot();

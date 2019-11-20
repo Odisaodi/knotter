@@ -147,6 +147,22 @@ namespace QuickType
         [JsonProperty("success"), JsonRequired]
         public string Success { get; set; }
     }
+
+    public partial class VoteSuccess
+    {
+        [JsonProperty("score")]
+        public long Score { get; set; }
+
+        [JsonProperty("post_id")]
+        public long PostId { get; set; }
+
+        [JsonProperty("change")]
+        public long Change { get; set; }
+
+        [JsonProperty("success")]
+        public bool Success { get; set; }
+    }
+
     public class ReturnStatus //"{\"status\":false,\"reason\":\"Not Found\"}"
     {
         [JsonProperty("status"), JsonRequired]

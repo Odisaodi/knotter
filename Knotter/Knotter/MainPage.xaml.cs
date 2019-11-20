@@ -20,6 +20,18 @@ namespace Knotter
 
             SearchBox.Completed += SearchClicked;
             SettingsButton.Clicked += SettingsClicked;
+
+            if (UserActions.Isloggedin())
+            {
+                UILoggedInStatus.Text = $"Welcome back, {Settings.Username}";
+                UISettingsBar.BackgroundColor = Color.LightGreen;
+            }
+            else
+            {
+                UILoggedInStatus.Text = "log in here -> ";
+                UISettingsBar.BackgroundColor = Color.IndianRed;
+            }
+                
         }
 
         public async void SettingsClicked(object sender, EventArgs e)

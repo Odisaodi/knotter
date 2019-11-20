@@ -11,27 +11,30 @@
     <ContentPage.Content >
         <StackLayout BackgroundColor="#7F000000">
             <Label x:Name="UINotification" Text="Unable to process request" IsVisible="False" BackgroundColor="IndianRed" HorizontalTextAlignment="Center"/>
-            <StackLayout 
+            <!--<StackLayout 
                 Margin="5"                 
                 Orientation="Horizontal" 
                 HorizontalOptions="FillAndExpand" 
-                BackgroundColor="Accent">
+                BackgroundColor="Accent">-->
 
-                <Button 
-                    x:Name = "ExternalButton" 
-                    Text="Loading..."
-                    HorizontalOptions="FillAndExpand">
-                </Button>
+                <StackLayout x:Name="UIActionBar" 
+                            Orientation="Horizontal" 
+                            BackgroundColor="Accent" 
+                            HorizontalOptions="FillAndExpand"
+                            Margin="5" >
 
-                <ImageButton 
-                        x:Name="UIFavoriteClick" 
-                        Source="vote.png" 
-                        BackgroundColor="Transparent" 
-                        WidthRequest="64" 
-                        HeightRequest="64" 
-                />
+                    <Button 
+                        x:Name="ExternalButton" 
+                        Text="Loading..."
+                        HorizontalOptions="FillAndExpand">
+                    </Button>
 
-            </StackLayout>
+                <ImageButton x:Name="UIFavoriteClicked" Source="stargrey.png" HeightRequest="50"/>
+                    <ImageButton x:Name="UIVoteDown" Source="votedowngrey.png"/>
+                    <ImageButton x:Name="UIVoteUp" Source="voteupgrey.png"/>
+                </StackLayout>
+
+            
 
             <!-- Grid allows us to lay elements on top of each other (z-stack)-->
             <Grid x:Name="UIContentLayers" VerticalOptions="FillAndExpand" >
@@ -40,10 +43,9 @@
             <StackLayout x:Name="UIMediaContent" VerticalOptions="CenterAndExpand" BackgroundColor="#648F8F8F">
                 <!-- example  content, removed at runtime -->
                     <ContentView>
-                        <Image Source="loading.png"/>
+                        <Image Source="example.png"/>
                     </ContentView>
-
-            </StackLayout >
+                </StackLayout >
 
                 <!-- SlidingPane fills the entire screen BackgroundColor="LightGoldenrodYellow"-->
             <StackLayout x:Name="SlidingWindow" Padding="5" VerticalOptions="End">
@@ -58,14 +60,15 @@
                         x:Name="UISliderCaption"
                         Text = "[↑↓:0] [♥:0]  Caption for sliding pane " 
                         HorizontalTextAlignment = "Center"
-                        VerticalTextAlignment="Center"
-                        HeightRequest="50"
+                        VerticalTextAlignment ="Center"
                         BackgroundColor = "Accent">
                     </Label>
 
+
+                    
                         <!-- example  content, removed at runtime -->
                     <!-- Frame surrounding tag list-->
-                    <StackLayout x:Name="xTagStack" Padding="10">
+                    <StackLayout x:Name="xTagStack" Padding="10" >
                         <Button Text="Example"/>
                         <Button Text="Example"/>
                         <Button Text="Example"/>

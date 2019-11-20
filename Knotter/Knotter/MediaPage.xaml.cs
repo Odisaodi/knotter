@@ -42,8 +42,14 @@ namespace Knotter
             UIButtonCollapse.Clicked +=
                 (s, e) => Collapse_clicked();
 
-            UIFavoriteClick.Clicked +=
-                (s, e) => UIVoteClicked();
+            UIVoteDown.Clicked +=
+                (s, e) => VoteClicked(false);
+
+            UIVoteUp.Clicked +=
+                (s, e) => VoteClicked(true);
+
+            UIFavoriteClicked.Clicked += 
+                (s, e) => HeartClicked();
 
             UpdateMedia();
         }
@@ -51,6 +57,7 @@ namespace Knotter
         public void UpdateMedia()
         {
             Indicate(true);
+            CreateActionBar();
             FetchMediaContent();
             UpdateSlidingPane();
             Indicate(false);
@@ -112,20 +119,18 @@ namespace Knotter
             UpdateMedia();
         }
 
-        //voting
-        public bool state;
-        private async void UIVoteClicked()//(object sender, EventArgs e)
+
+        public bool _liked;
+        private async void HeartClicked()//(object sender, EventArgs e)
         {//note: upvoting is different than favorating
-
-            state = !state;
-            var vote = (state) ? 1 : -1;
-            int ret = await UserActions.VoteAsync(Post.Id, vote);
-
+            _liked = !_liked;
+            int ret = await UserActions.Favourite(Post.Id, _liked);
             switch (ret)
             {
                 case -1:
                     //notify user of success
-                    UIFavoriteClick.Source = "downvote.png";
+                    //UIFavoriteClick.Source = "downvote.png";
+                    UIFavoriteClicked.Source = "stargrey.png";
                     break;
 
                 case 0:
@@ -133,12 +138,9 @@ namespace Knotter
                     //"already voted You have already voted for this post."
                     //"invalid score You have supplied an invalid score."
 
-                    //neutral icon
-                    UIFavoriteClick.Source = "vote.png";
-
+                    UIFavoriteClicked.Source = "star.png";
                     //turn notification on
                     UINotification.IsVisible = true;
-
                     //turn notification off after 2 seconds
                     Device.StartTimer(TimeSpan.FromSeconds(2),
                         () => { return UINotification.IsVisible = false; }
@@ -148,9 +150,52 @@ namespace Knotter
 
                 case 1:
                     //notify user of success
-                    UIFavoriteClick.Source = "upvote.png";
+                    UIFavoriteClicked.Source = "star.png";
                     break;
             }
+
+        }
+
+        //voting
+        //public bool state;
+        private async void VoteClicked(bool state)//(object sender, EventArgs e)
+        {//note: upvoting is different than favorating
+            var vote = (state) ? 1 : -1;
+            //int ret = await UserActions.Favourite(Post.Id, state);
+            long ret = await UserActions.VoteAsync(Post.Id, vote);
+
+            switch (ret)
+            {
+                case -1:
+                    //notify user of success
+                    //UIFavoriteClick.Source = "downvote.png";
+                    UIVoteUp.Source = "voteupgrey.png";
+                    UIVoteDown.Source = "votedown.png";
+                    break;
+
+                case 0:
+                    //failure types
+                    //"already voted You have already voted for this post."
+                    //"invalid score You have supplied an invalid score."
+                    UIVoteDown.Source = "votedowngrey.png";
+                    UIVoteUp.Source = "voteupgrey.png";
+
+                    //turn notification on
+                    UINotification.IsVisible = true;
+                    //turn notification off after 2 seconds
+                    Device.StartTimer(TimeSpan.FromSeconds(2),
+                        () => { return UINotification.IsVisible = false; }
+                    );
+
+                    break;
+
+                case 1:
+                    //notify user of success
+                    UIVoteUp.Source = "voteup.png";
+                    UIVoteDown.Source = "votedowngrey.png";
+                    break;
+            }
+
         }
 
         //swipe action

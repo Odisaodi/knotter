@@ -10,7 +10,21 @@
     <ContentPage.Content>
         <StackLayout x:Name="RootContent">
             
-            <Button x:Name="SettingsButton" Text="(Gear)" HorizontalOptions="End"></Button>
+            <StackLayout x:Name="UISettingsBar" Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor="IndianRed">
+                <Label 
+                    x:Name="UILoggedInStatus"
+                    Text="Login ->" 
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center" />
+                
+                <Button 
+                    x:Name="SettingsButton" 
+                    Text="(Gear)" 
+                    HorizontalOptions="End"></Button>
+            </StackLayout>
+            
+            
             
             <ScrollView x:Name="ScrollContent">
                 <Grid x:Name="GridItems">
