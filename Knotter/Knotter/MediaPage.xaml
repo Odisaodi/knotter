@@ -3,89 +3,79 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:videoplayer="clr-namespace:Octane.Xamarin.Forms.VideoPlayer;assembly=Octane.Xamarin.Forms.VideoPlayer"
              mc:Ignorable="d"
              x:Class="Knotter.MediaPage"
              BackgroundImageSource="tiledstripe.xml">
-
     <ContentPage.Content >
-        <StackLayout BackgroundColor="#7F000000">
-            <Label x:Name="UINotification" Text="Unable to process request" IsVisible="False" BackgroundColor="IndianRed" HorizontalTextAlignment="Center"/>
-            <!--<StackLayout 
-                Margin="5"                 
+        <!-- Grid allows us to lay elements on top of each other (z-stack)-->
+        <Grid x:Name="UIContentLayers" VerticalOptions="FillAndExpand" >
+
+            <StackLayout 
+                x:Name="UIActionBar" 
                 Orientation="Horizontal" 
-                HorizontalOptions="FillAndExpand" 
-                BackgroundColor="Accent">-->
+                BackgroundColor="#7F000000"
+                VerticalOptions="Start">
 
-                <StackLayout x:Name="UIActionBar" 
-                            Orientation="Horizontal" 
-                            BackgroundColor="Accent" 
-                            HorizontalOptions="FillAndExpand"
-                            Margin="5" >
-
-                    <Button 
-                        x:Name="ExternalButton" 
-                        Text="Loading..."
-                        HorizontalOptions="FillAndExpand">
-                    </Button>
-
-                <ImageButton x:Name="UIFavoriteClicked" Source="stargrey.png" HeightRequest="50"/>
-                    <ImageButton x:Name="UIVoteDown" Source="votedowngrey.png"/>
-                    <ImageButton x:Name="UIVoteUp" Source="voteupgrey.png"/>
-                </StackLayout>
-
+                <Button  x:Name="ExternalButton" Text="Loading..." HorizontalOptions="FillAndExpand" HeightRequest="64"/>
+                <ImageButton x:Name="UIFavoriteClicked" Source="stargrey.png" HeightRequest="50" BackgroundColor="#00000000"/>
+                <ImageButton x:Name="UIVoteDown" Source="votedowngrey.png" BackgroundColor="#00000000"/>
+                <ImageButton x:Name="UIVoteUp" Source="voteupgrey.png" BackgroundColor="#00000000"/>
+            </StackLayout>
             
+            <Label 
+                x:Name="UINotification" 
+                Text="Unable to process request" 
+                IsVisible="False" BackgroundColor="IndianRed" VerticalOptions="Start" HorizontalTextAlignment="Center"/>
 
-            <!-- Grid allows us to lay elements on top of each other (z-stack)-->
-            <Grid x:Name="UIContentLayers" VerticalOptions="FillAndExpand" >
-                
-            <!-- the element which holds the Media -->
-            <StackLayout x:Name="UIMediaContent" VerticalOptions="CenterAndExpand" BackgroundColor="#648F8F8F">
-                <!-- example  content, removed at runtime -->
-                    <ContentView>
-                        <Image Source="example.png"/>
-                    </ContentView>
-                </StackLayout >
+             <!--the element which holds the Media-->
+            <StackLayout x:Name="UIMediaContent" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="#648F8F8F">
+                <Image Source="example.png"/>
+            </StackLayout >
 
-                <!-- SlidingPane fills the entire screen BackgroundColor="LightGoldenrodYellow"-->
-            <StackLayout x:Name="SlidingWindow" Padding="5" VerticalOptions="End">
+            <StackLayout x:Name="UISlidingPane" MinimumHeightRequest="40">
+                <!--<Label 
+                    x:Name="UISliderCaption"
+                    HeightRequest="50"
+                    Text = "↑ Tags ↓" 
+                    HorizontalTextAlignment = "Center"
+                    VerticalTextAlignment ="Center"
+                    BackgroundColor = "Accent">
+                </Label>-->
+                <StackLayout x:Name="TagLibrary" BackgroundColor="#64000000">
+                    <!--<TableView>
+                        <TableRoot>
+                            <TableSection Title="category 0">
+                                <ViewCell>
+                                    <StackLayout>
+                                        <Button Text=" example 1"></Button>
+                                        <Button Text=" example 2"></Button>
+                                    </StackLayout>
+                                </ViewCell>
+                            </TableSection>
+                            
+                            <TableSection Title="category 0">
+                                <ViewCell>
+                                    <StackLayout>
+                                        <Button Text=" example 1"></Button>
+                                        <Button Text=" example 2"></Button>
+                                    </StackLayout>
+                                </ViewCell>
+                            </TableSection>
 
-                <!-- UISliding pane moves along the y of "SlidingPane" -->
-                <StackLayout 
-                    x:Name="UISlidingMenu" 
-                    BackgroundColor="#E5000000" 
-                    VerticalOptions="End">
-
-                    <Label 
-                        x:Name="UISliderCaption"
-                        Text = "[↑↓:0] [♥:0]  Caption for sliding pane " 
-                        HorizontalTextAlignment = "Center"
-                        VerticalTextAlignment ="Center"
-                        BackgroundColor = "Accent">
-                    </Label>
-
-
+                        </TableRoot>
+                    </TableView>-->
                     
-                        <!-- example  content, removed at runtime -->
-                    <!-- Frame surrounding tag list-->
-                    <StackLayout x:Name="xTagStack" Padding="10" >
-                        <Button Text="Example"/>
-                        <Button Text="Example"/>
-                        <Button Text="Example"/>
-                    </StackLayout>
-
                 </StackLayout>
-                    
+                
             </StackLayout>
             
                 <Button 
-                    x:Name="UIButtonCollapse" 
-                    IsVisible="True"
-                    Text="↓Collapse↓" 
-                    VerticalOptions="End" 
-                    HorizontalOptions="End">
+                        x:Name="UIButtonCollapse" 
+                        IsVisible="True"
+                        Text="↓Collapse↓" 
+                        VerticalOptions="End" 
+                        HorizontalOptions="End">
                 </Button>
-            </Grid>
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -8,16 +8,39 @@ using Xamarin.Forms.Xaml;
 
 using QuickType;
 using Octane.Xamarin.Forms.VideoPlayer;
+using System.Threading.Tasks;
 
 namespace Knotter
 {
+    internal static class PageTemplate
+    {
+
+        public static readonly StackLayout UIActionBar = new StackLayout
+        {
+            Orientation = StackOrientation.Horizontal,
+            BackgroundColor = Color.FromHex("#7F000000"),
+            HorizontalOptions = LayoutOptions.FillAndExpand,
+            Children = {
+
+            }
+        };
+
+        public static readonly View UIContentLayers = new Grid
+        {
+            Children = {
+                UIActionBar,
+            }
+        };
+
+    }
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MediaPage : ContentPage
     {
         private Booru Search;
         private CPost Post;
         private int Index = 0;
-        private static readonly double upperBounds = Booru.ScreenHeight / 3;
+        private static readonly double upperBounds = Booru.ScreenHeight / 4;
         private static readonly double LowerBounds = Booru.ScreenHeight - upperBounds;
 
         public MediaPage(object sender, int index)
@@ -28,39 +51,82 @@ namespace Knotter
             Index = index;
             Post = Search.posts[Index];
 
-            //add gesture to the MediaWindow
-            var MediaWindowPan = new PanGestureRecognizer();
-            MediaWindowPan.PanUpdated += OnMediaPanUpdated;
-            UIContentLayers.GestureRecognizers.Add(MediaWindowPan);
+            //Add Gesture
+            var floatingMenuPan = new PanGestureRecognizer();
+            floatingMenuPan.PanUpdated += OnFloatingMenuPan;
+            UIContentLayers.GestureRecognizers.Add(floatingMenuPan);
 
-            //Add Gesture to the SlidingMenu
-            PanGestureRecognizer SlidingMenu = new PanGestureRecognizer();
-            SlidingMenu.PanUpdated += OnSlidingMenuPanUpdated;
-            UIContentLayers.GestureRecognizers.Add(SlidingMenu);
+            //Add Gesture
+            var panGesture = new PanGestureRecognizer();
+            panGesture.PanUpdated += OnMediaPan;
+            UIContentLayers.GestureRecognizers.Add(panGesture);
 
-            //button event
-            UIButtonCollapse.Clicked +=
-                (s, e) => Collapse_clicked();
-
-            UIVoteDown.Clicked +=
-                (s, e) => VoteClicked(false);
-
-            UIVoteUp.Clicked +=
-                (s, e) => VoteClicked(true);
-
-            UIFavoriteClicked.Clicked += 
-                (s, e) => HeartClicked();
-
-            UpdateMedia();
+            ReloadMediaPage();
         }
 
-        public void UpdateMedia()
+        public void ReloadMediaPage()
         {
-            Indicate(true);
-            CreateActionBar();
-            FetchMediaContent();
-            UpdateSlidingPane();
+            //remember it's on a grid
+            Indicate();
+
+            //layer 0 (bottom)
+            UpdateMediaLayer();
+
+            //layer 1 (center)
+            UpdateActionBar();
+
+            //layer 2 (center)
+            UpdateNotification("loading", Color.LightGreen, 2);
+
+            UpdateFloatingMenu();
+
+            //UIContentLayers.Children.Add(UISlidingPane);
             Indicate(false);
+        }
+
+        private void UpdateFloatingMenu()
+        {
+            UISlidingPane.Children.Clear();
+
+            //Caption
+            var UISliderCaption = new Label
+            {
+                Text = "↑ Tags ↓", //↑↓;
+                HeightRequest = 50,
+                VerticalTextAlignment = TextAlignment.Center,
+                HorizontalTextAlignment = TextAlignment.Center,
+                BackgroundColor = Color.Accent,
+            };
+
+            UISlidingPane.Children.Add( UISliderCaption );
+            //
+                TagLibrary.Children.Clear();
+                TagLibrary.Children.Add( UpdateTagLibrary(Post.Tags) );
+                UISlidingPane.Children.Add(TagLibrary);
+            //
+            UISlidingPane.TranslateTo(0, LowerBounds);
+        }
+
+        private void UpdateNotification(string text, Color color, double seconds)//BackgroundColor="IndianRed"
+        {
+            var UINotification = new Label
+            {
+                Text = "Progress...",
+                BackgroundColor = Color.IndianRed,
+                VerticalOptions = LayoutOptions.Start,
+                HorizontalTextAlignment = TextAlignment.Center,
+            };
+
+            UIContentLayers.Children.Add(UINotification);
+
+            Task.Run(() => { 
+                Device.StartTimer(TimeSpan.FromSeconds(2), () => { 
+                    UINotification.IsVisible = false;
+                    return true;
+                });            
+            });
+
+            
         }
 
         ActivityIndicator activityIndicator;
@@ -74,7 +140,9 @@ namespace Knotter
                     VerticalOptions = LayoutOptions.CenterAndExpand,
                     HorizontalOptions = LayoutOptions.CenterAndExpand,
                 };
+                UIContentLayers.Children.Add(activityIndicator);
             }
+
             activityIndicator.IsRunning = state;
         }
 
@@ -89,19 +157,7 @@ namespace Knotter
             Index++;
             Post = Search.posts[Index];
 
-            UpdateMedia();
-        }
-
-        private void FetchMediaContent()
-        {
-            ExternalButton.Clicked += (s, e) =>
-            {
-                Launcher.OpenAsync(new Uri(Settings.HostValue + "/post/show/" + Post.Id));
-            };
-            ExternalButton.Text = $"View at {Settings.HostTitle}";
-
-            UIMediaContent.Children.Clear();
-            UIMediaContent.Children.Add( MediaTemplate() );
+            ReloadMediaPage();
         }
 
         //swipe action
@@ -116,7 +172,7 @@ namespace Knotter
             Index--;
             Post = Search.posts[Index];
 
-            UpdateMedia();
+            ReloadMediaPage();
         }
 
 
@@ -125,81 +181,62 @@ namespace Knotter
         {//note: upvoting is different than favorating
             _liked = !_liked;
             int ret = await UserActions.Favourite(Post.Id, _liked);
-            switch (ret)
-            {
-                case -1:
-                    //notify user of success
-                    //UIFavoriteClick.Source = "downvote.png";
-                    UIFavoriteClicked.Source = "stargrey.png";
-                    break;
 
-                case 0:
-                    //failure types
-                    //"already voted You have already voted for this post."
-                    //"invalid score You have supplied an invalid score."
-
-                    UIFavoriteClicked.Source = "star.png";
-                    //turn notification on
-                    UINotification.IsVisible = true;
-                    //turn notification off after 2 seconds
-                    Device.StartTimer(TimeSpan.FromSeconds(2),
-                        () => { return UINotification.IsVisible = false; }
-                    );
-
-                    break;
-
-                case 1:
-                    //notify user of success
-                    UIFavoriteClicked.Source = "star.png";
-                    break;
+            if (_liked & (ret == 1))
+            {//if the action was a success and the current state is "like"
+                
+                UIFavoriteClicked.Source = "star.png";
+                return;
             }
-
+            else if (_liked & (ret == 0))
+            {//if the action was a success and the current state is "dislike"
+                //turn notification on
+                UINotification.IsVisible = true;
+                //turn notification off after 2 seconds
+                Device.StartTimer(TimeSpan.FromSeconds(2),
+                    () => { return UINotification.IsVisible = false; }
+                );
+            }
+            else
+                UIFavoriteClicked.Source = "stargrey.png";
         }
 
         //voting
         //public bool state;
-        private async void VoteClicked(bool state)//(object sender, EventArgs e)
-        {//note: upvoting is different than favorating
-            var vote = (state) ? 1 : -1;
+        private async void VoteClicked(int vote)//(object sender, EventArgs e)
+        {
             //int ret = await UserActions.Favourite(Post.Id, state);
-            long ret = await UserActions.VoteAsync(Post.Id, vote);
-
-            switch (ret)
+            bool ret = await UserActions.VoteAsync(Post.Id, vote);
+            if ( ret )
             {
-                case -1:
-                    //notify user of success
-                    //UIFavoriteClick.Source = "downvote.png";
-                    UIVoteUp.Source = "voteupgrey.png";
-                    UIVoteDown.Source = "votedown.png";
-                    break;
+                switch (vote)
+                {
+                    case -1:
+                        UIVoteUp.Source = "voteupgrey.png";
+                        UIVoteDown.Source = "votedown.png";
+                        break;
 
-                case 0:
-                    //failure types
-                    //"already voted You have already voted for this post."
-                    //"invalid score You have supplied an invalid score."
-                    UIVoteDown.Source = "votedowngrey.png";
-                    UIVoteUp.Source = "voteupgrey.png";
+                    case 0:
+                        UIVoteUp.Source = "voteupgrey.png";
+                        UIVoteDown.Source = "votedowngrey.png";
+                        break;
 
-                    //turn notification on
-                    UINotification.IsVisible = true;
-                    //turn notification off after 2 seconds
-                    Device.StartTimer(TimeSpan.FromSeconds(2),
-                        () => { return UINotification.IsVisible = false; }
-                    );
-
-                    break;
-
-                case 1:
-                    //notify user of success
-                    UIVoteUp.Source = "voteup.png";
-                    UIVoteDown.Source = "votedowngrey.png";
-                    break;
+                    case 1:
+                        UIVoteUp.Source = "voteup.png";
+                        UIVoteDown.Source = "votedowngrey.png";
+                        break;
+                }
+            }else{
+                UINotification.IsVisible = true;
+                //turn notification off after 2 seconds
+                Device.StartTimer(TimeSpan.FromSeconds(2),
+                    () => { return UINotification.IsVisible = false; }
+                );
             }
-
         }
 
         //swipe action
-        private void OnMediaPanUpdated(object sender, PanUpdatedEventArgs e)
+        private void OnMediaPan(object sender, PanUpdatedEventArgs e)
         {
             switch (e.StatusType)
             {
@@ -246,8 +283,10 @@ namespace Knotter
         }
 
         //templates
-        public ContentView MediaTemplate()
+        public void UpdateMediaLayer()
         {
+            UIMediaContent.Children.Clear();
+
             dynamic media;
             switch (Post.FileExt)
             {
@@ -260,18 +299,18 @@ namespace Knotter
                     {
                         Source = VideoSource.FromUri(Post.FileUrl),
                         Volume = 0,//Default Mute
+                        WidthRequest = Booru.ScreenWidth,
                     };
                     break;
 
                 case "png":
                 case "jpg":
                 case "bmp":
-                    media = new Image
-                    {
-                        //preview, although smaller, loads much faster than absurd_res and saves data
-                        //user can still view full image on web
+                    media = new Image{ 
                         Source = ImageSource.FromUri(Post.SampleUrl),
-                        //WidthRequest = Booru.ScreenWidth,
+                        HorizontalOptions = LayoutOptions.CenterAndExpand,
+                        VerticalOptions = LayoutOptions.CenterAndExpand,
+                        //HeightRequest = Booru.ScreenHeight,
                     };
                     break;
 
@@ -286,12 +325,15 @@ namespace Knotter
                     break;
             }
 
-            return new ContentView
+            var result = new StackLayout
             {
-                Content = media,
-                HeightRequest = Booru.ScreenHeight,
-                WidthRequest = Booru.ScreenWidth,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+
+                Children = { media },
             };
+
+            UIMediaContent.Children.Add(result);
         }
 
         public static View WebVeiwTemplate(string imageurl) //post.FileUrl.AbsoluteUri

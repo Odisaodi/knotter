@@ -163,6 +163,19 @@ namespace QuickType
         public bool Success { get; set; }
     }
 
+    public partial class CreateFavorite
+    {
+        [JsonProperty("favorited_users")]
+        public string FavoritedUsers { get; set; }
+
+        [JsonProperty("post_id")]
+        public long PostId { get; set; }
+
+        [JsonProperty("score")]
+        public long Score { get; set; }
+
+    }
+
     public class ReturnStatus //"{\"status\":false,\"reason\":\"Not Found\"}"
     {
         [JsonProperty("status"), JsonRequired]

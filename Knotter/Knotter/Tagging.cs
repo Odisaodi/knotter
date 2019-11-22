@@ -2,81 +2,73 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 
-
 namespace Knotter
 {
     public partial class MediaPage : ContentPage
     {
+        
         private double StartDragY;
-        public void OnSlidingMenuPanUpdated(object sender, PanUpdatedEventArgs e)
+        public void OnFloatingMenuPan(object sender, PanUpdatedEventArgs e)
         {
+            UIContentLayers.RaiseChild(UISlidingPane);
+
             switch (e.StatusType)
             {
                 case GestureStatus.Started:
-                    StartDragY = UISlidingMenu.TranslationY;
+                    StartDragY = UISlidingPane.TranslationY;
                     break;
 
                 case GestureStatus.Running:
-                    UISlidingMenu.TranslationY = StartDragY + e.TotalY;
-
-                    //display a "drop/close" button if we scroll the content
-                    if (UISlidingMenu.TranslationY < LowerBounds)
-                        UIButtonCollapse.IsVisible = true;
-                    else
-                        UIButtonCollapse.IsVisible = false;
+                    UISlidingPane.TranslationY = StartDragY + e.TotalY;
                     break;
 
                 case GestureStatus.Completed:
-                    double distance = StartDragY - UISlidingMenu.TranslationY; //e.TotalY
-                    if (Math.Abs(distance) < 50)
-                        break;//ignore small movements
+                    double final = UISlidingPane.TranslationY;
+                    double dist = final - StartDragY; 
 
-                    bool direction = (distance < 0) ? true : false;
-                    switch (direction)
+                    if (Math.Abs(dist) < 50)//minimum drag distance 
+                        return;//ignore smaller movenents
+
+                    switch (dist > 0) //direction
                     {
                         case true:
-                            UISlidingMenu.TranslateTo(0, LowerBounds);//down
+                            UISlidingPane.TranslateTo(0, LowerBounds);//down
                             UIButtonCollapse.IsVisible = false;
                             break;
 
                         case false:
-                            UISlidingMenu.TranslateTo(0, 0);//top
+                            UISlidingPane.TranslateTo(0, 0);//top
                             break;
                     }
-                    break;
+                    break;//GestureStatus.Completed:
             }
         }
 
-        private void UpdateSlidingPane()
+        public void UpdateActionBar()
         {
-            UISlidingMenu.Children.Clear();
+            UIContentLayers.RaiseChild(UIActionBar);
 
-            //UISliderCaption
-            var UISliderCaption = new Label
-            {
-                Text = "↑ Tags ↓", //↑↓;
-                HeightRequest = 50,
-                VerticalTextAlignment = TextAlignment.Center,
-                HorizontalTextAlignment = TextAlignment.Center,
-                BackgroundColor = Color.Accent,
-            };
-            UISlidingMenu.Children.Add(UISliderCaption);
+            ExternalButton.Text = $"View on {Settings.HostTitle}";
 
-            var tagList = CreateTagList(Post.Tags);
-            UISlidingMenu.Children.Add(tagList);
+            ExternalButton.Clicked += (s, e) => { /* launcher.*/};
 
-            UISlidingMenu.TranslateTo(0, LowerBounds);
-            UIButtonCollapse.IsVisible = false;
+            UIFavoriteClicked.Clicked += (s, e) => { HeartClicked(); };
+
+            UIVoteDown.Clicked += (s, e) => { VoteClicked(-1); };
+
+            UIVoteUp.Clicked += (s, e) => { VoteClicked(1); };
         }
 
-        private void CreateActionBar()
+        private View CreateActionBar()
         {
             var UIExternalLink = new Button
             {
                 Text = "View on web",
                 BackgroundColor = Color.Transparent,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
             };
             UIExternalLink.Clicked += (s, e) => { };
+
             //
             var UIFavoriteClicked = new ImageButton
             {
@@ -90,59 +82,57 @@ namespace Knotter
             {
                 Source = "votedowngrey.png",
                 BackgroundColor = Color.Transparent,
-                
             };
-            UIVoteDown.Clicked += (s, e) => { VoteClicked(false); };
+            UIVoteDown.Clicked += (s, e) => { VoteClicked(-1); };
 
-            //
             var UIVoteUp = new ImageButton
             {
                 Source = "voteupgrey.png",
                 BackgroundColor = Color.Transparent,
             };
-            UIVoteUp.Clicked += (s, e) => { VoteClicked(true); };
+            UIVoteUp.Clicked += (s, e) => { VoteClicked(1); };
 
             //
-            var stack = new StackLayout
+            var UIActionBar = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.Start,
+                BackgroundColor = Color.FromHex("7F000000"),
                 Children =
                 {
-                    UIVoteUp, UIVoteDown, UIFavoriteClicked,
+                    UIExternalLink, UIFavoriteClicked, UIVoteDown, UIVoteUp, 
                 }
             };
-            UIMediaContent.Children.Add(stack);
-            //return stack;
+            
+            return UIActionBar;
             //throw new NotImplementedException();
         }
 
-        public TableView CreateTagList(QuickType.Tags tags)
+        public View UpdateTagLibrary(QuickType.Tags tags)
         {
             var root = new TableRoot();
             foreach (System.Reflection.PropertyInfo category in tags.GetType().GetProperties())
             {
                 var tableSection = new TableSection(category.Name);
-                List<string> taglist = (List<string>)category.GetValue(tags);
 
-                foreach (var tag in taglist)
+                foreach (var tag in (List<string>)category.GetValue(tags))
                 {
-                    Button button = new Button
-                    {
-                        Text = tag.ToString(),
-                    };
-
-                    button.Clicked += (s, e) => 
-                    {
-                        Navigation.PushAsync(
-                            new ResultsPage( tag.ToString() )
-                        );
-                    };
-
                     ViewCell cell = new ViewCell {
                         View = new StackLayout {
                             Children = {
-                                button,
+                                new Button
+                                {
+                                    Text = tag.ToString(),
+                                    Command = new Command(
+                                        execute: () =>
+                                        {
+                                            Navigation.PushAsync(
+                                                    new ResultsPage(tag.ToString())
+                                            );
+                                        }
+                                    ),
+                                },
                             },
                         },
                     };
@@ -150,12 +140,18 @@ namespace Knotter
                 }
                 root.Add(tableSection);
             }
-            return new TableView { Root = root };
+
+            var content = new TableView {
+                Root = root,
+                BackgroundColor = Color.FromHex("#EE000000") 
+            };
+            return content;
         }
+
         private void Collapse_clicked()
         {
             UIButtonCollapse.IsVisible = false;
-            UISlidingMenu.TranslateTo(0, LowerBounds);
+            UISlidingPane.TranslateTo(0, LowerBounds);
         }
     }
 }

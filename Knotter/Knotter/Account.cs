@@ -45,7 +45,7 @@ namespace Knotter
             return false;
         }
 
-        static public async Task<long> VoteAsync(long post_id, int score = 0)
+        static public async Task<bool> VoteAsync(long post_id, int score = 0)
         {
             var vote = new Dictionary<string, string>
             {
@@ -56,7 +56,6 @@ namespace Knotter
                 { "id" , post_id.ToString() },//"2051732"
                 { "score" , score.ToString() },
             };
-
             
             var response = await Connection.GetResponse("/post/vote.json", vote, true);
             if (response.IsSuccessStatusCode)
@@ -65,69 +64,50 @@ namespace Knotter
 
                 if (Deserialize.TryParse(json, out VoteSuccess Returned))
                 {
-                    return Returned.Score;
-                    //returned.success will return true if a downvote was a success.
-                    //me must return .Score to notify which direction the score went
+                    return Returned.Success;
                 }
-                //to do: if ( returned.success == false ) { ... };
+                //If the call did not succeed, the following reasons are possible:
+                //already voted You have already voted for this post.
+                //invalid score You have supplied an invalid score.
             }
             //if (not 200_OK) { "we may get a non json reply (501, 404.html?)" }
-            return 0;//neutral
+            return false;
         }
 
         ///favorite/create.json
         static public async Task<int> Favourite(long post_id, bool state)
         {
-            var fav = new Dictionary<string, string>
+            var favorite = new Dictionary<string, string>
             {
                 //identitify yourself
-                { "name", Settings.Username },
+                { "login", Settings.Username },
                 { "password_hash", Settings.ApiKey },
                 //action to perform
                 { "id" , post_id.ToString() },//"2051732"
             };
 
-            string page = "/favorite/destroy.json";
+            HttpResponseMessage response;
             if (state)
-                page = "/favorite/create.json";
+                response = await Connection.GetResponse("/favorite/create.json", favorite, true);
+            else
+                response = await Connection.GetResponse("/favorite/destroy.json", favorite, true);
 
-            var response = await Connection.GetResponse(page, fav, true);
             if (response.IsSuccessStatusCode)
             {
                 var json = await response.Content.ReadAsStringAsync();
 
-                if (Deserialize.TryParse(json, out ReturnStatus Returned))
+                if (Deserialize.TryParse(json, out CreateFavorite Returned))
                 {
-                    return (Returned.Status) ? 1 : -1;
+                    return 1;
                 }
             }
-            else if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+            else //if (not 200_OK) { "we may get a non json reply (501, 404.html?)" }
             {
                 //to do: user not logged in?
+                return (int)response.StatusCode;
             }
-            //if (not 200_OK) { "we may get a non json reply (501, 404.html?)" }
             return 0;//neutral
         }
-        static public async Task<bool> typedTags(long post_id)
-        {
-            var param = new Dictionary<string, string>
-            {
-                { "id" , post_id.ToString() },//"2051732"
-                { "typed_tags", "true" },
-            };
 
-            var response = await Connection.GetResponse("/post/index.json", param);
-            if (response.IsSuccessStatusCode)
-            {
-                var json = await response.Content.ReadAsStringAsync();
-
-                if (Deserialize.TryParse(json, out ReturnStatus Returned))
-                {
-                    return Returned.Status;
-                }
-            }
-            //if (not 200_OK) { "we may get a non json reply (501, 404.html?)" }
-            return false;
-        }
     }
 }
