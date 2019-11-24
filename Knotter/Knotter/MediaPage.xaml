@@ -17,9 +17,9 @@
                 VerticalOptions="Start">
 
                 <Button  x:Name="ExternalButton" Text="Loading..." HorizontalOptions="FillAndExpand" HeightRequest="64"/>
-                <ImageButton x:Name="UIFavoriteClicked" Source="stargrey.png" HeightRequest="50" BackgroundColor="#00000000"/>
-                <ImageButton x:Name="UIVoteDown" Source="votedowngrey.png" BackgroundColor="#00000000"/>
-                <ImageButton x:Name="UIVoteUp" Source="voteupgrey.png" BackgroundColor="#00000000"/>
+                <ImageButton x:Name="UIFavoriteClicked" Source="stargrey.png"/>
+                <ImageButton x:Name="UIVoteDown" Source="votedowngrey.png"/>
+                <ImageButton x:Name="UIVoteUp" Source="voteupgrey.png"/>
             </StackLayout>
             
             <Label 
@@ -28,7 +28,7 @@
                 IsVisible="False" BackgroundColor="IndianRed" VerticalOptions="Start" HorizontalTextAlignment="Center"/>
 
              <!--the element which holds the Media-->
-            <StackLayout x:Name="UIMediaContent" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="#648F8F8F">
+            <StackLayout x:Name="UIMediaContent" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
                 <Image Source="example.png"/>
             </StackLayout >
 

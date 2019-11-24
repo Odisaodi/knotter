@@ -299,18 +299,22 @@ namespace Knotter
                     {
                         Source = VideoSource.FromUri(Post.FileUrl),
                         Volume = 0,//Default Mute
-                        WidthRequest = Booru.ScreenWidth,
+                        HeightRequest = UIMediaContent.Height,
+                        WidthRequest = UIMediaContent.Width,
                     };
                     break;
 
                 case "png":
                 case "jpg":
                 case "bmp":
+
+                    var page = NavigationPage.HeightProperty;
+               
                     media = new Image{ 
                         Source = ImageSource.FromUri(Post.SampleUrl),
-                        HorizontalOptions = LayoutOptions.CenterAndExpand,
-                        VerticalOptions = LayoutOptions.CenterAndExpand,
-                        //HeightRequest = Booru.ScreenHeight,
+                        HeightRequest = Booru.ScreenHeight, 
+                        WidthRequest = UIMediaContent.Width,
+                        VerticalOptions = LayoutOptions.Center,
                     };
                     break;
 
@@ -327,9 +331,7 @@ namespace Knotter
 
             var result = new StackLayout
             {
-                VerticalOptions = LayoutOptions.CenterAndExpand,
-                HorizontalOptions = LayoutOptions.CenterAndExpand,
-
+                BackgroundColor = Color.FromHex("#648F8F8F"),
                 Children = { media },
             };
 

@@ -47,15 +47,17 @@ namespace Knotter
         public void UpdateActionBar()
         {
             UIContentLayers.RaiseChild(UIActionBar);
+            //reset the buttons state
+            //to do: load state when swiping back to a previous image (already voted)
+            UIFavoriteClicked.Source = "stargrey.png";
+            UIVoteDown.Source = "votedowngrey.png";
+            UIVoteUp.Source = "voteupgrey.png";
 
             ExternalButton.Text = $"View on {Settings.HostTitle}";
-
             ExternalButton.Clicked += (s, e) => { /* launcher.*/};
 
             UIFavoriteClicked.Clicked += (s, e) => { HeartClicked(); };
-
             UIVoteDown.Clicked += (s, e) => { VoteClicked(-1); };
-
             UIVoteUp.Clicked += (s, e) => { VoteClicked(1); };
         }
 
