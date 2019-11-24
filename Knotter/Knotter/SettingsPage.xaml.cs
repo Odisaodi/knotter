@@ -38,7 +38,7 @@ namespace Knotter
         }
 
         public static string ApiKey {
-            get { return Preferences.Get("ApiKey", ""); }
+            get { return _pass; }
             set {
                 _pass = value;
                 Preferences.Set("ApiKey", value); } 

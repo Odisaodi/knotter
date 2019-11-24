@@ -111,8 +111,8 @@ namespace Knotter
         {
             var UINotification = new Label
             {
-                Text = "Progress...",
-                BackgroundColor = Color.IndianRed,
+                Text = text,
+                BackgroundColor = color,
                 VerticalOptions = LayoutOptions.Start,
                 HorizontalTextAlignment = TextAlignment.Center,
             };
@@ -308,12 +308,12 @@ namespace Knotter
                 case "jpg":
                 case "bmp":
 
-                    var page = NavigationPage.HeightProperty;
+                    //var page = NavigationPage.HeightProperty;
                
                     media = new Image{ 
                         Source = ImageSource.FromUri(Post.SampleUrl),
                         HeightRequest = Booru.ScreenHeight, 
-                        WidthRequest = UIMediaContent.Width,
+                        WidthRequest = Booru.ScreenWidth,
                         VerticalOptions = LayoutOptions.Center,
                     };
                     break;

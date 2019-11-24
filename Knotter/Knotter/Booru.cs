@@ -85,7 +85,7 @@ namespace Knotter
                     return remainder + output.Count;
                 }
             }
-            catch
+            catch (Newtonsoft.Json.JsonSerializationException)
             {
                 return 0;
             }
