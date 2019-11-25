@@ -66,19 +66,18 @@ namespace Knotter
                 //aka ("1.0")
                 if (latest != null)
                 {
-                    var currentVersion = VersionTracking.CurrentVersion;
-                    string ThisVersion = currentVersion;
-                    string ThatVersion = latest;
-                    //bool UpdateAvailible = (ThisVersion < ThatVersion) ? true : false;
-                    bool UpdateAvailible = string.Compare(ThisVersion, ThatVersion, StringComparison.Ordinal) <= 0;
-                    if (UpdateAvailible)
+                    var current = VersionTracking.CurrentVersion;
+
+                    var ThisVer = new Version(current);
+                    var ThatVer = new Version(latest);
+
+                    if(ThisVer < ThatVer)
                     {
                         return true;
                     }
                 }
             }
             return false;
-            //return false;
         }
     }
 }
