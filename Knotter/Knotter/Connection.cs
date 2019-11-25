@@ -1,32 +1,40 @@
-﻿using QuickType;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Linq;
 using Xamarin.Essentials;
+
 
 namespace Knotter
 {
-    public static partial class Connection
+    public static partial class Connection 
     {
         static public Dictionary<string, string> Arguments { get; set; }
         //-----------
         static private HttpClient Client;
 
-        static public void Connect(string host = "https://e926.net")
+        static public bool Connect(string host = "https://e926.net")
         {
-            Client = new HttpClient
+            try
             {
-                BaseAddress = new Uri(host),
-            };
-            Client.DefaultRequestHeaders.UserAgent.ParseAdd("Knotter/1.0 (user do6kids9)");//MyProject/1.0 (by username on Knotter)
+                Client = new HttpClient
+                {
+                    BaseAddress = new Uri(host),
+                };
+                Client.DefaultRequestHeaders.UserAgent.ParseAdd("Knotter/1.0 (user do6kids9)");//MyProject/1.0 (by username on Knotter)
 
-            Arguments = new Dictionary<string, string>
+                Arguments = new Dictionary<string, string>
+                {
+                    ["typed_tags"] = "true",
+                    ["limit"] = "1",
+                };
+            }
+            catch //what
             {
-                ["typed_tags"] = "true",
-                ["limit"] = "1",
-            };
+                return false;
+            }
+            return true;
         }
 
         static public async Task<HttpResponseMessage> GetResponse(string page, Dictionary<string, string> arguments, bool IsPost = false)
@@ -40,24 +48,6 @@ namespace Knotter
 
             return await Client.SendAsync(request);//.ConfigureAwait(false);
         }
-
-        //static private async Task<bool> (string page, Dictionary<string, string> arguments)
-        //{
-        //    HttpResponseMessage response = await GetResponse(page, arguments);
-
-        //    if (response.IsSuccessStatusCode)
-        //    {
-        //        return await response.Content.ReadAsStringAsync();//.ConfigureAwait(false);
-        //    }
-
-        //    var error = new ReturnStatus { 
-        //        Status = false, 
-        //        Reason = response.ReasonPhrase,
-        //    };
-
-        //    string value = Serialize.ToJson(error);
-        //    return value;
-        //}
 
         static public async Task<bool> CheckVersion()
         {

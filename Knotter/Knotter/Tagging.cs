@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Knotter
@@ -46,7 +47,7 @@ namespace Knotter
 
         public void UpdateActionBar()
         {
-            UIContentLayers.RaiseChild(UIActionBar);
+            //UIContentLayers.RaiseChild(UIActionBar);
             //reset the buttons state
             //to do: load state when swiping back to a previous image (already voted)
             UIFavoriteClicked.Source = "stargrey.png";
@@ -54,7 +55,9 @@ namespace Knotter
             UIVoteUp.Source = "voteupgrey.png";
 
             ExternalButton.Text = $"View on {Settings.HostTitle}";
-            ExternalButton.Clicked += (s, e) => { /* launcher.*/};
+            //
+            var ExternamLink = Settings.HostValue + $"/post/show/{Post.Id}";
+            ExternalButton.Clicked += async (s, e) => { await Launcher.OpenAsync(ExternamLink); };
 
             UIFavoriteClicked.Clicked += (s, e) => { HeartClicked(); };
             UIVoteDown.Clicked += (s, e) => { VoteClicked(-1); };

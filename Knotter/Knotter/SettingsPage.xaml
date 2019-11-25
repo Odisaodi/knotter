@@ -36,13 +36,44 @@
     </ContentPage>
     <!-- about -->
     <ContentPage Title="about" >
-        
+
         <StackLayout>
             <Label Text="icons by https://icons8.com" HorizontalTextAlignment="Center"/>
             <Button x:Name="UICheckVersion" Text="Check for Updates" />
             <Label x:Name="UIVersionLabel" IsVisible="False" HorizontalTextAlignment="Center"/>
+
+            <Label x:Name="Advert" Text="Commission some art!" HorizontalTextAlignment="Center"/>
+            <TableView BackgroundColor="AliceBlue">
+                <TableRoot>
+                    <!-- Ground-Zer0s -->
+                    <TableSection Title="GroundZer0s" >
+                        <ViewCell>
+                            <Label HorizontalTextAlignment="Center"
+                                   Text="Sketches as low as $10. &#13;&#10; Contact: CielMorrisonArt@gmail.com">
+                            </Label>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <Button x:Name ="GroundZer0s" Text="view ground-zer0s tumblr"/>
+                        </ViewCell>
+                    </TableSection>
+
+                    <!-- N/A -->
+                    <!--<TableSection Title="you" >
+                        <ViewCell>
+                            <Label HorizontalTextAlignment="Center"
+                                   Text="you to can Advertise Here">
+                            </Label>
+                        </ViewCell>
+
+                        <ViewCell>
+                            <Button x:Name="None" Text="Link"/>
+                        </ViewCell>
+                    </TableSection>-->
+
+                </TableRoot>
+            </TableView>
         </StackLayout>
-        
     </ContentPage>
 </TabbedPage>
 

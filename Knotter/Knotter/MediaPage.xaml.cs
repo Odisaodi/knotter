@@ -12,32 +12,32 @@ using System.Threading.Tasks;
 
 namespace Knotter
 {
-    internal static class PageTemplate
-    {
+    //internal static class PageTemplate
+    //{
 
-        public static readonly StackLayout UIActionBar = new StackLayout
-        {
-            Orientation = StackOrientation.Horizontal,
-            BackgroundColor = Color.FromHex("#7F000000"),
-            HorizontalOptions = LayoutOptions.FillAndExpand,
-            Children = {
+    //    public static readonly StackLayout UIActionBar = new StackLayout
+    //    {
+    //        Orientation = StackOrientation.Horizontal,
+    //        BackgroundColor = Color.FromHex("#7F000000"),
+    //        HorizontalOptions = LayoutOptions.FillAndExpand,
+    //        Children = {
 
-            }
-        };
+    //        }
+    //    };
 
-        public static readonly View UIContentLayers = new Grid
-        {
-            Children = {
-                UIActionBar,
-            }
-        };
+    //    public static readonly View UIContentLayers = new Grid
+    //    {
+    //        Children = {
+    //            UIActionBar,
+    //        }
+    //    };
 
-    }
+    //}
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MediaPage : ContentPage
     {
-        private Booru Search;
+        private readonly Booru Search;
         private CPost Post;
         private int Index = 0;
         private static readonly double upperBounds = Booru.ScreenHeight / 4;
@@ -66,7 +66,7 @@ namespace Knotter
 
         public void ReloadMediaPage()
         {
-            //remember it's on a grid
+            //loading
             Indicate();
 
             //layer 0 (bottom)
@@ -75,12 +75,10 @@ namespace Knotter
             //layer 1 (center)
             UpdateActionBar();
 
-            //layer 2 (center)
-            UpdateNotification("loading", Color.LightGreen, 2);
-
+            //layer 2 (top)
             UpdateFloatingMenu();
 
-            //UIContentLayers.Children.Add(UISlidingPane);
+            //
             Indicate(false);
         }
 
@@ -102,31 +100,33 @@ namespace Knotter
             //
                 TagLibrary.Children.Clear();
                 TagLibrary.Children.Add( UpdateTagLibrary(Post.Tags) );
+          
                 UISlidingPane.Children.Add(TagLibrary);
             //
             UISlidingPane.TranslateTo(0, LowerBounds);
         }
 
-        private void UpdateNotification(string text, Color color, double seconds)//BackgroundColor="IndianRed"
+        private void UpdateNotification(string text, Color color, double seconds)
         {
-            var UINotification = new Label
+            //update
+            var Notification = new Label
             {
                 Text = text,
-                BackgroundColor = color,
+                BackgroundColor = color, //IndianRed / LightGreen
                 VerticalOptions = LayoutOptions.Start,
                 HorizontalTextAlignment = TextAlignment.Center,
+                IsVisible = true,
             };
 
-            UIContentLayers.Children.Add(UINotification);
+            UIContentLayers.Children.Add(Notification);
+            UIContentLayers.RaiseChild(Notification);
 
-            Task.Run(() => { 
-                Device.StartTimer(TimeSpan.FromSeconds(2), () => { 
-                    UINotification.IsVisible = false;
+            Task.Run(() => {
+                Device.StartTimer(TimeSpan.FromSeconds(seconds), () => {
+                    UIContentLayers.Children.Remove(Notification);
                     return true;
-                });            
+                });
             });
-
-            
         }
 
         ActivityIndicator activityIndicator;
@@ -142,12 +142,11 @@ namespace Knotter
                 };
                 UIContentLayers.Children.Add(activityIndicator);
             }
-
             activityIndicator.IsRunning = state;
         }
 
         //swipe action
-        private async void GetNextPost()
+        private async void OnSwipeLeft()
         {
             //if Next_post touches the threshhold we have to update the prefetch
             if ((Search.posts.Count - Index) < Search.ResultsPerPage)
@@ -161,7 +160,7 @@ namespace Knotter
         }
 
         //swipe action
-        private void GetLastPost()
+        private void OnSwipeRight()
         {
             if (Index <= 0)
             {
@@ -184,25 +183,17 @@ namespace Knotter
 
             if (_liked & (ret == 1))
             {//if the action was a success and the current state is "like"
-                
                 UIFavoriteClicked.Source = "star.png";
-                return;
             }
             else if (_liked & (ret == 0))
             {//if the action was a success and the current state is "dislike"
-                //turn notification on
-                UINotification.IsVisible = true;
-                //turn notification off after 2 seconds
-                Device.StartTimer(TimeSpan.FromSeconds(2),
-                    () => { return UINotification.IsVisible = false; }
-                );
-            }
-            else
                 UIFavoriteClicked.Source = "stargrey.png";
+            }
+            else {
+                UpdateNotification("Unable to process request.", Color.IndianRed, 1);
+            }
         }
 
-        //voting
-        //public bool state;
         private async void VoteClicked(int vote)//(object sender, EventArgs e)
         {
             //int ret = await UserActions.Favourite(Post.Id, state);
@@ -227,11 +218,7 @@ namespace Knotter
                         break;
                 }
             }else{
-                UINotification.IsVisible = true;
-                //turn notification off after 2 seconds
-                Device.StartTimer(TimeSpan.FromSeconds(2),
-                    () => { return UINotification.IsVisible = false; }
-                );
+                UpdateNotification("Unable to process request.", Color.IndianRed, 1);
             }
         }
 
@@ -268,12 +255,12 @@ namespace Knotter
                         {
                             case true:// swipe right ->
                                 UIMediaContent.TranslationX = Booru.ScreenWidth;
-                                GetNextPost();
+                                OnSwipeLeft();
                                 break;
 
                             case false://swipe left <-
                                 UIMediaContent.TranslationX = -Booru.ScreenWidth;
-                                GetLastPost();
+                                OnSwipeRight();
                                 break;
                         }
                     }
@@ -292,27 +279,41 @@ namespace Knotter
             {
                 case "gif":
                     media = WebVeiwTemplate(Post.FileUrl.AbsoluteUri);
+                    //UpdateNotification("this is a gif", Color.LightGreen, 2);
                     break;
 
                 case "webm"://Webm's used to work but dont anymore, hmm
                     media = new VideoPlayer
                     {
                         Source = VideoSource.FromUri(Post.FileUrl),
+                        AutoPlay = true,
                         Volume = 0,//Default Mute
-                        HeightRequest = UIMediaContent.Height,
-                        WidthRequest = UIMediaContent.Width,
+                        WidthRequest = Booru.ScreenWidth,
+                        //height causes streaching
                     };
+                    Task.Run(async () =>
+                    {
+                        Indicate();
+                        while (((VideoPlayer)media).IsLoading)
+                        {
+                            if ((((VideoPlayer)media).IsLoading == false)){
+                                Indicate(false);
+                                return;
+                            }
+                            await Task.Delay(100);
+                        };
+                    });
+
+                    UpdateNotification("Webm's Muted. (volume control not implemented)", Color.LightGreen, 2);
                     break;
 
                 case "png":
                 case "jpg":
                 case "bmp":
-
-                    //var page = NavigationPage.HeightProperty;
-               
-                    media = new Image{ 
+                    media = new Image
+                    {
                         Source = ImageSource.FromUri(Post.SampleUrl),
-                        HeightRequest = Booru.ScreenHeight, 
+                        HeightRequest = Booru.ScreenHeight/2,
                         WidthRequest = Booru.ScreenWidth,
                         VerticalOptions = LayoutOptions.Center,
                     };
@@ -321,30 +322,37 @@ namespace Knotter
                 default:
                     media = new Label
                     {
-                        Text = $"Media format not supported: {Post.FileExt}",
+                        Text = $"Media format not implemented: {Post.FileExt}",
                         HorizontalTextAlignment = TextAlignment.Center,
                         VerticalTextAlignment = TextAlignment.Center,
                         TextColor = Color.Chartreuse,
                     };
                     break;
+
             }
 
             var result = new StackLayout
             {
+                //known bug: gif/webView doesn't inherit this background color...
                 BackgroundColor = Color.FromHex("#648F8F8F"),
                 Children = { media },
             };
 
             UIMediaContent.Children.Add(result);
+            UIMediaContent.LowerChild(result);//image should be under the menu's
         }
 
         public static View WebVeiwTemplate(string imageurl) //post.FileUrl.AbsoluteUri
         {
+            var width = Booru.ScreenWidth;
+            var height = Booru.ScreenHeight / 2;//squash the height a little
+
             var webveiw = new WebView
             {
-                WidthRequest = Booru.ScreenWidth,
-                HeightRequest = Booru.ScreenHeight,
-
+                WidthRequest = width,
+                HeightRequest = height,
+                IsEnabled = false,//must be disabled or it blocks swipe inputs
+                
                 Source = new HtmlWebViewSource
                 {
                     Html =
@@ -354,10 +362,10 @@ namespace Knotter
                         "<meta name='viewport' content='target-densityDpi=device-dpi'/>" +
                         "<style> " +
                             "img {text-align: center; position: absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0;}" +
-                            "body {background-color: #262626;}" +
+                            "body {background-color: #262626; }" +
                         " </style>" +
                         "</head>" +
-                        $"<body><img src=\"{imageurl}\" width=\"{Booru.ScreenWidth}\" ></body>" +
+                        $"<body><img width=\"{width}\" src=\"{imageurl}\" ></body>" +
                     "</html>"
                 },
             };
@@ -368,13 +376,12 @@ namespace Knotter
             * so a transparent top layer (frame) is required so we can still swipe
             */
 
-            return new Frame
-            {
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.FillAndExpand,
-                BackgroundColor = Color.Transparent,
-                Content = webveiw,
-            };
+            return webveiw;
+            //{
+            //    HorizontalOptions = LayoutOptions.FillAndExpand,
+            //    VerticalOptions = LayoutOptions.FillAndExpand,
+            //    Content = webveiw, 
+            //};
         }
 
 

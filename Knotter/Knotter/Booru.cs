@@ -1,6 +1,7 @@
 using QuickType;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin;
@@ -9,8 +10,8 @@ namespace Knotter
 {
     partial class Booru
     {
-        static public int ScreenWidth;
-        static public int ScreenHeight;
+        static public double ScreenWidth;
+        static public double ScreenHeight;
         static private bool _isGettingNewItems;      
 
         static public int preview_width = 110;
@@ -28,12 +29,12 @@ namespace Knotter
         public Booru(string host)
         {
             
-            Connection.Connect(host);//assume success
+            Connection.Connect(host);//assuming success
             
             //calculate screen size;
             DisplayInfo = DeviceDisplay.MainDisplayInfo;
-            ScreenWidth = (int)(DisplayInfo.Width / DisplayInfo.Density);
-            ScreenHeight = (int)(DisplayInfo.Height / DisplayInfo.Density);
+            ScreenWidth = (DisplayInfo.Width / DisplayInfo.Density);
+            ScreenHeight = (DisplayInfo.Height / DisplayInfo.Density);
 
             //set col/row/etc
             ColCount = ColsPerPage();
@@ -91,11 +92,11 @@ namespace Knotter
             }
             //an error occured
 
-            if (Deserialize.TryParse(json, out ReturnStatus ret))
-            {
+            //if (Deserialize.TryParse(json, out ReturnStatus ret))
+            //{
                 //to do: ReturnStatus.;
                 //Device.BeginInvokeOnMainThread( ()=> DisplayAlert )
-            }
+            //}
 
             //uh oh
             return 0;

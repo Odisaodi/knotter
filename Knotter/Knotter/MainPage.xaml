@@ -16,15 +16,13 @@
                     Text="Login ->" 
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center" />
+                    VerticalTextAlignment="Center" BackgroundColor="#B34E4E" />
                 
                 <Button 
                     x:Name="SettingsButton" 
                     Text="(Gear)" 
                     HorizontalOptions="End"></Button>
             </StackLayout>
-            
-            
             
             <ScrollView x:Name="ScrollContent">
                 <Grid x:Name="GridItems">

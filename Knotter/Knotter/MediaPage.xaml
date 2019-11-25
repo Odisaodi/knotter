@@ -9,17 +9,23 @@
     <ContentPage.Content >
         <!-- Grid allows us to lay elements on top of each other (z-stack)-->
         <Grid x:Name="UIContentLayers" VerticalOptions="FillAndExpand" >
+            
 
+            
             <StackLayout 
                 x:Name="UIActionBar" 
                 Orientation="Horizontal" 
                 BackgroundColor="#7F000000"
                 VerticalOptions="Start">
 
-                <Button  x:Name="ExternalButton" Text="Loading..." HorizontalOptions="FillAndExpand" HeightRequest="64"/>
-                <ImageButton x:Name="UIFavoriteClicked" Source="stargrey.png"/>
-                <ImageButton x:Name="UIVoteDown" Source="votedowngrey.png"/>
-                <ImageButton x:Name="UIVoteUp" Source="voteupgrey.png"/>
+                <Button 
+                    x:Name="ExternalButton" 
+                    Text="Loading..." 
+                    HorizontalOptions="FillAndExpand" 
+                    HeightRequest="64"/>
+                <ImageButton x:Name="UIFavoriteClicked" Source="stargrey.png" BackgroundColor="Transparent"/>
+                <ImageButton x:Name="UIVoteDown" Source="votedowngrey.png" BackgroundColor="Transparent"/>
+                <ImageButton x:Name="UIVoteUp" Source="voteupgrey.png" BackgroundColor="Transparent"/>
             </StackLayout>
             
             <Label 
@@ -32,50 +38,59 @@
                 <Image Source="example.png"/>
             </StackLayout >
 
-            <StackLayout x:Name="UISlidingPane" MinimumHeightRequest="40">
-                <!--<Label 
+            <StackLayout x:Name="UISlidingPane" BackgroundColor="#A0000000">
+                <Label 
                     x:Name="UISliderCaption"
                     HeightRequest="50"
                     Text = "↑ Tags ↓" 
                     HorizontalTextAlignment = "Center"
                     VerticalTextAlignment ="Center"
                     BackgroundColor = "Accent">
-                </Label>-->
-                <StackLayout x:Name="TagLibrary" BackgroundColor="#64000000">
-                    <!--<TableView>
-                        <TableRoot>
-                            <TableSection Title="category 0">
-                                <ViewCell>
-                                    <StackLayout>
-                                        <Button Text=" example 1"></Button>
-                                        <Button Text=" example 2"></Button>
-                                    </StackLayout>
-                                </ViewCell>
-                            </TableSection>
-                            
-                            <TableSection Title="category 0">
-                                <ViewCell>
-                                    <StackLayout>
-                                        <Button Text=" example 1"></Button>
-                                        <Button Text=" example 2"></Button>
-                                    </StackLayout>
-                                </ViewCell>
-                            </TableSection>
-
-                        </TableRoot>
-                    </TableView>-->
+                </Label>
+                
+                <StackLayout Orientation="Horizontal"><!-- Split the View horizontally -->
+                    <StackLayout HorizontalOptions="FillAndExpand" WidthRequest="250" BackgroundColor="SteelBlue" >
+                        <Label Text="[not_implemented]" HorizontalTextAlignment="Center"></Label>
+                        <Label Text="likes:"/>
+                        <Label Text="favs:"/>
+                        <Label Text="other crap:"/>
+                        <Label Text="stats and crap:"/>
+                    </StackLayout>
                     
-                </StackLayout>
+                    <StackLayout x:Name="TagLibrary" BackgroundColor="#64000000" HorizontalOptions="Start">
+                        <TableView >
+                            <TableRoot>
+                                <TableSection Title="category 0">
+                                    <ViewCell>
+                                        <StackLayout>
+                                            <Button Text=" example 1"></Button>
+                                            <Button Text=" example 2"></Button>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </TableSection>
+
+                                <TableSection Title="category 0">
+                                    <ViewCell>
+                                        <StackLayout>
+                                            <Button Text=" example 1"></Button>
+                                            <Button Text=" example 2"></Button>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </TableSection>
+                            </TableRoot>
+                        </TableView>
+                    </StackLayout>
+                </StackLayout><!-- Split the View horizontally -->
                 
             </StackLayout>
             
-                <Button 
-                        x:Name="UIButtonCollapse" 
-                        IsVisible="True"
-                        Text="↓Collapse↓" 
-                        VerticalOptions="End" 
-                        HorizontalOptions="End">
-                </Button>
+            <Button 
+                x:Name="UIButtonCollapse" 
+                IsVisible="False"
+                Text="↓Collapse↓" 
+                VerticalOptions="End" 
+                HorizontalOptions="End">
+            </Button>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

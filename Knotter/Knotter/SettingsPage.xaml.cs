@@ -78,6 +78,8 @@ namespace Knotter
                 UILabelLoggedIn.Text = $"Not logged in";
                 UILabelLoggedIn.BackgroundColor = Color.IndianRed;
             } 
+            //Adverts
+            GroundZer0s.Clicked += async (s, e) => { await Launcher.OpenAsync(new Uri("https://groundzer0s-art.tumblr.com/")); };
         }
 
         public void UIGetWelcomeText()
@@ -109,7 +111,7 @@ namespace Knotter
                 bool reply = await DisplayAlert("wuw whats this", "An Update is availible!", "Download", "Cancel");
                 if (reply)
                 {
-                    await Launcher.OpenAsync(new Uri("https://github.com/keihoag/knotter"));
+                    await Launcher.OpenAsync(new Uri("https://github.com/keihoag/knotter/raw/master/apk/com.lolsoft.Knotter.apk"));//https://github.com/keihoag/knotter
                 }
             }
             else
