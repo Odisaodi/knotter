@@ -113,7 +113,6 @@ namespace QuickType
         [JsonProperty("sources")]
         public List<Uri> Sources { get; set; }
     }
-
     public partial class CreatedAt
     {
         [JsonProperty("json_class")]
@@ -194,6 +193,26 @@ namespace QuickType
         public string PasswordHash { get; set; }
     }
 
+    public partial class ForumPost
+    {
+        [JsonProperty("body")]
+        public string Body { get; set; }
+
+        [JsonProperty("creator")]
+        public string Creator { get; set; }
+
+        [JsonProperty("creator_id")]
+        public long CreatorId { get; set; }
+
+        [JsonProperty("id")]
+        public long Id { get; set; }
+
+        [JsonProperty("parent_id")]
+        public object ParentId { get; set; }
+
+        [JsonProperty("title")]
+        public string Title { get; set; }
+    }
 
     public static class Serialize
     {

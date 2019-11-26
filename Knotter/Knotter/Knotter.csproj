@@ -17,6 +17,9 @@
     <Compile Update="MediaPage.xaml.cs">
       <DependentUpon>MediaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="ForumPage.xaml.cs">
+      <DependentUpon>ForumPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
@@ -30,6 +33,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="MediaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ForumPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="SettingsPage.xaml">

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Knotter.ForumPage" BackgroundImageSource="tiledstripe.xml">
+    <ContentPage.Content >
+
+        <StackLayout Padding="5" VerticalOptions="FillAndExpand">
+
+            <StackLayout BackgroundColor="#FF203f6c">
+                
+                <Picker SelectedIndex="0" Title="Pick a category"  BackgroundColor="#A0A0A0A0">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>All</x:String>
+                            <x:String>General</x:String>
+                            <x:String>Bugs and Features</x:String>
+                            <x:String>Tag Alias and implications</x:String>
+                            <x:String>Art Talk</x:String>
+                            <x:String>Off Topic</x:String>
+                            <x:String>e621 Tools and Apps</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <StackLayout Orientation="Horizontal" >
+                    <Entry HorizontalOptions="FillAndExpand" BackgroundColor="#A0A0A0A0"/>
+                    <Button Text="search" />
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout x:Name="UITopicList" VerticalOptions="FillAndExpand" BackgroundColor="#204274" >
+
+                <StackLayout Orientation="Horizontal" BackgroundColor="#152f56">
+                    <Label x:Name="Title" Text="Title" TextColor="#b4c7d9" HorizontalOptions="StartAndExpand" />
+                    <Label x:Name="Replies" TextColor="#b4c7d9" Text="Replies"></Label>
+                </StackLayout>
+
+                <StackLayout x:Name="GeneratedTopic" BackgroundColor="#101B2D" Margin="2" Orientation="Horizontal">
+                    <!-- #152f56 -->
+                    <StackLayout  Margin="2">
+                        <!-- #152f56 -->
+                        <Label 
+                            x:Name="TopicTitle" 
+                            TextColor="#b4c7d9" 
+                            BackgroundColor="#24395C"
+                            Text="Suggestion: Sorting by video length what if this is wayyydeo length what if this is wayyydeo length what if this is wayyydeo length what if this is wayyydeo length what if this is wayyydeo length what if this is wayyyyy long?" 
+                            FontAttributes="Bold" 
+                            Padding="5"
+                            FontSize="15"/>
+
+                        <Label 
+                            x:Name="TopicContent" 
+                            TextColor="#b4c7d9" 
+                            Padding="10" 
+                            Text="This thread is for bringing old alias/implication suggestions, that are straightforward and shouldn't This thread is for bringing old alias/implication suggestions, that are straightforward and shouldn't " 
+                            >
+                        </Label>
+
+                        <StackLayout Orientation="Horizontal" HeightRequest="40" BackgroundColor="#090E16" Margin="2">
+                            <Button Grid.Column="0" Text="75" WidthRequest="64" IsEnabled="False"/>
+                            <Button Grid.Column="1" Text="75" WidthRequest="64" IsEnabled="False"/>
+                            <Button Text="Read" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>                       
+                        
+                    </StackLayout>
+                    
+                </StackLayout>
+
+                <StackLayout Margin="5" BackgroundColor="#284a81" Orientation="Horizontal">
+                        <Label TextColor="#b4c7d9" Text="Suggestion: Sorting by video length" ></Label>
+                </StackLayout>
+                
+            </StackLayout>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

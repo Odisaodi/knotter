@@ -8,7 +8,9 @@ using Xamarin;
 
 namespace Knotter
 {
-    partial class Booru
+
+
+partial class Booru
     {
         static public double ScreenWidth;
         static public double ScreenHeight;
