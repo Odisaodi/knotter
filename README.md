@@ -13,5 +13,6 @@ Features:
 + swipe left/right to navigate
 + (beta) browse forums (read only)
 
-![Screenshot](https://github.com/keihoag/knotter/blob/master/preview/home.jpg)![Screenshot](https://github.com/keihoag/knotter/blob/master/preview/browse.jpg) 
-![Screenshot](https://github.com/keihoag/knotter/blob/master/preview/view.jpg)![Screenshot](https://github.com/keihoag/knotter/blob/master/preview/forum.jpg) 
+![Screenshot](https://github.com/keihoag/knotter/blob/master/preview/home.jpg) ![Screenshot](https://github.com/keihoag/knotter/blob/master/preview/browse.jpg) 
+
+![Screenshot](https://github.com/keihoag/knotter/blob/master/preview/view.jpg) ![Screenshot](https://github.com/keihoag/knotter/blob/master/preview/forum.jpg) 
