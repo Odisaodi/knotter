@@ -11,15 +11,16 @@ namespace Knotter
     [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
-
         public MainPage()
         {
             InitializeComponent();
 
             TitleText.Text = Settings.HostTitle;
-
+            UIForumBrowse.Clicked += SearchClicked;
             SearchBox.Completed += SearchClicked;
             SettingsButton.Clicked += SettingsClicked;
+            UIForumButton.Clicked += ViewForms;
+            
 
             if (UserActions.Isloggedin())
             {
@@ -31,7 +32,13 @@ namespace Knotter
                 UILoggedInStatus.Text = "log in here -> ";
                 UISettingsBar.BackgroundColor = Color.IndianRed;
             }
-                
+
+            Connection.Connect(Settings.HostValue);
+        }
+
+        private async void ViewForms(object sender, EventArgs e) 
+        {
+            await Navigation.PushAsync(new ForumPage() ).ConfigureAwait(false);//.ConfigureAwait(false);
         }
 
         public async void SettingsClicked(object sender, EventArgs e)

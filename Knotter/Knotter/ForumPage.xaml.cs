@@ -12,21 +12,31 @@ namespace Knotter
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ForumPage : ContentPage
     {
-        public ForumPage()
+        public ForumPage(long? parent = null)
         {
             InitializeComponent();
-        }
+            UISearch.Clicked += UpdatePostList;
 
-        public async void GetForumPosts(double? parent, int page, int limit = 25)
+            GetForumPosts(parent);
+        }
+        public void UpdatePostList(object sender, EventArgs e)
+        {
+            UITopicList.Children.Clear();
+            GetForumPosts(null, 1);
+        }
+        public async void GetForumPosts(long? parent, int page = 1, int limit = 25)
         {
             var args = new Dictionary<string, string>
             {
-                ["parent_id"] = parent.ToString(),
                 ["page"] = page.ToString(),
-                ["limit "] = limit.ToString(),
+                ["limit"] = limit.ToString(),
+            };
+            if (parent != null)
+            {
+                args["parent_id"] = parent.ToString();
             };
 
-            var response = await Connection.GetResponse("/forum/list.json", args);
+            var response = await Connection.GetResponse("/forum/index.json", args);
 
             var json = await response.Content.ReadAsStringAsync();
 
@@ -40,6 +50,11 @@ namespace Knotter
                         UITopicList.Children.Add(post_template);
                     }
                 }
+                if (QuickType.Deserialize.TryParse(json, out QuickType.ReturnStatus error))
+                {
+                    //ded
+                    Device.BeginInvokeOnMainThread(()=>DisplayAlert("owo", error.Reason, "OK"));
+                }
             }
             catch (Newtonsoft.Json.JsonSerializationException)
             {
@@ -51,24 +66,48 @@ namespace Knotter
         {
             return new string(s.Take(n).ToArray());
         }
-        public static View CreateTemplate(QuickType.ForumPost post)
+        public View CreateTemplate(QuickType.ForumPost post)
         {
-            var truncated_body = Truncate(post.Body, 255);
+            var body = post.Body;
+
+            var button = new Button { HorizontalOptions = LayoutOptions.EndAndExpand };
+
+            if ( post.Title.Length > 0 )
+            {
+                //display truncated body
+                body = Truncate(body, 255) + " ...";
+
+                //button text and click event
+                button.Text = "comments";
+                button.Clicked += (s, e) => { Navigation.PushAsync(new ForumPage(post.Id)); };
+            }
+            else //is a reply
+            {
+                //display the user's name (who posted the comment)
+                post.Title = "Reply: " + post.Creator;
+                //button text and click event
+                button.Text = "Quote";
+                //IsEnabled = false;
+                button.Clicked += (s, e) => throw new NotImplementedException();
+            }
+
             //Topic
             return new StackLayout//x:Name="GeneratedTopic"
             {
-                BackgroundColor = Color.FromHex("#101B2D"),
                 Margin = 2,
                 Orientation = StackOrientation.Horizontal,
+                BackgroundColor = Color.FromHex("#101B2D"),
                 Children =
                 {
-                    new StackLayout 
+                    new StackLayout
                     {//x:Name="none"
                         Margin = 2,
+                        HorizontalOptions = LayoutOptions.FillAndExpand,
                         Children =
                         {
                             new Label //x:Name="TopicTitle"
                             {
+                                Text = post.Title,
                                 Padding = 5,
                                 FontSize = 15,
                                 FontAttributes = FontAttributes.Bold,
@@ -78,31 +117,19 @@ namespace Knotter
 
                             new Label //x:Name="TopicContent"
                             {
-                                Text = truncated_body + " ...",
+                                Text = body,
                                 Padding = 10,
-                                TextColor = Color.FromHex("#b4c7d9"),
+                                TextColor = Color.FromHex("#B4C7D9"),
                             },
 
                             new StackLayout{
                                 Margin = 2,
-                                HeightRequest = 40,
+                                //HeightRequest = 40,
                                 Orientation = StackOrientation.Horizontal,
-                                BackgroundColor = Color.FromHex("#090E16"),                                
+                                BackgroundColor = Color.FromHex("#090E16"),
                                 Children =
                                 {
-                                     new Button {
-                                         Text="↑",
-                                         WidthRequest=64,
-                                     },
-                                     new Button {
-                                         Text="↑",
-                                         WidthRequest=64,
-                                     },
-                                     new Button {
-                                         Text="Comments",
-                                         WidthRequest=64,
-                                         HorizontalOptions = LayoutOptions.FillAndExpand,
-                                     }
+                                    button,
                                 },
                             },
                         },

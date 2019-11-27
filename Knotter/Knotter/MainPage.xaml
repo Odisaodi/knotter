@@ -6,95 +6,87 @@
              mc:Ignorable="d"
              x:Class="Knotter.MainPage"
              BackgroundImageSource="tiledstripe.xml">
-             
     <ContentPage.Content>
-        <StackLayout x:Name="RootContent">
-            
-            <StackLayout x:Name="UISettingsBar" Orientation="Horizontal" HorizontalOptions="Fill" BackgroundColor="IndianRed">
-                <Label 
-                    x:Name="UILoggedInStatus"
-                    Text="Login ->" 
-                    HorizontalOptions="FillAndExpand"
-                    HorizontalTextAlignment="Center"
-                    VerticalTextAlignment="Center" BackgroundColor="#B34E4E" />
+        <Grid VerticalOptions="FillAndExpand">
+            <StackLayout x:Name="RootContent" VerticalOptions="FillAndExpand">
+                <StackLayout 
+                    x:Name="UISettingsBar" 
+                    Orientation="Horizontal" 
+                    HorizontalOptions="Fill" 
+                    BackgroundColor="IndianRed"
+                    >
+                    <Label 
+                        x:Name="UILoggedInStatus"
+                        Text="Login ->" 
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center" BackgroundColor="#B34E4E" />
+                    <Button 
+                            x:Name="SettingsButton" 
+                            Text="(Gear)" 
+                            HorizontalOptions="End"/>
+                </StackLayout>   
                 
-                <Button 
-                    x:Name="SettingsButton" 
-                    Text="(Gear)" 
-                    HorizontalOptions="End"></Button>
-            </StackLayout>
-            
-            <ScrollView x:Name="ScrollContent">
-                <Grid x:Name="GridItems">
-                    <!-- Results -->
-                </Grid>
-
-            </ScrollView>
-            
-            <StackLayout x:Name="splash" VerticalOptions="CenterAndExpand">
-                <Grid>
-                    <!-- background -->
-                    <Image 
+                <StackLayout x:Name="splash" VerticalOptions="CenterAndExpand">
+                    <Grid>
+                        <!-- background -->
+                        <Image 
                         Source="esix2.png"
                         Aspect="AspectFill"
                         HorizontalOptions="Center"
                         VerticalOptions="EndAndExpand">
-                    </Image>
-                    <!-- frame -->
-                    <Frame 
-                        CornerRadius="20"
-                        VerticalOptions="Center"
-                        Padding="2"
-                        BackgroundColor="#BF000000"
-                  
-                        IsClippedToBounds="True">
-                        
-                        <Grid BackgroundColor="Transparent" IsClippedToBounds="True">
-                            <!-- stack ontop of blur -->
-                            <Image
+                        </Image>
+                        <!-- frame -->
+                        <Frame 
+                            CornerRadius="20"
+                            VerticalOptions="Center"
+                            Padding="2"
+                            BackgroundColor="#BF000000"                 
+                            IsClippedToBounds="True">
+                            <Grid BackgroundColor="Transparent" IsClippedToBounds="True">
+                                <!-- stack ontop of blur -->
+                                <Image
                                 Source="esix2_blur.png"
                                 Aspect="AspectFill"
                                 HeightRequest="150"
                                 VerticalOptions="Center"
                                 >
-                            </Image>
+                                </Image>
 
-                            <StackLayout VerticalOptions="Center">
-                                <!-- text decal -->
-                                <Label 
+                                <StackLayout VerticalOptions="Center">
+                                    <!-- text decal -->
+                                    <Label 
                                     x:Name="TitleText"
                                     Text="e926" 
                                     FontSize="40"
                                     TextColor="#b4c7d9"
                                     HorizontalTextAlignment="Center"
                                     FontAttributes="Italic, Bold">
-                                </Label>
-                                <!-- search entry -->
-                                <Entry 
+                                    </Label>
+                                    <!-- search entry -->
+                                    <Entry 
                                     x:Name="SearchBox" 
                                     HorizontalTextAlignment="Center" 
                                     TextColor="Fuchsia"
                                     BackgroundColor="#1AFFFFFF" >
-                                </Entry>
+                                    </Entry>
 
-                                <Label Text="mascot by Keishinkae" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" TextColor="Accent"></Label>
-                            </StackLayout>
-                            
-                        </Grid>
-                        
-                    </Frame>
-                </Grid>
-            </StackLayout>
-            <!-- Splash -->
-            
-            <Label x:Name="debug" VerticalTextAlignment="End"></Label>
-            <!--<Entry x:Name="Tags" 
-                   VerticalOptions="EndAndExpand"
-                   BackgroundColor="#1AFFFFFF">
-            </Entry>-->
+                                    <Label Text="mascot by Keishinkae" VerticalOptions="EndAndExpand" HorizontalTextAlignment="Center" TextColor="Accent"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                    
+                    <StackLayout x:Name="UIFooter" Orientation="Horizontal">
+                        <Button x:Name="UIForumButton" HorizontalOptions="FillAndExpand" Text="Forum"></Button>
+                        <Button x:Name="UIForumBrowse" HorizontalOptions="FillAndExpand" Text="Browse"></Button>
+                    </StackLayout>
+                    
+                </StackLayout><!-- Splash -->
+                
 
-            
-        </StackLayout>
-        
+            </StackLayout><!-- root -->          
+            </Grid>
+
     </ContentPage.Content>
 </ContentPage>

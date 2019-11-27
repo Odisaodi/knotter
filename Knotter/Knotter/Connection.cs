@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
-
+using Xamarin.Forms;
 
 namespace Knotter
 {
@@ -32,6 +32,7 @@ namespace Knotter
             }
             catch //what
             {
+                Device.BeginInvokeOnMainThread(async () => await Application.Current.MainPage.DisplayAlert("uwu whats this", "No Connection", "OK"));
                 return false;
             }
             return true;
@@ -40,13 +41,18 @@ namespace Knotter
         static public async Task<HttpResponseMessage> GetResponse(string page, Dictionary<string, string> arguments, bool IsPost = false)
         {
             HttpMethod Method = IsPost ? HttpMethod.Post : HttpMethod.Get;//default GET
-
-            var request = new HttpRequestMessage(Method, page)
+            try
             {
-                Content = new FormUrlEncodedContent(arguments)
-            };
-
-            return await Client.SendAsync(request);//.ConfigureAwait(false);
+                var request = new HttpRequestMessage(Method, page)
+                {
+                    Content = new FormUrlEncodedContent(arguments)
+                };
+                return await Client.SendAsync(request);//.ConfigureAwait(false);
+            }
+            catch
+            {
+                return default;
+            }
         }
 
         static public async Task<bool> CheckVersion()
